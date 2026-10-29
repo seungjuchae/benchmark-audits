@@ -1,0 +1,25 @@
+{
+  "model": "openai/gpt-6-astra",
+  "baseline_model": "openai/gpt-5",
+  "source_sha256": "19cdc9815b028e97db4fa9609f12fde44c670761079e84806f302f0ecceb1222",
+  "prompt_version": "v6_fixed",
+  "repetitions": 1,
+  "num_tests": 36,
+  "num_batches": 4,
+  "diagnosis_rerun": false,
+  "judge_called": false,
+  "reasoning_effort": "provider default, as in baseline; not explicitly set",
+  "extra_body": {
+    "provider": {
+      "data_collection": "deny",
+      "zdr": true
+    }
+  },
+  "created_at_utc": "2026-10-25T23:12:11.990809+00:00",
+  "official_model_doc": "https://developers.openai.com/api/docs/models/gpt-6-astra",
+  "notes": [
+    "Replay uses exact saved system and user messages; no new GPT-5 outputs generated.",
+    "Previous-test names are preserved; previous results are not inputs in original Gatekeeper batching.",
+    "Single-sample comparison cannot measure repeatability or establish a causal effect on final diagnosis."
+  ]
+}

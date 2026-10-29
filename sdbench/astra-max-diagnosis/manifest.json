@@ -1,0 +1,77 @@
+{
+  "created_at_utc": "2026-10-28T18:05:57.386959+00:00",
+  "git_commit": "304ce9625a046cea97d64e3b1ba5d19217b5095c",
+  "sources": [
+    {
+      "path": "data\\processed_case_data\\synthetic\\case_0_Case_17_2026__A_58_Year_Old_Woman_with_Recurrent_F.json",
+      "sha256": "b3bb7ddabe1548a5946894ecf916aaf467217b8e63bfe6deca3a9ef860f1773a"
+    },
+    {
+      "path": "results\\seungju_synthetic_baseline_gpt-5_train_20261025_183616_k1\\json\\case_k0_0.json",
+      "sha256": "19cdc9815b028e97db4fa9609f12fde44c670761079e84806f302f0ecceb1222"
+    },
+    {
+      "path": "results\\seungju_synthetic_baseline_gpt-5_train_20261025_183616_k1\\run_config.json",
+      "sha256": "e25b38e083f2264827d028e7dec4e18936a7cae47e12b93c0f4b4ba3ae00d042"
+    },
+    {
+      "path": "sdbench\\agents\\baseline.py",
+      "sha256": "23a30559e222478418a24c75d79a0f7275c865b5e299db87bce7579ca5dd1160"
+    },
+    {
+      "path": "sdbench\\gatekeeper.py",
+      "sha256": "ca91392afdcecc43d6d29e622faa0044890a49454353679d0f76a8752a47bde3"
+    },
+    {
+      "path": "sdbench\\judge.py",
+      "sha256": "abe49c2426fb7fa998c7b89f54e1a8fcfab61841b3dd13265310d67c7497a2d3"
+    },
+    {
+      "path": "sdbench\\harness\\harness.py",
+      "sha256": "d4dcf1971e538151ba437c59079ae6cbbd98d0c45c102bf8fd2f85574285e9cc"
+    },
+    {
+      "path": "sdbench\\prompts\\gatekeeper_synthetic_tests\\v6_fixed\\prompt.yaml",
+      "sha256": "88a530d5ae9e943fbbf7c39b74de2808b2d3a189295e3fbd4c69d10d97689c6b"
+    },
+    {
+      "path": "sdbench\\prompts\\check_diagnosis\\v4_reasoning_with_tests\\prompt.yaml",
+      "sha256": "a8efe9a616f539fa8956d47e2b6ec9f4ce378fa36b6c51ff38fea7cbbe9c1cf1"
+    }
+  ],
+  "baseline_result": "results/seungju_synthetic_baseline_gpt-5_train_20261025_183616_k1/json/case_k0_0.json",
+  "model": "openai/gpt-6-astra",
+  "model_args": {
+    "extra_body": {
+      "reasoning": {
+        "effort": "max"
+      }
+    }
+  },
+  "case_id": "0",
+  "repetitions": 1,
+  "agent": "baseline",
+  "gatekeeper": "gpt-5",
+  "judge": "gpt-5",
+  "changes": [
+    "Diagnostic model changed from gpt-5 to openai/gpt-6-astra",
+    "Diagnostic reasoning explicitly set to max"
+  ],
+  "preserved": [
+    "All SDBenchConfig fields identical to the previous saved run",
+    "Identical initial agent system/user messages",
+    "Identical case report and reference diagnosis",
+    "Identical Gatekeeper initial system prompt and version v6_fixed",
+    "Identical Judge version v4_reasoning_with_tests",
+    "70 turns, chunks of 10, one turn type, same baseline harness"
+  ],
+  "initial_messages_sha256": "4cef6b1252231190ceebea53b2c629d55766dfebcf2e1554288d0e441aa32d8c",
+  "clinical_costing": "Disabled, exactly as in original diagnostic run_config.json. Old post-hoc workup cost is not compared against a missing new estimate.",
+  "recording": "API wrappers only record requests/responses; baseline and harness policy are unchanged. Resume replays completed calls locally instead of making them again.",
+  "limitations": [
+    "One observed trajectory for each model, not repeated-trial performance.",
+    "Gatekeeper/Judge settings are held fixed but their newly generated answers can vary.",
+    "Agent model and reasoning budget both change; model-only causal attribution is not possible.",
+    "Original run did not save complete API usage, so original API spend is unavailable in this comparison."
+  ]
+}

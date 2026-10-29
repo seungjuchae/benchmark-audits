@@ -1,0 +1,33 @@
+{
+  "kind": "Post-run assistant review, not additional model-generated grading",
+  "conclusion": "The proposed failure of awarding full credit or a passing score to this unsupported related addition was not reproduced: all six A judgments were 5; all six B judgments were 3.",
+  "scope": "One synthetic case, one perturbation, three calls per model/answer; not validation of the entire rubric or a frontier diagnostic rollout.",
+  "reasoning_note": "Both judges recognized missing case-specific support. The 3-point rubric says incorrect AND unrelated, while the added condition was selected as related; the judges applied the incorrect-addition rule more broadly. This does not establish that the clinical condition is biologically impossible.",
+  "wording_note": "GPT-5 B repeat 3 uses unrelated. Preserve the wording without treating it as proof that hypogammaglobulinemia cannot be lymphoma-associated.",
+  "explanations_ko": {
+    "gpt5_A_1": "기준 정답과 동일하며 핵심 질환, 면역표현형, CNS·피부 침범, 이차성 HLH가 모두 일치함.",
+    "gpt5_A_2": "원문 병리와 검사 소견이 진단을 뒷받침하고, 빠진 요소나 근거 없는 추가 진단이 없음.",
+    "gpt5_A_3": "핵심 질환과 관련 합병증·침범 부위를 포함한 기준 정답과의 완전한 일치로 판단함.",
+    "gpt5_B_1": "저감마글로불린혈증이 기록되지 않았고 정량 면역글로불린 수치도 없음. 그럴듯하거나 관련되어도 근거 없는 추가 진단이라고 판단함.",
+    "gpt5_B_2": "정답 부분은 전부 맞지만, 단클론성 단백질이 없다는 검사 결과는 저감마글로불린혈증의 근거가 아니므로 추가 진단을 감점함.",
+    "gpt5_B_3": "추가 질환을 입증하는 수치가 없다는 이유로 감점함. 이 응답은 추가 질환을 'unrelated'라고도 표현하므로 관련성과 환자 내 근거 부족을 구분해 읽어야 함.",
+    "astra_max_A_1": "질환·면역표현형·장기 침범·HLH가 모두 같고 근거 없는 추가 진단이 없어 완전 일치로 판단함.",
+    "astra_max_A_2": "기준 정답의 모든 요소를 포함하고 증례보고서와 검사 결과가 이를 뒷받침한다고 판단함.",
+    "astra_max_A_3": "기준 정답을 정확하게 재현했고, 불필요하거나 근거 없는 추가 진단이 없는 것으로 판단함.",
+    "astra_max_B_1": "림프종이나 치료로 생길 수 있다는 가능성이 이 환자에게 있다는 증거는 아니라고 명시함. 정량 면역글로불린과 감마 분획 감소 기록이 없음.",
+    "astra_max_B_2": "IgG·IgA·IgM 농도나 감마 분획 감소가 제시되지 않음. 단클론성 단백질 없음·정상 유리 경쇄로 해당 질환을 입증할 수 없다고 지적함.",
+    "astra_max_B_3": "진단의 정답 부분은 완전하지만 추가 합병증은 원문·검사 모두에서 뒷받침되지 않으므로 '정답 + 잘못된 추가 진단'으로 분류함."
+  },
+  "verified_quotes": [
+    {
+      "id": "gpt5_B_2",
+      "quote": "No immunoglobulin quantification is presented",
+      "translation": "정량 면역글로불린 수치가 제시되지 않았습니다."
+    },
+    {
+      "id": "astra_max_B_1",
+      "quote": "Although lymphoma or its treatment can cause this complication, that possibility does not demonstrate its presence in this patient.",
+      "translation": "림프종이나 그 치료가 이 합병증을 일으킬 수는 있지만, 그 가능성이 이 환자에게 실제로 있다는 증거는 아닙니다."
+    }
+  ]
+}

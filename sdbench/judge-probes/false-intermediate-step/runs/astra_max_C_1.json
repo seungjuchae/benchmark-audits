@@ -1,0 +1,96 @@
+{
+  "id": "astra_max_C_1",
+  "model_key": "astra_max",
+  "variant": "C",
+  "repetition": 1,
+  "request_sha256": "da37b32f4d3e3c397c6a8125f065e36e04bdc46bef089aa0f5d7c7212435ce52",
+  "status": "complete",
+  "started_at_utc": "2026-10-28T19:01:46.261789+00:00",
+  "response": {
+    "id": "gen-1793214107-zyzCMmt31SxScwGKMu2q",
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": "**REASONING**: The candidate diagnosis is identical to the reference, matching the core disease, immunophenotypic subtype, sites of involvement, and secondary complication.\n\nThe reported deep skin biopsies establish intravascular large B-cell lymphoma: large atypical CD20-positive and PAX5-positive B cells occupy small-vessel lumina, with CD31/CD34 outlining the surrounding endothelium and a Ki-67 index of approximately 95%. The narrative’s MUM1 positivity, CD10 negativity, and weak BCL6 expression support the non–germinal-center immunophenotype. Marrow re-review additionally confirms intravascular/intrasinusoidal lymphoma involvement.\n\nCNS involvement is supported by progressive encephalopathy and multifocal cerebral infarcts of differing ages, without a large-vessel or cardiac embolic source. Cutaneous involvement is biopsy-confirmed. Associated secondary hemophagocytic lymphohistiocytosis is supported by fever, splenomegaly, hyperferritinemia, hypertriglyceridemia, elevated soluble IL-2 receptor, and marrow hemophagocytosis in the setting of lymphoma.\n\nAll qualifiers are supported and directly related to the primary disease. There are no missing reference components or incorrect, unrelated additions.\n\n**SCORE**: 5",
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": null,
+          "reasoning": "**Evaluating test results**\n\nI need to think through the potential contradictions in the test order compared to the reported results, but I shouldn't overthink it since the results are clear. I should mention that \"the reported skin biopsy results show...\" to highlight the positive outcomes despite any comments about order. We should emphasize that while the modalities are consistent, only cutaneous involvement is confirmed. I'll focus on ensuring the diagnoses match thoroughly and structure my final answer appropriately.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.summary",
+              "summary": "**Evaluating test results**\n\nI need to think through the potential contradictions in the test order compared to the reported results, but I shouldn't overthink it since the results are clear. I should mention that \"the reported skin biopsy results show...\" to highlight the positive outcomes despite any comments about order. We should emphasize that while the modalities are consistent, only cutaneous involvement is confirmed. I'll focus on ensuring the diagnoses match thoroughly and structure my final answer appropriately.",
+              "format": "azure-openai-responses-v1",
+              "index": 0
+            },
+            {
+              "type": "reasoning.encrypted",
+              "data": "gAAAAABq4kasOUROd_eACZeu-xf6TQ267MALoD-zjSD-_b-EJy8cwm4r_Oj5BV9P2-Fd52WrsBo7upoUqfhsk94JaMazuotpbzrLFgSvKXGoaUn1veBrd1TjKtNrzYKtsJ8vtw3ey9tcWb2_8GbK-IhzX9Znp_m5_Chwyrl1pqAzCr_YhZl_GzNJQ3qizm1_Wgt6h7Jxf6EXPFZAlA1sZfswArcElEAgNjmTML_nOD2_r7yx9DjEWxbKNjU_tsyvdhFNwT7D1rsJElMCT5QC2esmtn3ZO82o6qvwcjbPFSkhJMDccyXGvu9eO133ifL2FjhmYcZaRC5ry41cIieLAMGmjG8gquU1FVGEo-Z4I7i7M_fdW-YiKwlE3h1dXgHScwXllDblqN0_21ebCe_jyNVC8AM3y-YaHn3dtnOcnmZLwK8CvQ40g0wTvY0BtE-DwS3IjcjJmdaC6_fYhDJvyRa6B5G1d3BRvhDbHXhRcWzFnhfNOqePBC3vT9uaag-CtMUZSNUwu3bnkZ3uHttZ3V_KvAce6EKlagoTUiHbJ_gF-36jng4-fUgHiGiBFUN77w538MFls7aepK71edLWY9fkv13uqo1dio5letMgS6jiqHJndlOjQma7-kxN31jPLOadtsQZel6j-1occNvDrYl_mwLJqcyh2-hYnDltTRi-CGR-cCrdf93aqxQzZAHTP5BJzh7j5r9iOeNzeVD0EdXsZvvxMPExPLWiXFkcNunZufdN45Mk7kmfIXf9NSRtSSzNPnQopujJOxZxcvrMapCjq_7BefpVf5LgNJ99eQc4MWb85PL4X-bqJy2WnFH5Cd7NSZZkGwxFmxFAUE9zzJBzRAtJbg8sNVj1ZzMSJZyapIVPrAw60UciD3xtRzb9tmukI8fzKPnmzctrFmCpCG57euB_mcQ2j1u5jT_w7SriQkQVnbOr0rP58-Li7FSMzLL909G1vdAvSdHUIq542KB0bINM_0CvU5gfwQZ7gtPl1LoqdukgdQzd7rne8moOhJ4Cbjqnwi5ft84ZSkR96ugbbb9G2WtXnwp8ViDMGLi5SLi5BzQVtx9n2-TIKE5Cs49Uv5bbRsV-jQh4HIPnFw938tYj6s5NBbWmsoXS6DUut-SDXUobtoGh1RR819FcA_sj5zJ3kNtHKLZBl-p7q1aRqoFajjWr1vrQ6RMkEAKwIp-2NnDvy_ZUqzAd6fuN-hDxRZFn1j50BDS0PwMJ6vDnWeNn6MtiUiSsH8Yqf0XarXSbNGQhLj8qKYe_xsKD5gkQM0pWWQzNVLO8jdGDwAVqPDJDvg_m8SVRTwhOReQeVlFkZKLIzC3sGXY-XlfebbnWRdZl-jtnVTWIT0HPJc_ms-FzCuLZCTa_p51GIQfdA-tK-MEOTyxFfiU927YHo2jujbMxllpt8SFYOirHStXf3fR5coOpQdgttAiEbNEsvxPMRsR8GT91T7XndezBjXUA-I4pqaiRSng186-9LCxsVDQmYPQwyRVPnBGNMBOdlewe-687-K9xiUULFhOuWFt2hdRCdzFZchYOVIpmAW9sYTpw0-5YiiAKXLjyJVGiDzxei555Az8utrbPdclPfCpGbzOJry_iUZL_IyipSZHyDNvQPDpS8fc9sq2pm9CpiXPfBAUcitVojha4a2WF1L2SpCtpPDfC5xqlhLOC2pVDHKMdRLtkeIysVjSgWzYDqckys62-9yEQhU2NA5dvois_Q4AT3lZT3CyVdmBv5inClVx2coxQne1NQqTatNwFhNRxJCTc16TsE_uxVVc5KmWEb4AbZcOGg984__wRcr0zu0LR_t5Pokyt2jJ5eCB_LZ-3p0eN6Yzo_oQ7sXBUtQ9dPKmKBy9YaQ1K-o_ulwmuVnr4OekCHsCIPdS6nJTc_wOva7j8rAvVamJjfFRIn6FHOF1v-QeD50ex_8g8Gx58aFfy6HRTNrzhV28MW9H3ShX5jgyrz2BE777LSHYdLUMCIMP94Z8FXyU8GjA8Nva21_p2zNBBbxqCquTZuqPucSSMSGLRRtl44-ZaiOJDUKwFGCMvv9xr2noVbovy4BFSBXNFmmICMkyWZQ8RzzmjlTDTUiOhEZhZdut9DjXNgviE-zzwYfLZAN2puzO6I3SDGfPBMC-OBPmdBfzJHpWA9xVoHcSFBf1bs9MZq4UVn3YvCSq9HPGQr2vqHnKlulz6pkufA9P1KN9Tk5Mn2BxHQ2SGjSzdi_atKyWdhrnF-7VtGH6vIvUrLfMbBvUEkgy9gyu-DZgCge6Fb_scPQPA9hQ4-A1nHW25kyXxrFtvruST2AHxCiAKuBs4QEtzn3N-4XNXQmITHofsfQsEvGCrm-c2sK2ERZDXOfwvWM52BJtI3BCQuLsbe8sBzJqWQ-IWSSz4mp7cL2pjv9ZRPvsOy7JtMeBjM-SwyZMMfPyFKp3uqevbnx9aXOaeQuJd3Y180MAdpFYBQuKAudab3OtEzXXhwyW42yglmONFv8DWLcdU--dA4l0NyXgw-drO6DLsZ9cBPpf2n7PLsfLoKhp9ZEaqX6eTtNPSoxVfieRvbF74JRLMldM4xVVV6rAnipqt4YEiUIDYGfg9wNQC4gyDvPDmwb5RzjqUn3oNTNgdHLJUcsUfr9oMG85w1fyHKFMh3ijD7M1e0-l6gl69y-j3VE32sV7j3gIEfm0XYJiRAD9_OK3K2x-O684cH10PY314RAG05WJO4fLH7Z6dFb1gLWRFn-u8_zYdf4M1ygnF_WIYm8xhQQt5hthujPtpOiVciSLWrheD56GlCsv_-Tw60YaYkW1V41dA8D9OHHy7s259UZFMX-33wmihnzYb2JJQTGcClRZIebvQDgygBy-L2lFaCjVDYtB_J3txaDqcSeoNsLaGu2KqIJ8yRgsXldBWViml1eeg4fWF2PT7ZARd_vZ4gD6mAk4-C3Sb7J4M_J5ApVQrpnVYCnneVHiKB9Aku5B-yFFbJtXPqFq1nT9rrZ20HsZa2wXpck_sQxYApEyYhzMZmbG2mN1acdUQMmle4PZaaxSOC7gfIEt0NKpJoS8O9QbZ21-7L6f6hkGnllOHeiKDFaUjLTdAAS0-naj_9SxYqXLOFbOhZUmNR4X7Mwrt3h8-tyBL2xYfm9kOp_4pLRTA4tpT28udpSqMaF1bhztv3Ke5SL1jvmRqUzNbb9S0b-suAQ97KjspgceZjjL5VZUetDIF0nxcGAZUazmxu2fCoX0Bl0q2iNk-sPNseHGvtkI_gy7pVtAkms9NDUIpG94JOUdp_WUFK-2Wjoz_NUxz00aiRCgdgU0AH0Qmwx8y0k3OKz5zieHZyf3ap5DV_32ONxSBhYdf-YjWq9oqSxmKeyIqzZlEpWu49sVqL6SB4t9n851k4XvTmUDinIrHEyCTeOOr1pjn31OvtqVq0HIjtLuXiZroa9fCHn64L2QQlk_kMz2trt6T5eMfGAacnzrxueBeht2Uv9Iuz7x9KevguiwtPYay9tGs_goRl_oZY90Enio4gv9rVXuESTanr9OuLIQy8vj_bBqscYltzsjkcNY66DA08Hx9AI9P7AT1XkQQGLxDquB44A4m0Zz78ZMQTZisNJH9ltTV0uXk34RzF_UyfDueczhnyQns87T6NChoS8UCQCR_IFaWg7aaXIgv_7V7a5SywA1i_QlRJnPTXMygX29PZwun2MM8sVNVpmF2dt5_9BeERdnvCL6sgGWAJVlGF1FCo3JOafBISBzO7ty450dMsq9Sj_m71xNkoic410x7KkJ3LzFNoiQBBW3AiqJPX-y4UdCPx5MMHnvI7o2BGmNH_iVhts8lHOt6YiTWEsttwcZvNK0x5AB_FS5IgbQHOAX2WbBlM45gBTpPBwgJEpfIqjWTrNdGMfbk5zQhyAY9vNTsjXrrOfiYu2KyFDRW_OhjrtKDOrBwJB0Q8BPzmkayAGGPY_l4PGFeqJ45S_Hj4B2FjCjr1ZNm0l9CaxmXieYVElbDpB-a0dukgS2RVOf780cXtYd779gqu1W_YDreHzOHR0DjqLLf5zBW5ECW0r6RwRhK13kFh_v09fxEHLm-nWOaplaAcbv7Io1fCc6Mzdhso08OoAa9HgQHHevVJXDJNwV5gXqqO_I9eOCnzzYOI5zX_5Slkvjc91T_0Chja6CLeQNZbibQDm9_0UIdYCKTShQs7b8YkIot-cEIaOnPvmOLQhWiSvxq7JnJ8m92z3ryUiD35cACX-ptBoYqBrqZpRjDGQG37uQhU46YQK7qCzL8UNVCl3Z4Lr2kfuwg8kU04uHY6HtIL2K01SqzbMcp2hkC-el1ydCwFY_q8xHnfno2dYyzsASsbkRK83xCdvsqf30v6q9FgyMfzyG6yyj_AQ4BafaD1Mc_Ye7d7HpIRDJD3P9KDk48w4bLLzDtZ2pYFJAhM__PBgfVwIuSSnUi4SvlXU_MIYStHq9JUL9NsRaCpVRvUAe8eYAPr1g_ezhQv_RN9LaPFaPLl96B.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWFzdHJhLTIwMjYwOTAzfGF6dXJlIn0",
+              "format": "azure-openai-responses-v1",
+              "id": "rs_05e1e810aa88bdb6016ae2469f046c8196b01b5c97f1cd0588",
+              "index": 1
+            },
+            {
+              "type": "reasoning.summary",
+              "summary": "**Condensing a diagnosis**\n\nI need to make sure my wording is confident since the scores are exact. I should condense the information into two paragraphs of 150-200 words. The first part might look like this: \"The candidate is identical to the reference. Pathology demonstrates intraluminal ... non GCB markers, with CNS support for Secondary HLH. There are no omitted components and no incorrect or unrelated additions.\" That gives me about 180 words to work with.",
+              "format": "azure-openai-responses-v1",
+              "index": 2
+            },
+            {
+              "type": "reasoning.encrypted",
+              "data": "gAAAAABq4ka6I5fQcChZWgy0gbBY8CwkC9ym3QhVRt0J2FXfkTA8RFQWrDDlctEhC6ifP0-yT8IbHOj4aHhb0lft_SPoB84z5iyM-ZAT_CIsLlo0U15cSb5jHGQsfmJv8bV1cCL7zAhSOr2bBTG2jkb8QbWBqTuxfUJGqz4BCBtwpjbZBUCq0uqugYw7hGBwoCwm0t2Wj9JYRsYCjoXoTOstkO1pI_nK3rXFiExmD7wgwFLdNWrtiClLAOjZ_fvY0F5lk7PWQevfDNWxPSo7VpzDHRMWzx7BTYvwj1XfYGZR_kyTbN30Z3r2PdSVRmTdHcLGNhtqqisXd9LEfTV67jS0ovu_K2lAT7tIwAbQravikDxIDyojRHwuhht54Yxc7A3isMRKB1vtjrtJuKnnydmXnSQFY8ZWkSq4Lgo1xUoZ4XrIPf4ksSOJnkqiJ7lrXgRAtbOnyaWTDIz1wrs7HrDLiawEUYVaLJ0KmJH7-5OD5cp3Lukin-HssoVLnDnz7CD6IzsWqdKw7Z9ZOPNvWJ5a-3rksBzxTu-wgyXXfjJr1uWbMFRlC3H-X38AgRYLf1DVsB1mNgc9oAKl8bgHSafFOaEC52SsUbfS6nSFI6ACZSwQP0UNr8y1zaU5jb-t0z3i6Qm5-PGpCgjfiiBi9Pp8nimjMVJbkIK7xXdR9Yq8spSFdCnwLwRdofNho01ln4pEpxbhSMS_p3Rx0Ts44Mha9z8Ci5RIl3XwUQHp5rT3KGili5oWg5XBWholw6hA-S_oAfDMG9RXLN8kV_i8OAFujkCp8-nvmDxuU7NHuOYC8uENX0NUos4DZtiscoz0jeuVoE24VyiMxDo1yedfMw0pKT4CIPbFFanR3nwOWfoz9d9L15pQdD6Zm8CZ1eqmVmtSNkAov3PMsq6xsnsJNV1zkVn2jCJK8vs6LQqjixA163KiCYAskJC_RlbWzM2AjELg3avA3Cgk8LFJa6S5lB4e2L6Y8gY7F_cbc9nWTkloi6G59n5RR4vP7cPEuNGHYWP7Jwbo-1R3cUNTc4oh2lewiF1d4jP1JT6YN32xRyb7Yuouq3IQuwwXh3NMTiKMd9TJInS4aLes6qEYtwX7nQju5h_JGBa0cs_Uwit8yLX54qlNeBOvxLifiWxTJfH7JDJf6SM8oQoPeUla7oh0YFX_MtxKYvYBCben1O2TEOAidjP0GSmyNTiE50Ja8CwYDDH4ZFBOfyEG0e49LW7ZrRSdOS1PvOJxRUUmqUdzIaTjVRnBOZ46Eb-NmASKnnS3TODt6vxdvlWI9M84-G7hRZygHa8qs73zd7a16Jed5xrAxTHP1VYsSKCbP6JYxc0m23BYRf25Ll38e1WtqSWMGb9gIbwK5Qad5GXxNA8fo1l4CI0eW_Ssccc0A3DIIvnX3jwhVFghUiY_sK2PQ09h2z4nEDg24zYjfaBMrViOxgiqdF9IH-lxUEjySLelCSfqR9OnkJjtqXEkkK1cjI58FZwwXlTEGwrAW4F-FFpX7ncgiXWVKwqjTfurPfZl5LRxQtJnvsQvPqqa7tS7Rpj9i6g4quKWfsHJvbogXu1EwGBq1fBMQugwTB4D0FUK_S6fM5RZ4LoxJd8EYicZcww7Dl-fQ2cooWpeCm71w6WPMAs-TbnwFK5tLz2eYJTWuuN_2WBze1LDxnx0A5zMCcafL7PhsLdD69FlA755GeHO64GNRSRmnBCffmQWEMWiGCfrTJt5AHosXGzz4C2bfVANWIuxl4TfocYKGcZ8N9trQk3JluFF1-zXhisbG8ChuXE-3dRWUqqQorlOL5lwBvRVYtaWwKk7qHhkduUQprRQFtU4MGRRjFah2mU80BWfvKoq00qkKVr9NQmx1YEnuA0tU05bKJLumT5J3zsX_8WXACWgvTGspyOq8XwtU1D5ru5otmLXEv5h5hEHwFmSrxHLgO3R_Bcoj8TFN6Hnwg8RA0XoW9CPnMspSPDztdgkoHXl7ohwq7HlR67t41GyQq4g42C8h9yAT6EZHel9c1CsfjZsQ7IOwFJn5pzq1h4gzuF58pKkLiDkqy_29jv9zIeXMlYiQcSshdHmnWKEiVaEvyigku7z2ZXGUQZtY21SPpUXj6JN6YqDicLp2bOUt_7iTc4gFSl__J9_sIWVpqiy4w9XeHtDQvpmKRknyNrgotXXgc-zNoAIhWr8Sz3zzVB9NBuapAMlaFUEdEGO4JrmfPf4_04ZD7JDphqTGZr889PIIGCCIadNeHkgpS6ouVh0PjO5rLUTCGHbHiZPPGZFu6-x4cXfJ0e8siQGA_Tnk1uVundyklLigw3fr4glwEhmxpuxhJpYYyo5Ek-ejPBYUwCUUYGmHV0QPczojrgN62r7amhlnm_MgnHwFax3RAc0TADKPhBPG7YyGgVRNSJtZwSBhStW7h0b3boECYU1bbMad3k2nV2AkkJvr1NCaluu9YP8mE-06zvoG8aRZIqyJlx-bxJjL_ombyWMPCNS_JwAnGJDpEpKpZ-Vu7wRiPPaMM4cyrkzWiNCS5mxl4q83g3NNvPN9XH_PcyD0Hx6U2UfvR5Iz80nRLF631q2OzqP3vHr0QsDyA2n6oTJ7vtx1fdT5ie89JimSEDptnTi8DULJMx7CBXYjjeiG3MbK_bjVyG9B_ET-clsT1WNGuXoYvtJfIkjFmTSlRGlv_vleC2yRwH3XZoUzDL8bjw9ovpj9GDax7V5hnP3daTavTfBBs9ifzipXKjAMI4jRpcdnU9etO7NUiBcIGxoGM6xcGlbZEYXtO0DebKGij1531dIvqao7cLooDuD1vilJLN66BDkgVggMBMkUjdSl86HmOEUM23qvZvxubedBYPdLjU5g_7TzTGAo1wZ4qQotzJag1U9UgI8APOke26SRzPVO9NXh2fznPF0ZsBbWXCoB7UzQQjKkED4A_Y7mWzWBU8ghitSJCVNkGwmKCCDioUaoQiMj-LBPzHN2qII8A2LGmQ5V4x3O5PUdLiujwkEet8rvqxKV5U0mtnCXH3r-h3sEqQRI74-pP3uSrYbTNQrHLW4qeQo59co-xt9jozbCObUcwuuIo1E_DrASqKnKJb9UxhqX5cLIb2nkmrHGS3MLXUanibcnEfGUwh9kJYe-0aECE-NrOWMFO8cLPUnR7Klqo2cC8AfhqUCcWmvsqi__07FXhbQqmIWeovBePlwxSXNd_dSsEyOezZRn8e3Y17MP6T_yGgP7_aKfN_2DcXewp76njnhBUUtHkejO11ss4-kZnfP7zeVC7U6rWpqARn3VD2usAlNCP3ZX_irSh1f5xKcClQ4qFcm7j6wcYWSxSnx0J14tZQjyYE8w3c7MWXeQOQWaSJtMGMPG50c50JwM7kWMDxEaGHHJBQRqULKPgCNINVOwFBFc8QDCiC6FLo_ifG1hR4ayNcAcLuK98f5O3YdWdkUWFm65RQPR6jFb_HnkzU3hWv1yxdCoQlqoEvRe82jr6ZUwtgOXYoV-BY0D6v5I0_J-BWeLvQj0x7-DQgkRe5EmHtWFayLRttmb-Uc-tkHi3ookH8-xBTjjHm6kIK5DHuYjLyQze0MVZeeTyMdOZZDE2R1adJujsTvF8PV578sWHwOFdJOMgZxwfVDfo-RqYtmnPzmE-n8QfDC6q9xj7IG0y9Drc8WO9dDOdCJEtF71V3EifRHJdc-nec54MCSaYXqo-C1qHnzvrsj8RoBavAgn3ZZ0nwlW6p0BCLZ0Fiy8es0GPxs2v972hIwKWr02_f6B3Mwlkl0XGf1HK5xx15cby_ucyPS46fQurJ3HipFAF-1onB3V5mevSHcSk361_022oSYUkOXwF545IEfb-8NZsvPEOA8hs7qpEfGjS7f4URWId6vDhcMUzIrK8Mq3TguSUnjlgw1AA8t69199SA9DhxLCA_2Z9moLoGPT2jSigOS-xepyA_JIHxXeUM_3PZMln4qCOyVAeCcmxPACJecdMm5Kuxw5v_1t9yz8EVzW5cx-jjhOeT8_0mk4bWqbnBcR62pO3fQdbO0k6l5Aq7CL6fWwoLxT67Lxua72xbkToddMZA28c8py9nGhjEiQH2iZvB4jGE1eoCZ_MuLWHWNxuoAn-Fx1t-wO1ud8VZ5m4wjpqBjcqcNsv-vBQAYFFmgcI8kUAG9IjWqKZVpCqFWiVf_0A0W2pYMVNbfrQQXzZHVWhf7oTcj20IBUAcRAFq7Q7Wlf7tvK8vTbgLSNkiNLIz9fUgh0DerPVkxV4ztI6DoVRncndLOUa4k6dJwKmSIVQcxbcO3AcHRVfQmJvB8x1ty1hMZQg0W8uOS1DXiwS42GE8heQF6tuc8InkhRUtItsRylftDm1hMjlwdYQH5E36WFju3glumhfgzOnGXdZxHyAiaQO7eKi49OYhzmCnLRiYYsE0tJ2aDaDrs7bJfHUYFUN3XxSCX1bF9kWks0BYW7cZWI0vMh9WnbbiHZZc_Qf_ztW5ujD4TGoeb1NdsGuq6YSG_bzMz0oE9iW0q1y3f4eakcv1H4U9VZ-E4Em-CzJPNwGSyhe_rof33A2gdmzni9cKFlJD1.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWFzdHJhLTIwMjYwOTAzfGF6dXJlIn0",
+              "format": "azure-openai-responses-v1",
+              "id": "rs_05e1e810aa88bdb6016ae246ac97388196af642f011bcd1feb",
+              "index": 3
+            }
+          ]
+        },
+        "native_finish_reason": "completed"
+      }
+    ],
+    "created": 1793214107,
+    "model": "openai/gpt-6-astra",
+    "object": "chat.completion",
+    "moderation": null,
+    "service_tier": "default",
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 1304,
+      "prompt_tokens": 12591,
+      "total_tokens": 13895,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": 0,
+        "reasoning_tokens": 1034,
+        "rejected_prediction_tokens": null,
+        "image_tokens": 0
+      },
+      "prompt_tokens_details": {
+        "audio_tokens": 0,
+        "cached_tokens": 12588,
+        "cache_write_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost": 0.077818,
+      "is_byok": false,
+      "cost_details": {
+        "upstream_inference_cost": 0.077818,
+        "upstream_inference_prompt_cost": 0.012618,
+        "upstream_inference_completions_cost": 0.0652
+      }
+    },
+    "provider": "Azure"
+  },
+  "completed_at_utc": "2026-10-28T19:02:21.421269+00:00",
+  "elapsed_seconds": 35.16,
+  "score": 5,
+  "passed": true,
+  "grading_output": "**REASONING**: The candidate diagnosis is identical to the reference, matching the core disease, immunophenotypic subtype, sites of involvement, and secondary complication.\n\nThe reported deep skin biopsies establish intravascular large B-cell lymphoma: large atypical CD20-positive and PAX5-positive B cells occupy small-vessel lumina, with CD31/CD34 outlining the surrounding endothelium and a Ki-67 index of approximately 95%. The narrative’s MUM1 positivity, CD10 negativity, and weak BCL6 expression support the non–germinal-center immunophenotype. Marrow re-review additionally confirms intravascular/intrasinusoidal lymphoma involvement.\n\nCNS involvement is supported by progressive encephalopathy and multifocal cerebral infarcts of differing ages, without a large-vessel or cardiac embolic source. Cutaneous involvement is biopsy-confirmed. Associated secondary hemophagocytic lymphohistiocytosis is supported by fever, splenomegaly, hyperferritinemia, hypertriglyceridemia, elevated soluble IL-2 receptor, and marrow hemophagocytosis in the setting of lymphoma.\n\nAll qualifiers are supported and directly related to the primary disease. There are no missing reference components or incorrect, unrelated additions.\n\n**SCORE**: 5",
+  "grading_reason": "The candidate diagnosis is identical to the reference, matching the core disease, immunophenotypic subtype, sites of involvement, and secondary complication.\n\nThe reported deep skin biopsies establish intravascular large B-cell lymphoma: large atypical CD20-positive and PAX5-positive B cells occupy small-vessel lumina, with CD31/CD34 outlining the surrounding endothelium and a Ki-67 index of approximately 95%. The narrative’s MUM1 positivity, CD10 negativity, and weak BCL6 expression support the non–germinal-center immunophenotype. Marrow re-review additionally confirms intravascular/intrasinusoidal lymphoma involvement.\n\nCNS involvement is supported by progressive encephalopathy and multifocal cerebral infarcts of differing ages, without a large-vessel or cardiac embolic source. Cutaneous involvement is biopsy-confirmed. Associated secondary hemophagocytic lymphohistiocytosis is supported by fever, splenomegaly, hyperferritinemia, hypertriglyceridemia, elevated soluble IL-2 receptor, and marrow hemophagocytosis in the setting of lymphoma.\n\nAll qualifiers are supported and directly related to the primary disease. There are no missing reference components or incorrect, unrelated additions."
+}

@@ -1,0 +1,35 @@
+{
+  "kind": "manual review of saved text, not an LLM Judge score",
+  "diagnosis_rerun": false,
+  "judge_called": false,
+  "original_hash_unchanged": true,
+  "exact_original_messages_verified": true,
+  "gpt5_refusals": 0,
+  "astra_refusals": 10,
+  "astra_refused_requests": [
+    "Test to order: Urinalysis and urine culture",
+    "Test to order: Thyroid-stimulating hormone (TSH) and free T4",
+    "Test to order: Serum protein electrophoresis (SPEP) with immunofixation and serum free light chains",
+    "Test to order: Antinuclear antibody (ANA) with ENA panel and anti–double-stranded DNA",
+    "Test to order: Rheumatoid factor (RF) and anti-CCP",
+    "Test to order: Cryoglobulins and cryofibrinogen",
+    "Test to order: Hepatitis B surface antigen, core antibody; Hepatitis C antibody",
+    "Test to order: Bartonella henselae and quintana serology (IgG/IgM) ± PCR",
+    "Test to order: Anaplasma and Ehrlichia PCR/serology",
+    "Test to order: Babesia blood smear and PCR"
+  ],
+  "gpt5_synthetic_flags": 10,
+  "astra_synthetic_flags": 3,
+  "replay_api_cost_usd": 0.685595,
+  "probe_api_cost_usd": 0.00035,
+  "total_api_cost_usd": 0.6859449999999999,
+  "findings": [
+    "Skin biopsy: Astra omits unrequested CD20/PAX5/Ki-67/EBER; synthesizes requested DIF and microorganism stains instead of reporting unavailable.",
+    "CSF: Astra omits unrequested flow cytometry; synthesizes requested enterovirus/fungal/AFB results instead of reporting unavailable.",
+    "Urinalysis/culture and Anaplasma/Ehrlichia: Astra returns a generic refusal rather than fabricated negatives.",
+    "Astra marks refusals false; false therefore does not imply a source-backed test result was returned.",
+    "Astra rejects some combined requests but accepts other multi-test panels. This illustrates uncertainty in the single-investigation boundary; refusal text does not state a specific reason.",
+    "New negatives are expressly labeled Synthetic within Astra outputs; no clinical truth validation was performed.",
+    "Single replay only; does not establish repeatability, overall superiority, or effect on final diagnosis."
+  ]
+}

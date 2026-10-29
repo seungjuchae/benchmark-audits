@@ -1,0 +1,99 @@
+{
+  "created_at_utc": "2026-10-28T17:48:25.285373+00:00",
+  "git_commit": "304ce9625a046cea97d64e3b1ba5d19217b5095c",
+  "sources": [
+    {
+      "path": "data\\processed_case_data\\synthetic\\case_0_Case_17_2026__A_58_Year_Old_Woman_with_Recurrent_F.json",
+      "sha256": "b3bb7ddabe1548a5946894ecf916aaf467217b8e63bfe6deca3a9ef860f1773a"
+    },
+    {
+      "path": "results\\seungju_synthetic_baseline_gpt-5_train_20261025_183616_k1\\json\\case_k0_0.json",
+      "sha256": "19cdc9815b028e97db4fa9609f12fde44c670761079e84806f302f0ecceb1222"
+    },
+    {
+      "path": "results\\seungju_synthetic_baseline_gpt-5_train_20261025_183616_k1\\run_config.json",
+      "sha256": "e25b38e083f2264827d028e7dec4e18936a7cae47e12b93c0f4b4ba3ae00d042"
+    },
+    {
+      "path": "sdbench\\prompts\\check_diagnosis\\v4_reasoning_with_tests\\prompt.yaml",
+      "sha256": "a8efe9a616f539fa8956d47e2b6ec9f4ce378fa36b6c51ff38fea7cbbe9c1cf1"
+    },
+    {
+      "path": "sdbench\\judge.py",
+      "sha256": "abe49c2426fb7fa998c7b89f54e1a8fcfab61841b3dd13265310d67c7497a2d3"
+    }
+  ],
+  "inputs_sha256": "19fa2317f9a77f3002eb5fa5c1918affee8962c921e43aa2c2331428591c89dd",
+  "added_sentence": "The lymphoma is also complicated by secondary hypogammaglobulinemia.",
+  "answers": {
+    "A": "Intravascular large B-cell lymphoma (non–germinal-center B-cell immunophenotype), with central-nervous-system and cutaneous involvement and associated secondary hemophagocytic lymphohistiocytosis.",
+    "B": "Intravascular large B-cell lymphoma (non–germinal-center B-cell immunophenotype), with central-nervous-system and cutaneous involvement and associated secondary hemophagocytic lymphohistiocytosis. The lymphoma is also complicated by secondary hypogammaglobulinemia."
+  },
+  "hypothesis": "A should receive 5. B tests whether a related but unsupported additional diagnosis is accepted as fully correct. No unique lower score is pre-assigned to B, because the rubric's explicit 3-point addition rule says incorrect AND unrelated.",
+  "primary_measure": "B receiving score 5 despite the unsupported addition",
+  "secondary_measures": [
+    "All scores",
+    "score >= 4 pass counts",
+    "Visible grading rationales and grounding"
+  ],
+  "case_count": 1,
+  "repetitions_per_model_per_answer": 3,
+  "planned_judge_calls": 12,
+  "diagnostic_calls": 0,
+  "gatekeeper_calls": 0,
+  "costing_calls": 0,
+  "concurrency": 3,
+  "judge_prompt_directory": "v4_reasoning_with_tests",
+  "judge_prompt_yaml_version": 11,
+  "matches_original_saved_judge_prompt": true,
+  "test_log_count": 54,
+  "source_absence_search": {
+    "hypogammaglobulin": 0,
+    "immunoglobulin": 0,
+    "gamma globulin": 0,
+    "gamma-globulin": 0
+  },
+  "manual_evidence_review": [
+    "Case narrative and all 54 saved question/test results reviewed before outcome inspection.",
+    "No hypogammaglobulinemia diagnosis or quantitative total IgG/IgA/IgM result is supplied.",
+    "Reported pathogen-specific IgG/IgM and antiphospholipid antibodies are not quantitative total immunoglobulin measurements.",
+    "SPEP/immunofixation says no monoclonal protein; no decreased gamma fraction or total Ig level is reported.",
+    "This is an unsupported addition, not proof of biological impossibility or an observed diagnostic-agent error."
+  ],
+  "relatedness_source": "https://www.frontiersin.org/journals/oncology/articles/10.3389/fonc.2025.1689028/full",
+  "relatedness_note": "Published IVLBCL cohort reports hypogammaglobulinemia among hemophagocytic-variant features. This motivates a related clinical addition, not evidence that the synthetic patient has it. Source NOT sent to Judge.",
+  "model_settings": {
+    "gpt5": {
+      "model": "openai/gpt-5",
+      "reasoning_effort": "omitted, same as original run"
+    },
+    "astra_max": {
+      "model": "openai/gpt-6-astra",
+      "reasoning": {
+        "effort": "max"
+      }
+    }
+  },
+  "sampling_note": "No temperature or seed sent to API. Fresh isolated calls. Fixed local seed only shuffles call order.",
+  "operational_settings": "16384 combined output/reasoning token cap; parameter-support-required routing; ZDR/data_collection deny; no pro mode; no extra judge instructions or A/B labels.",
+  "dispatch_order": [
+    "astra_max_A_1",
+    "astra_max_B_3",
+    "gpt5_A_1",
+    "gpt5_B_2",
+    "astra_max_B_1",
+    "gpt5_A_2",
+    "gpt5_A_3",
+    "astra_max_B_2",
+    "gpt5_B_3",
+    "gpt5_B_1",
+    "astra_max_A_2",
+    "astra_max_A_3"
+  ],
+  "limitations": [
+    "Single synthetic case and single preselected perturbation; three repetitions are exploratory.",
+    "GPT-5 and Astra differ in both model and reasoning setting; not a model-only causal comparison.",
+    "Saved GPT-5 Gatekeeper results are fixed context; no Astra diagnostic rollout is tested.",
+    "Raw evidence and qualitative review do not establish clinical gold labels for every possible score."
+  ]
+}

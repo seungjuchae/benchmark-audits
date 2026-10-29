@@ -1,0 +1,419 @@
+{
+  "model": "openai/gpt-6-astra",
+  "baseline_model": "openai/gpt-5",
+  "source_sha256": "19cdc9815b028e97db4fa9609f12fde44c670761079e84806f302f0ecceb1222",
+  "prompt_version": "v6_fixed",
+  "repetitions": 1,
+  "num_tests": 36,
+  "num_batches": 4,
+  "diagnosis_rerun": false,
+  "judge_called": false,
+  "reasoning_effort": "provider default, as in baseline; not explicitly set",
+  "extra_body": {
+    "provider": {
+      "data_collection": "deny",
+      "zdr": true
+    }
+  },
+  "created_at_utc": "2026-10-25T23:12:11.990809+00:00",
+  "official_model_doc": "https://developers.openai.com/api/docs/models/gpt-6-astra",
+  "notes": [
+    "Replay uses exact saved system and user messages; no new GPT-5 outputs generated.",
+    "Previous-test names are preserved; previous results are not inputs in original Gatekeeper batching.",
+    "Single-sample comparison cannot measure repeatability or establish a causal effect on final diagnosis."
+  ],
+  "rows": [
+    {
+      "test_name": "Test to order: Vital signs with fever curve documentation",
+      "batch": 1,
+      "gpt5_result": "Vital signs and fever curve (current admission):\n- Admission (ED): Temp 38.6°C; HR 104 bpm; BP 138/82 mm Hg; RR 18/min; SpO2 96% on room air.\n- Hospital Day 1: Peak temp 39.1°C at 19:00; overnight nadir 37.8°C. HR range 96–108 bpm.\n- Hospital Day 2: Peak temp 38.8°C at 18:30; overnight nadir 37.6°C. HR range 94–104 bpm.\n- Hospital Day 3: Peak temp 38.5°C at 20:00; overnight nadir 37.5°C. HR range 92–100 bpm.",
+      "gpt5_is_synthetic": true,
+      "astra_result": "On admission: temperature 38.6°C; heart rate 104 beats per minute; blood pressure 138/82 mm Hg; respiratory rate 18 breaths per minute; oxygen saturation 96% while breathing ambient air. Daily fevers were documented during the first days of hospitalization; individual serial temperature measurements are not recorded.",
+      "astra_is_synthetic": false
+    },
+    {
+      "test_name": "Test to order: Blood cultures x3 sets from separate sites prior to any antibiotics",
+      "batch": 1,
+      "gpt5_result": "Three sets of blood cultures obtained over 48 hours showed no growth.",
+      "gpt5_is_synthetic": false,
+      "astra_result": "Three sets of blood cultures obtained over 48 hours showed no growth. Collection from separate sites and timing relative to antibiotics are not documented.",
+      "astra_is_synthetic": false
+    },
+    {
+      "test_name": "Test to order: Complete blood count with differential",
+      "batch": 1,
+      "gpt5_result": "Complete blood count with differential:\n- Hemoglobin 9.4 g/dL\n- Hematocrit 28.5%\n- MCV 89 fL\n- White-cell count 3.6 ×10⁹/L\n- Neutrophils 68%\n- Lymphocytes 19%\n- Platelet count 96 ×10⁹/L",
+      "gpt5_is_synthetic": false,
+      "astra_result": "Hemoglobin: 9.4 g/dL (12.0–16.0).\nHematocrit: 28.5% (36.0–46.0).\nMean corpuscular volume: 89 fL (80–100).\nWhite-cell count: 3.6 ×10⁹/L (4.5–11.0).\nNeutrophils: 68% (40–70).\nLymphocytes: 19% (22–44).\nPlatelet count: 96 ×10⁹/L (150–400).\nOther differential components are not documented.",
+      "astra_is_synthetic": false
+    },
+    {
+      "test_name": "Test to order: Comprehensive metabolic panel (including liver enzymes)",
+      "batch": 1,
+      "gpt5_result": "Comprehensive metabolic panel:\n- Sodium 137 mmol/L\n- Potassium 4.1 mmol/L\n- Creatinine 1.0 mg/dL\n- Urea nitrogen 18 mg/dL\n- AST 76 U/L\n- ALT 52 U/L\n- Alkaline phosphatase 168 U/L\n- Total bilirubin 1.1 mg/dL\n- Albumin 3.0 g/dL",
+      "gpt5_is_synthetic": false,
+      "astra_result": "Documented admission components:\nSodium: 137 mmol/L (135–145).\nPotassium: 4.1 mmol/L (3.5–5.0).\nCreatinine: 1.0 mg/dL (0.6–1.1).\nUrea nitrogen: 18 mg/dL (7–20).\nAspartate aminotransferase: 76 U/L (10–40).\nAlanine aminotransferase: 52 U/L (7–35).\nAlkaline phosphatase: 168 U/L (35–105).\nTotal bilirubin: 1.1 mg/dL (0.1–1.0).\nAlbumin: 3.0 g/dL (3.5–5.0).\nOther admission panel components are not documented.",
+      "astra_is_synthetic": false
+    },
+    {
+      "test_name": "Test to order: Lactate dehydrogenase (LDH)",
+      "batch": 1,
+      "gpt5_result": "Lactate dehydrogenase (LDH): 842 U/L",
+      "gpt5_is_synthetic": false,
+      "astra_result": "Lactate dehydrogenase: 842 U/L (reference range, 110–210).",
+      "astra_is_synthetic": false
+    },
+    {
+      "test_name": "Test to order: Ferritin",
+      "batch": 1,
+      "gpt5_result": "Ferritin: 3,150 ng/mL",
+      "gpt5_is_synthetic": false,
+      "astra_result": "Ferritin: 3,150 ng/mL (reference range, 11–307).",
+      "astra_is_synthetic": false
+    },
+    {
+      "test_name": "Test to order: Erythrocyte sedimentation rate (ESR)",
+      "batch": 1,
+      "gpt5_result": "Erythrocyte sedimentation rate (ESR): 88 mm/hr",
+      "gpt5_is_synthetic": false,
+      "astra_result": "Erythrocyte sedimentation rate: 88 mm/hr (reference range, 0–20).",
+      "astra_is_synthetic": false
+    },
+    {
+      "test_name": "Test to order: C-reactive protein (CRP)",
+      "batch": 1,
+      "gpt5_result": "C-reactive protein (CRP): 96 mg/L",
+      "gpt5_is_synthetic": false,
+      "astra_result": "C-reactive protein: 96 mg/L (reference range, &lt;5).",
+      "astra_is_synthetic": false
+    },
+    {
+      "test_name": "Test to order: Procalcitonin",
+      "batch": 1,
+      "gpt5_result": "Procalcitonin: 0.12 ng/mL",
+      "gpt5_is_synthetic": false,
+      "astra_result": "Procalcitonin: 0.12 ng/mL (reference range, &lt;0.10).",
+      "astra_is_synthetic": false
+    },
+    {
+      "test_name": "Test to order: Coagulation panel (PT/INR, aPTT)",
+      "batch": 1,
+      "gpt5_result": "Coagulation panel:\n- Prothrombin time (PT): 13.1 s\n- Activated partial thromboplastin time (aPTT): 31 s",
+      "gpt5_is_synthetic": false,
+      "astra_result": "Prothrombin time: 13.1 seconds (11.5–14.5).\nActivated partial-thromboplastin time: 31 seconds (25–35).\nINR is not documented.",
+      "astra_is_synthetic": false
+    },
+    {
+      "test_name": "Test to order: D-dimer",
+      "batch": 2,
+      "gpt5_result": "D-dimer: 2.9 µg/mL FEU (reference <0.50).",
+      "gpt5_is_synthetic": false,
+      "astra_result": "D-dimer: 2.9 µg/mL FEU (reference range, &lt;0.50).",
+      "astra_is_synthetic": false
+    },
+    {
+      "test_name": "Test to order: Urinalysis and urine culture",
+      "batch": 2,
+      "gpt5_result": "Urinalysis: Specific gravity 1.015; trace protein; no glucose; no leukocyte esterase or nitrites; 0–2 RBC/HPF; 0–2 WBC/HPF; no casts.\nUrine culture: No growth at 48 hours.",
+      "gpt5_is_synthetic": true,
+      "astra_result": "I can only provide specific test results or answer specific patient questions. Please request a specific diagnostic test or ask a specific question about the patient's history, symptoms, or demographics.",
+      "astra_is_synthetic": false
+    },
+    {
+      "test_name": "Test to order: Thyroid-stimulating hormone (TSH) and free T4",
+      "batch": 2,
+      "gpt5_result": "Thyroid-stimulating hormone (TSH): 2.3 µIU/mL (reference 0.4–4.0).\nFree T4: 1.1 ng/dL (reference 0.8–1.8).",
+      "gpt5_is_synthetic": true,
+      "astra_result": "I can only provide specific test results or answer specific patient questions. Please request a specific diagnostic test or ask a specific question about the patient's history, symptoms, or demographics.",
+      "astra_is_synthetic": false
+    },
+    {
+      "test_name": "Test to order: Serum protein electrophoresis (SPEP) with immunofixation and serum free light chains",
+      "batch": 2,
+      "gpt5_result": "Serum protein electrophoresis with immunofixation: No monoclonal protein detected.\nSerum free light chains: Kappa 18 mg/L (3.3–19.4), Lambda 17 mg/L (5.7–26.3), Kappa/Lambda ratio 1.06 (0.26–1.65).",
+      "gpt5_is_synthetic": true,
+      "astra_result": "I can only provide specific test results or answer specific patient questions. Please request a specific diagnostic test or ask a specific question about the patient's history, symptoms, or demographics.",
+      "astra_is_synthetic": false
+    },
+    {
+      "test_name": "Test to order: Antinuclear antibody (ANA) with ENA panel and anti–double-stranded DNA",
+      "batch": 2,
+      "gpt5_result": "Antinuclear antibody (ANA): Negative.\nAnti–double-stranded DNA: Negative.\nENA panel (SSA/Ro, SSB/La, Sm, RNP, Scl-70, Jo-1): Negative.",
+      "gpt5_is_synthetic": true,
+      "astra_result": "I can only provide specific test results or answer specific patient questions. Please request a specific diagnostic test or ask a specific question about the patient's history, symptoms, or demographics.",
+      "astra_is_synthetic": false
+    },
+    {
+      "test_name": "Test to order: Rheumatoid factor (RF) and anti-CCP",
+      "batch": 2,
+      "gpt5_result": "Rheumatoid factor: Within normal limits.\nAnti-cyclic citrullinated peptide (anti-CCP): Within normal limits.",
+      "gpt5_is_synthetic": false,
+      "astra_result": "I can only provide specific test results or answer specific patient questions. Please request a specific diagnostic test or ask a specific question about the patient's history, symptoms, or demographics.",
+      "astra_is_synthetic": false
+    },
+    {
+      "test_name": "Test to order: Complement levels (C3, C4)",
+      "batch": 2,
+      "gpt5_result": "Complement levels: C3 within normal limits; C4 within normal limits.",
+      "gpt5_is_synthetic": false,
+      "astra_result": "The serum C3 and C4 concentrations were normal.",
+      "astra_is_synthetic": false
+    },
+    {
+      "test_name": "Test to order: Antineutrophil cytoplasmic antibodies (ANCA; MPO and PR3)",
+      "batch": 2,
+      "gpt5_result": "Antineutrophil cytoplasmic antibodies: MPO negative; PR3 negative.",
+      "gpt5_is_synthetic": false,
+      "astra_result": "Antineutrophil cytoplasmic antibodies (both proteinase-3 and myeloperoxidase specificities): negative or within normal limits.",
+      "astra_is_synthetic": false
+    },
+    {
+      "test_name": "Test to order: Antiphospholipid panel: lupus anticoagulant, anticardiolipin IgG/IgM, beta-2 glycoprotein I IgG/IgM",
+      "batch": 2,
+      "gpt5_result": "Antiphospholipid panel: Lupus anticoagulant negative; Anticardiolipin IgG/IgM within normal limits; Anti–β2-glycoprotein I IgG/IgM within normal limits.",
+      "gpt5_is_synthetic": false,
+      "astra_result": "A lupus anticoagulant assay was negative, and anticardiolipin and anti–β2-glycoprotein I antibodies (IgG and IgM) were within normal limits.",
+      "astra_is_synthetic": false
+    },
+    {
+      "test_name": "Test to order: Cryoglobulins and cryofibrinogen",
+      "batch": 2,
+      "gpt5_result": "Cryoglobulins: Not detected.\nCryofibrinogen: Not detected.",
+      "gpt5_is_synthetic": true,
+      "astra_result": "I can only provide specific test results or answer specific patient questions. Please request a specific diagnostic test or ask a specific question about the patient's history, symptoms, or demographics.",
+      "astra_is_synthetic": false
+    },
+    {
+      "test_name": "Test to order: Hepatitis B surface antigen, core antibody; Hepatitis C antibody",
+      "batch": 3,
+      "gpt5_result": "Hepatitis B surface antigen: Negative\nHepatitis B core antibody (total): Negative\nHepatitis C antibody: Negative",
+      "gpt5_is_synthetic": false,
+      "astra_result": "I can only provide specific test results or answer specific patient questions. Please request a specific diagnostic test or ask a specific question about the patient's history, symptoms, or demographics.",
+      "astra_is_synthetic": false
+    },
+    {
+      "test_name": "Test to order: Quantiferon-TB Gold (or T-Spot)",
+      "batch": 3,
+      "gpt5_result": "Quantiferon-TB Gold: Negative",
+      "gpt5_is_synthetic": false,
+      "astra_result": "Tuberculosis interferon-γ release assay: negative.",
+      "astra_is_synthetic": false
+    },
+    {
+      "test_name": "Test to order: Bartonella henselae and quintana serology (IgG/IgM) ± PCR",
+      "batch": 3,
+      "gpt5_result": "Bartonella henselae IgG: Negative; IgM: Negative\nBartonella quintana IgG: Negative; IgM: Negative\nBartonella PCR (blood): Not detected",
+      "gpt5_is_synthetic": true,
+      "astra_result": "I can only provide specific test results or answer specific patient questions. Please request a specific diagnostic test or ask a specific question about the patient's history, symptoms, or demographics.",
+      "astra_is_synthetic": false
+    },
+    {
+      "test_name": "Test to order: Coxiella burnetii (Q fever) serology: Phase I/II IgG/IgM",
+      "batch": 3,
+      "gpt5_result": "Coxiella burnetii serology:\n- Phase I IgG: Negative\n- Phase I IgM: Negative\n- Phase II IgG: Negative\n- Phase II IgM: Negative",
+      "gpt5_is_synthetic": false,
+      "astra_result": "Coxiella burnetii serologic testing: negative. Individual phase-specific antibody titers are not documented.",
+      "astra_is_synthetic": false
+    },
+    {
+      "test_name": "Test to order: Lyme disease two-tier testing (EIA with reflex immunoblot)",
+      "batch": 3,
+      "gpt5_result": "Lyme disease two-tier testing:\n- Screening EIA: Negative\n- Reflex immunoblot: Not performed (per negative EIA)",
+      "gpt5_is_synthetic": false,
+      "astra_result": "Borrelia burgdorferi serologic testing: negative. Individual EIA and immunoblot results are not documented.",
+      "astra_is_synthetic": false
+    },
+    {
+      "test_name": "Test to order: Anaplasma and Ehrlichia PCR/serology",
+      "batch": 3,
+      "gpt5_result": "Anaplasma phagocytophilum:\n- PCR: Not detected\n- IgG: Negative\n- IgM: Negative\nEhrlichia chaffeensis:\n- PCR: Not detected\n- IgG: Negative\n- IgM: Negative",
+      "gpt5_is_synthetic": true,
+      "astra_result": "I can only provide specific test results or answer specific patient questions. Please request a specific diagnostic test or ask a specific question about the patient's history, symptoms, or demographics.",
+      "astra_is_synthetic": false
+    },
+    {
+      "test_name": "Test to order: Babesia blood smear and PCR",
+      "batch": 3,
+      "gpt5_result": "Babesia testing:\n- Peripheral blood smear: No intraerythrocytic parasites seen\n- Babesia microti PCR: Not detected",
+      "gpt5_is_synthetic": true,
+      "astra_result": "I can only provide specific test results or answer specific patient questions. Please request a specific diagnostic test or ask a specific question about the patient's history, symptoms, or demographics.",
+      "astra_is_synthetic": false
+    },
+    {
+      "test_name": "Test to order: Peripheral blood smear review (look for parasites, hemolysis, schistocytes)",
+      "batch": 3,
+      "gpt5_result": "Peripheral smear: Normochromic, normocytic anemia; no schistocytes; occasional teardrop forms; no blasts",
+      "gpt5_is_synthetic": false,
+      "astra_result": "Normochromic, normocytic anemia; no schistocytes; occasional teardrop forms; no blasts",
+      "astra_is_synthetic": false
+    },
+    {
+      "test_name": "Test to order: MRI brain with and without contrast including diffusion-weighted imaging",
+      "batch": 3,
+      "gpt5_result": "MRI brain with and without contrast, including DWI:\n- Multiple small foci of diffusion restriction scattered in both cerebral hemispheres, the right cerebellar hemisphere, and the left thalamus\n- Apparent diffusion coefficient maps show low signal in several lesions; others show less prominent ADC change\n- Additional patchy, confluent T2/FLAIR hyperintensities in periventricular and subcortical white matter\n- Post-contrast: faint, patchy perivascular and leptomeningeal enhancement\n- No ring-enhancing lesion, no dominant parenchymal or dural mass, and no evidence of abscess\n- Gradient-echo: few scattered microhemorrhages; no large hemorrhage",
+      "gpt5_is_synthetic": false,
+      "astra_result": "Multiple small foci of restricted diffusion scattered throughout both cerebral hemispheres, the right cerebellar hemisphere, and the left thalamus. There were additional patchy, confluent hyperintensities in the periventricular and subcortical white matter on T2-weighted and fluid-attenuated inversion recovery (FLAIR) sequences. After contrast administration, faint, patchy perivascular and leptomeningeal enhancement; no ring-enhancing lesion or dominant parenchymal or dural mass. Gradient-echo imaging revealed a few scattered microhemorrhages but no large hemorrhage.",
+      "astra_is_synthetic": false
+    },
+    {
+      "test_name": "Test to order: MRA or CTA head and neck (to assess for vasculitis vs emboli)",
+      "batch": 3,
+      "gpt5_result": "Intracranial and cervical MR angiography:\n- No large-vessel stenosis or occlusion\n- No segmental \"beading\"\n- No aneurysm identified",
+      "gpt5_is_synthetic": false,
+      "astra_result": "Magnetic resonance angiography of the intracranial and cervical vessels showed no large-vessel stenosis, occlusion, beading, or aneurysm.",
+      "astra_is_synthetic": false
+    },
+    {
+      "test_name": "Test to order: Transthoracic echocardiogram",
+      "batch": 4,
+      "gpt5_result": "Transthoracic echocardiography showed normal left and right ventricular size and systolic function, no valvular vegetation, no intracardiac mass, and no pericardial effusion; an agitated-saline study revealed no right-to-left shunt.",
+      "gpt5_is_synthetic": false,
+      "astra_result": "Normal left and right ventricular size and systolic function, no valvular vegetation, no intracardiac mass, and no pericardial effusion; an agitated-saline study revealed no right-to-left shunt.",
+      "astra_is_synthetic": false
+    },
+    {
+      "test_name": "Test to order: Transesophageal echocardiogram if TTE is nondiagnostic or suspicion remains high",
+      "batch": 4,
+      "gpt5_result": "Transesophageal echocardiography likewise demonstrated no vegetation, no atrial myxoma, no patent foramen ovale, and no aortic atheroma or thrombus.",
+      "gpt5_is_synthetic": false,
+      "astra_result": "No vegetation, no patent foramen ovale, and no aortic atheroma or thrombus.",
+      "astra_is_synthetic": false
+    },
+    {
+      "test_name": "Test to order: CT chest/abdomen/pelvis with contrast (malignancy/abscess/occult infection)",
+      "batch": 4,
+      "gpt5_result": "CT of the chest, abdomen, and pelvis with intravenous contrast showed no mediastinal, hilar, axillary, retroperitoneal, mesenteric, or pelvic lymphadenopathy and no focal mass lesion. The spleen measured 14 cm craniocaudally, at the upper limit of or mildly above normal; the liver was normal in size and contour, and there was no ascites.",
+      "gpt5_is_synthetic": false,
+      "astra_result": "No mediastinal, hilar, axillary, retroperitoneal, mesenteric, or pelvic lymphadenopathy and no focal mass lesion. The spleen measured 14 cm in the craniocaudal dimension; the liver was normal in size and contour, and there was no ascites.",
+      "astra_is_synthetic": false
+    },
+    {
+      "test_name": "Test to order: Chest X-ray",
+      "batch": 4,
+      "gpt5_result": "Posteroanterior and lateral chest radiographs show clear lungs without focal consolidation, pleural effusion, or pneumothorax. Cardiomediastinal silhouette within normal size and contour. No acute osseous abnormality.",
+      "gpt5_is_synthetic": true,
+      "astra_result": "Synthetic result: Cardiomediastinal silhouette is within normal size limits. No focal airspace opacity, pleural effusion, or pneumothorax.",
+      "astra_is_synthetic": true
+    },
+    {
+      "test_name": "Test to order: Lumbar puncture after neuroimaging: opening pressure; CSF cell count with differential, protein, glucose; Gram stain and bacterial culture; HSV-1/2 PCR; VZV PCR; enterovirus PCR; cryptococcal antigen; fungal culture; AFB smear/culture; CSF cytology",
+      "batch": 4,
+      "gpt5_result": "Lumbar puncture: Opening pressure 17 cm H2O. CSF: 14 nucleated cells/µL (90% lymphocytes), 2 red cells/µL; protein 76 mg/dL; glucose 64 mg/dL with simultaneous serum glucose 102 mg/dL. Gram stain: no organisms; bacterial cultures: no growth. HSV-1/2 PCR: negative; VZV PCR: negative; cryptococcal antigen: negative. CSF cytology: reactive lymphocytes, no malignant cells. CSF flow cytometry: no clonal lymphoid population. Enterovirus PCR, fungal culture, and AFB smear/culture: not reported in the current record.",
+      "gpt5_is_synthetic": false,
+      "astra_result": "Documented results: Opening pressure, 17 cm of water. CSF contained 14 nucleated cells per cubic millimeter (90% lymphocytes) and 2 red cells per cubic millimeter; protein, 76 mg/dL; glucose, 64 mg/dL, with simultaneous serum glucose of 102 mg/dL. Gram staining and bacterial cultures were negative, as were PCR assays for herpes simplex virus and varicella–zoster virus and a cryptococcal antigen assay. CSF cytologic examination revealed reactive lymphocytes but no malignant cells.\nSynthetic additional results: Enterovirus PCR negative. Fungal culture showed no growth after final incubation. AFB smear negative; mycobacterial culture showed no growth after final incubation.",
+      "astra_is_synthetic": true
+    },
+    {
+      "test_name": "Test to order: Dermatology punch biopsies of the mottled/telangiectatic skin lesions (deep punch to subcutis) for H&E and direct immunofluorescence; include bacterial/fungal/AFB stains",
+      "batch": 4,
+      "gpt5_result": "Dermatology deep punch biopsies (livedoid/telangiectatic lesions and clinically normal skin): Epidermis unremarkable. Numerous small vessels in deep dermis and subcutis (capillaries, postcapillary venules, small arterioles) are distended/occluded by cohesive aggregates of large atypical mononuclear cells with scant cytoplasm, vesicular nuclei, prominent nucleoli; mitoses frequent; occasional intraluminal fibrin thrombi. Minimal perivascular inflammation; atypical cells confined intraluminally. Similar findings present in biopsy of normal-appearing skin.\n\nImmunohistochemistry: Atypical intraluminal cells positive for CD20, PAX5, CD79a; negative for CD3 and cytokeratin. Endothelial markers (CD31/CD34) highlight endothelium encasing intraluminal aggregates. Cells express MUM1/IRF4 and BCL2; CD10 negative; BCL6 weak; subset CD5 positive. Ki-67 proliferation index approximately 95%. EBER in-situ hybridization: negative. Direct immunofluorescence and special stains for bacteria/fungi/AFB: not reported.",
+      "gpt5_is_synthetic": false,
+      "astra_result": "Documented histologic findings: Numerous dilated small vessels in the deep dermis and within the subcutaneous fat — capillaries, postcapillary venules, and small arterioles — were distended and largely occluded by cohesive aggregates of large, atypical mononuclear cells. These cells had scant cytoplasm, large vesicular nuclei with coarse chromatin, and one or more prominent nucleoli; mitotic figures were frequent, and apoptotic debris was present. Admixed fibrin thrombi were noted within several involved vessels. There was minimal infiltration of the surrounding dermal or subcutaneous stroma.\nSynthetic ancillary results: Direct immunofluorescence showed no specific vascular or dermoepidermal immune deposits. Bacterial, fungal, and acid-fast stains showed no organisms.",
+      "astra_is_synthetic": true
+    }
+  ],
+  "gpt5_synthetic_count": 10,
+  "astra_synthetic_count": 3,
+  "batch_usage": [
+    {
+      "completion_tokens": 932,
+      "prompt_tokens": 10142,
+      "total_tokens": 11074,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": 0,
+        "reasoning_tokens": 125,
+        "rejected_prediction_tokens": null,
+        "image_tokens": 0
+      },
+      "prompt_tokens_details": {
+        "audio_tokens": 0,
+        "cached_tokens": 0,
+        "cache_write_tokens": 10139,
+        "video_tokens": 0
+      },
+      "cost": 0.1733675,
+      "is_byok": false,
+      "cost_details": {
+        "upstream_inference_cost": 0.1733675,
+        "upstream_inference_prompt_cost": 0.1267675,
+        "upstream_inference_completions_cost": 0.0466
+      }
+    },
+    {
+      "completion_tokens": 670,
+      "prompt_tokens": 10356,
+      "total_tokens": 11026,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": 0,
+        "reasoning_tokens": 84,
+        "rejected_prediction_tokens": null,
+        "image_tokens": 0
+      },
+      "prompt_tokens_details": {
+        "audio_tokens": 0,
+        "cached_tokens": 0,
+        "cache_write_tokens": 10353,
+        "video_tokens": 0
+      },
+      "cost": 0.1629425,
+      "is_byok": false,
+      "cost_details": {
+        "upstream_inference_cost": 0.1629425,
+        "upstream_inference_prompt_cost": 0.1294425,
+        "upstream_inference_completions_cost": 0.0335
+      }
+    },
+    {
+      "completion_tokens": 733,
+      "prompt_tokens": 10566,
+      "total_tokens": 11299,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": 0,
+        "reasoning_tokens": 80,
+        "rejected_prediction_tokens": null,
+        "image_tokens": 0
+      },
+      "prompt_tokens_details": {
+        "audio_tokens": 0,
+        "cached_tokens": 0,
+        "cache_write_tokens": 10563,
+        "video_tokens": 0
+      },
+      "cost": 0.1687175,
+      "is_byok": false,
+      "cost_details": {
+        "upstream_inference_cost": 0.1687175,
+        "upstream_inference_prompt_cost": 0.1320675,
+        "upstream_inference_completions_cost": 0.03665
+      }
+    },
+    {
+      "completion_tokens": 923,
+      "prompt_tokens": 10754,
+      "total_tokens": 11677,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": 0,
+        "reasoning_tokens": 280,
+        "rejected_prediction_tokens": null,
+        "image_tokens": 0
+      },
+      "prompt_tokens_details": {
+        "audio_tokens": 0,
+        "cached_tokens": 0,
+        "cache_write_tokens": 10751,
+        "video_tokens": 0
+      },
+      "cost": 0.1805675,
+      "is_byok": false,
+      "cost_details": {
+        "upstream_inference_cost": 0.1805675,
+        "upstream_inference_prompt_cost": 0.1344175,
+        "upstream_inference_completions_cost": 0.04615
+      }
+    }
+  ]
+}

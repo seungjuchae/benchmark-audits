@@ -1,0 +1,83 @@
+{
+  "id": "gpt5_A_3",
+  "model_key": "gpt5",
+  "variant": "A",
+  "repetition": 3,
+  "request_sha256": "6c5f6e14c505ccad8b85ce0b972c7d650973d07ee95575a5a7474af448460b7d",
+  "status": "complete",
+  "started_at_utc": "2026-10-28T19:02:09.338604+00:00",
+  "response": {
+    "id": "gen-1793214130-jlKaYaUFefah3Y8x38QT",
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": "**REASONING**: The candidate diagnosis is identical to the reference: intravascular large B-cell lymphoma with a non–germinal-center (activated B-cell–like) phenotype, involving the CNS and skin, and associated secondary hemophagocytic lymphohistiocytosis (HLH). This matches the core disease entity, etiology, anatomic sites, and specificity. It includes directly related manifestations (CNS ischemic events, cutaneous livedo/telangiectasias) and the HLH trigger/complication, all supported by the case data: skin biopsies showing intraluminal CD20/PAX5+ large B cells with high Ki-67; marrow intrasinusoidal involvement; MRI with multifocal, multi-territory infarcts; and HLH criteria (fever, splenomegaly, bicytopenia, hypertriglyceridemia, ferritin 3150 ng/mL, elevated sIL-2R, and hemophagocytosis). No unrelated or incorrect additions are present. This is a perfect match per the rubric.\n\n**SCORE**: 5",
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": null,
+          "reasoning": "**Formatting for evaluation**\n\nI need to make sure I follow the format correctly with reasoning and scoring. My score will be a single digit, right? I'll include statements like “perfect match to reference” and also note how everything aligns. It’s important to be specific, so I’ll mention direct tests too. I want the evaluation to be clear, so let’s get that final version ready, making sure it all fits together as it should!",
+          "reasoning_details": [
+            {
+              "type": "reasoning.summary",
+              "summary": "**Formatting for evaluation**\n\nI need to make sure I follow the format correctly with reasoning and scoring. My score will be a single digit, right? I'll include statements like “perfect match to reference” and also note how everything aligns. It’s important to be specific, so I’ll mention direct tests too. I want the evaluation to be clear, so let’s get that final version ready, making sure it all fits together as it should!",
+              "format": "azure-openai-responses-v1",
+              "index": 0
+            },
+            {
+              "type": "reasoning.encrypted",
+              "data": "gAAAAABq4ka5XAuMQC7VlJcFPOprfqMmmJBY3UhnZAknCX-pbI9PrVwH4WVToENJgTHlKolrNxtavPyRBOUTpuebstu_4Tk7D4ae1awtNMW1zrao0f9igHHzUaflY2bxKRJ6KF-wuEvxmmX_cla-3G7Z7OXT_vJNZcznyfBuNSwFlDCbcJUyOY0VwKEuyskyCj_SZiKLmfVWFXuBMo79gR3oNUqoFTKo7U68jmKktDAajNDZxp8huQx1JD7l7wU4FmnAv20dQ7ekw3bQ67_DDHanurAclhCwksMV_oJhYexz16Bhk8EbiZFzWYlhSYJbgnEStl8q1C8FI6IqasM1GzPbXlOx0R618P91ksUzjJ_ro9KrN78H6rftgNhID5lLapdpF1st541W3cFL2lGsEJQxS41wXT6ABfSRPGruVvTGYlYBIBaCoprkctvjv-zBc0kinQqAIHlle_UDvAHbmzdnI6AUedd9oUedS-WDTeDKCOy-0kDXWbfx-yDx0HKLbTz1Ba4d8AxAiQ9WftB9_wOVYKco5jtxKFCB3hRNEaZ-CEE0lO0X8vufi3K4gzjtQy0ekqb3eoXxUTmbvIwiFXsFPWyHFUbYqyqVNJaRMlLdd4uN7WqeMDZ_KtFK20tMn68quj4-q8_YJKtLi0bigfbOvy_3jSlmWZyIa-agZZ3mH7I7lRTCtfQSyiRshSGVsAQwa1qf8TOMj7PENv6Zt5ZVK6vHMcqye8gIGO__NaGKRI1fPDnn34Bor7rRSpnQG_79Ms_8jswdGj_2o9ITYs8TpH4-aFdL0jur52IRWLiVrYF25fKDajO8ohrNrvGAOI8A3DBr8iqqbApXYG7ZZj51Gkw5Q3q3ge3lY8kgNgplR3UXWEWw7sREcB_ioSbvYzpiKuHrdRpeWLWTPl5G-5jodovfjbIDaFEzPiH7nkIYNlb2Z4PHCZcmrUAP8P4Pe4zxsZKSlN7qzJ1TKNT9TVQZ9i0HfAhEJgHMKF3YgPNtELeTorDK6GMgZagBXoADPumnCCQuTh52ats2JFt0vaQv5vZp00QYiADBsC0-DZey9LdIoeHVuLGY4b9yG5HrF_cKpXyE7BXajpknpiCadHJLLFeFVe9Gy-uMst4DxCwK9QRoVAPY59j_pRRgk7L54Z7ekr-y2eFoiVV2E3F9qahOflK-xSKacyQIvPevvwMLRKtIcrHCouVlEPEbjcrk4FlTyoIU9rs_hPl6MBGTQCJkAl_tj3660P21Fhf80sI0Y0HeJxrr42gfvDaE0ehoDT9NcYww4B-emspR5fG8fzXRreJUYBC6mQ1RDxnVlwEi8U-QsmFGmOGPI94YmzUiPkqyWfIyDaN1nK1CaHhaDqcqXVH0T_FGDhuqRlKEBxkMpnLZkzhk74brRcY5XUg399V3SzeGzdVYQVWCtyCBJ28TOdCy5fbI0Bh3-A-N6EVL3nDZxIqLAOIXw-NHZl6Qxs6YtOLHMVhboEY3mlOD6480H11lUCh8A6Ija-O8zc7wzFOajnSuu8x1twVhW3SeA6EQTDJYNTM_2EZ_PtuRaaaTaIw4CmlAzgYzSF2bauQlEwkrSljmb3bu-puVbOL2hLax8C9Hq5ComMv2KWYKeDBAPzDeAak46C4L1z3daEzRjTde916HqRPTA25dBX3aGA65GdiE9gBEHrtKgmmTyGLqhQQyM7CBqrYd5vCWZxj59GpUuXYWmuwtKb39ZBzPu3NaZRrHeBkTDE6Qyi0xJgaKzOhdKx-IQvC_JQjzJO3j8hufcGWHZVTq8QZDeaH5GmG3zW5ORFsHzGYURh9P179KZc3uUNRhu1n8DtEPAfP2cLwUK8FHz1--zCjVKmYp8qR7ESNagnY9GSKBVgE5Xv45Mg1jG-pPXy1ZbowZYy167-IMDoksH8HxdXO4DLhPcLhojPKujmNurj-fGDOHc5dEY3qXtjiL31sk05nm-k7-MYEzjv95fKx6yk6IyCwGABpLV-dzHEoxSxNFwAARlxeaPe98Rcb9GMy_E4k85ZpB7pgqssRtkHn4v57t8g50z78L3uVP3vbrlgyL2bZQ3PaEgRdafiW73ApaJucvbLjGI70Kkh7QqOE9d2RAMPJeV4MjyjgXlxiNI6szhCfH6-z4GLa_qpDYjEEnDiiK56KObgkIPlXaRRNw9Vhq7PYvk8CGCA0JN7eOuQek-XQIA1bVeWouDLod8fyVnz7Ri3WBKd_mFV-lLoZ57_OPF-OLfqoOsKi1_6QFDL5j-aNbgIRxTTXwtk2IZejUE7rsfRYbFF8TVtX-gj1rSkSge8z0WzbKnYjo24j0y8FfBFR12tIA7k2qSOYXuTknjwf31zSaDAmCFftsYh6bLmIOO42O_ygt2o3l6Rs2fsl3zLyEIt-JUG4c9OV704_pYvt-0i9GYnCLjGvgNHOinaslV79-QAkGXm7vJagfWCtuPWmZhTit1OXHwrZt3XCYYemPwaeMiTGNcv_7R2iLA_9wtT7OAKGkLcORnzIxiaIy5mjVJskiM0w0Zr4a-YtIrPodTFsxDLnXYfeH6Yx0mh5ggIamq8_pGbuP5O65MQxg_9QqFkTA0EmG2pMPqVfECdfSlYGFYWpWlSDf50PcyblQrFRQPz33XI5RhGRD9bd0ZyeYGLFlxst0qxJu-CzxY3N9JHT_o-_8i_L_hIvZpoWdjjsi4huBsxsQeaGDHXSHSDY4zvI9c3HCUrTWwW3gnGySfXJ7f4JaD-Zx-vFxcZe4Xzfc5eiY_C3cPjpE6X2ajlbubidLQfSa4aEKejImp54__Xawcf5dMPoE7qkJbzK_CxJB0Bx2hj7ozQI8bX2KeL3WIe2xcQIFxBM2qnupxbqxIBFmnpBvRgZ3GsO4bZBZkNP4Ax2F0dGCZjdpsgBB4WLm51D31xJpAkaNBCK_-DdWr1zdJdT1BJOZDAeXsC8t5qPb3BhgmT24uqKR.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC01LTIwMjUtMDgtMDd8YXp1cmUifQ",
+              "format": "azure-openai-responses-v1",
+              "id": "rs_03d9d77372c6636c016ae246b35c14819088dca44539a2b785",
+              "index": 1
+            }
+          ]
+        },
+        "native_finish_reason": "completed"
+      }
+    ],
+    "created": 1793214130,
+    "model": "openai/gpt-5",
+    "object": "chat.completion",
+    "moderation": null,
+    "service_tier": "default",
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 530,
+      "prompt_tokens": 12578,
+      "total_tokens": 13108,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": 0,
+        "reasoning_tokens": 256,
+        "rejected_prediction_tokens": null,
+        "image_tokens": 0
+      },
+      "prompt_tokens_details": {
+        "audio_tokens": 0,
+        "cached_tokens": 12416,
+        "cache_write_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost": 0.0070545,
+      "is_byok": false,
+      "cost_details": {
+        "upstream_inference_cost": 0.0070545,
+        "upstream_inference_prompt_cost": 0.0017545,
+        "upstream_inference_completions_cost": 0.0053
+      }
+    },
+    "provider": "Azure"
+  },
+  "completed_at_utc": "2026-10-28T19:02:17.689096+00:00",
+  "elapsed_seconds": 8.35,
+  "score": 5,
+  "passed": true,
+  "grading_output": "**REASONING**: The candidate diagnosis is identical to the reference: intravascular large B-cell lymphoma with a non–germinal-center (activated B-cell–like) phenotype, involving the CNS and skin, and associated secondary hemophagocytic lymphohistiocytosis (HLH). This matches the core disease entity, etiology, anatomic sites, and specificity. It includes directly related manifestations (CNS ischemic events, cutaneous livedo/telangiectasias) and the HLH trigger/complication, all supported by the case data: skin biopsies showing intraluminal CD20/PAX5+ large B cells with high Ki-67; marrow intrasinusoidal involvement; MRI with multifocal, multi-territory infarcts; and HLH criteria (fever, splenomegaly, bicytopenia, hypertriglyceridemia, ferritin 3150 ng/mL, elevated sIL-2R, and hemophagocytosis). No unrelated or incorrect additions are present. This is a perfect match per the rubric.\n\n**SCORE**: 5",
+  "grading_reason": "The candidate diagnosis is identical to the reference: intravascular large B-cell lymphoma with a non–germinal-center (activated B-cell–like) phenotype, involving the CNS and skin, and associated secondary hemophagocytic lymphohistiocytosis (HLH). This matches the core disease entity, etiology, anatomic sites, and specificity. It includes directly related manifestations (CNS ischemic events, cutaneous livedo/telangiectasias) and the HLH trigger/complication, all supported by the case data: skin biopsies showing intraluminal CD20/PAX5+ large B cells with high Ki-67; marrow intrasinusoidal involvement; MRI with multifocal, multi-territory infarcts; and HLH criteria (fever, splenomegaly, bicytopenia, hypertriglyceridemia, ferritin 3150 ng/mL, elevated sIL-2R, and hemophagocytosis). No unrelated or incorrect additions are present. This is a perfect match per the rubric."
+}

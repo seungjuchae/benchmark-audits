@@ -1,0 +1,77 @@
+{
+  "id": "gpt5_C_2",
+  "model_key": "gpt5",
+  "variant": "C",
+  "repetition": 2,
+  "request_sha256": "4671730d09be2be6ee60f6409124e66de726593a9638f46b5c94da474e921509",
+  "status": "complete",
+  "started_at_utc": "2026-10-28T19:01:38.823799+00:00",
+  "response": {
+    "id": "gen-1793214099-PbMSISH4KcVAz387AFXC",
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": "**REASONING**: The candidate diagnosis exactly matches the reference diagnosis in all components: core disease entity (intravascular large B‑cell lymphoma), specified immunophenotype (non–germinal-center/ABC type), anatomic/organ involvement (central nervous system and cutaneous), and the directly related complication (secondary hemophagocytic lymphohistiocytosis). This is fully supported by the case data: random deep skin biopsies showing intraluminal CD20+ large B cells with high Ki-67; marrow intrasinusoidal CD20+ cells; MRI with multifocal multi-territory infarcts; PET-CT with diffuse marrow/splenic uptake; and HLH features (fever, splenomegaly, bicytopenia, triglycerides 295 mg/dL, ferritin 3,150 ng/mL, elevated sIL‑2R, marrow hemophagocytosis). No incorrect or unrelated additions are present. This is a perfect, clinically equivalent match per the rubric.\n\n**SCORE**: 5",
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": null,
+          "reasoning": null,
+          "reasoning_details": [
+            {
+              "type": "reasoning.encrypted",
+              "data": "gAAAAABq4kaZwx7QFXugejy6l7mH3XjazSe_ossG2vykbtQMqS58jBVLYVa56znX96tvyzlnN0q6a5Dl7HSsaWNtBhSaz4VN08ZvkfHr19OmwOeaNn1YwAyMrku3xGoC5cmUjnEbsOGqLkF3Cwi5_k5jmKM81bniQgYlyeYh3s5S0ZgP2PVRRZfieL4Yr-wkcEP3PMuNqtM9d5XP4uNtPK-Ej8_KMkb-7SIuTjrX--4xWrnRhtLMBBOTXwo-Ovjv_8xR0jZ55hy8u836ocADf8_HA2Ku42vM_l2M-5BUacOeI0ZqPtQ52HMgFK2vlQuOYt7k6G4HUzInONf93tET2LJT2SOoIXaZKBR2nkRcbXPKSofIJ67ux7nYDw63FF3JJkwMcF3inK4SJyul9vCGZZce0XLZm8Gwkt2zEERa4iMrizw1ss-E2zsRWuOSs6F0kdcyY6CkKMvpsbNgyfh-pNinjRT8flmFRa1Mp0QDwWsU2IWVv1AqRMIUza4AdpSUe6LT_mKcZCDk4woyFEoBVKJArgy_ubwECL9aLE0MyBawKS0pLJuN7nQCZYTY1ok9AyaxDyBilczoi6k2yzbcpCikLQI-ilq2S2TAJtGtPRN39YO4dyJ6hPJZb3LJbSw5cNKIe7fmXVK6azRThAnuWQz7A69zFzoUBm8KQG5631QyqCy-e8iuZ5kolorXhyLubxu8a-uKiAIxbTLo5cMQRtyHiRLvKVRMTnsGg7XB74imN2jD_ZC5TvMz4RuM38c_b4MAIPwhG3ddAej3osWz927epNxgsTzypvyF_SVhJHkEuF_2TuG2KKrjnt4_hQi9ytVzlc6oP9eg5sSC_UIkXh7dsyzSkKPz7JuxlTNsGd5nZJ8NTL25kYG0RPcobUQsPO13rcX7k_3hXbUx6f_VIwbtnmlhGvR1uE3pwOpAutPGxPV1zbxrP86Hjts8XZlBKllx04t1Sg929Kp5FJT3n_3QwDqqPIT9qrQaY1AhdCAfLqmpKqOvDbMviaohak2_GzsVAQLRDyTulMbtGuJU_rmAsTw1n8AYZNTi12EYVhV63fNg0SeGGWfYW52BCvkzCb5k0iYZWGO4AGsQMcLhk4qyzGhtdkTnoN121CQkxu8AJwiUrPxuHFxReToRJ2BdHSOMYq9RqrazjO381JPDWH1QjUVCuxKqJBRblMLlSiqrEk8MdtBLxZpUgtckX7mf0ttv7sv1cKAxH_r-5KLn2bo3vMPkphssjSTL26qkJ-QYbOFG2_xRJEwcvg8S4560BddCKgtI_pM9TIb2zis5uACiKvjDInwx2QoGFIQK6LmRXe0epJGoBjzslbCYEhvl1jnbeI-aXTIbOQGyFeouSJZDILSFRk21h2sBGQrMJcPMPIddJFayeWvbLrVC1zIgYCe5ccQfDi0Ljv2oLfcd2WbnYJpUwhRcu7SElxa-rO123eg2vRh9s2ukNSnwaP08FWZkk5sMmpa9LzLZyClxC9tM8pBh551I8ps9vpbF7OjTvTu81iwDOy_arHvVnFkt1APV80IVUyrr6vFxl5c2rcEaejQ7ho-GF93bDT4jag5V1CBG-6_c4NHi_4tA5hLiGNBjE5d2f2ZufpeZCO_YsfBnMaO4hL9BQsMIalBGCyfEJoO46cF1Df3BWVHd2HoEXpHG_f4ACiHgDBpG8vOmFw0_kTjVfUo9y4KXxNWE7_HKwpsE7ehwLtZ0_u7NBHTKMoG_P-kH-JBwHphHPTQhHAvOjRmM1nJ9d-knNVNz7o4XaPuXvwTqr_aKScdY4kn7MXfLlw3huNXZH_Snyo3xlVsOotQahmrglvAdWEwR5kUBDFPI9ZRoepoKL70tTI7bL55Cggh1DNQQR8PvsIT3C3n8ZMDk2Ew5ChzRzWCYcPkJUWhXSj9dTC__A1KHFucShjTJkF3kIsiCBWua-PfynVbpzmOqg5jLYIH_I9ETBVlXRbYecfj5a5_yhN4qZ7nNwd7HSCnSWppgKD7y7gQk1Hk4rFrx0XX8gQwTAvfDiom-5qZXYd-1r1g=.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC01LTIwMjUtMDgtMDd8YXp1cmUifQ",
+              "format": "azure-openai-responses-v1",
+              "id": "rs_0cf56ca0e6927890016ae24695411c81978b41c6d1188f7e98",
+              "index": 0
+            }
+          ]
+        },
+        "native_finish_reason": "completed"
+      }
+    ],
+    "created": 1793214099,
+    "model": "openai/gpt-5",
+    "object": "chat.completion",
+    "moderation": null,
+    "service_tier": "default",
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 375,
+      "prompt_tokens": 12591,
+      "total_tokens": 12966,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": 0,
+        "reasoning_tokens": 128,
+        "rejected_prediction_tokens": null,
+        "image_tokens": 0
+      },
+      "prompt_tokens_details": {
+        "audio_tokens": 0,
+        "cached_tokens": 11392,
+        "cache_write_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost": 0.00667275,
+      "is_byok": false,
+      "cost_details": {
+        "upstream_inference_cost": 0.00667275,
+        "upstream_inference_prompt_cost": 0.00292275,
+        "upstream_inference_completions_cost": 0.00375
+      }
+    },
+    "provider": "Azure"
+  },
+  "completed_at_utc": "2026-10-28T19:01:46.258589+00:00",
+  "elapsed_seconds": 7.43,
+  "score": 5,
+  "passed": true,
+  "grading_output": "**REASONING**: The candidate diagnosis exactly matches the reference diagnosis in all components: core disease entity (intravascular large B‑cell lymphoma), specified immunophenotype (non–germinal-center/ABC type), anatomic/organ involvement (central nervous system and cutaneous), and the directly related complication (secondary hemophagocytic lymphohistiocytosis). This is fully supported by the case data: random deep skin biopsies showing intraluminal CD20+ large B cells with high Ki-67; marrow intrasinusoidal CD20+ cells; MRI with multifocal multi-territory infarcts; PET-CT with diffuse marrow/splenic uptake; and HLH features (fever, splenomegaly, bicytopenia, triglycerides 295 mg/dL, ferritin 3,150 ng/mL, elevated sIL‑2R, marrow hemophagocytosis). No incorrect or unrelated additions are present. This is a perfect, clinically equivalent match per the rubric.\n\n**SCORE**: 5",
+  "grading_reason": "The candidate diagnosis exactly matches the reference diagnosis in all components: core disease entity (intravascular large B‑cell lymphoma), specified immunophenotype (non–germinal-center/ABC type), anatomic/organ involvement (central nervous system and cutaneous), and the directly related complication (secondary hemophagocytic lymphohistiocytosis). This is fully supported by the case data: random deep skin biopsies showing intraluminal CD20+ large B cells with high Ki-67; marrow intrasinusoidal CD20+ cells; MRI with multifocal multi-territory infarcts; PET-CT with diffuse marrow/splenic uptake; and HLH features (fever, splenomegaly, bicytopenia, triglycerides 295 mg/dL, ferritin 3,150 ng/mL, elevated sIL‑2R, marrow hemophagocytosis). No incorrect or unrelated additions are present. This is a perfect, clinically equivalent match per the rubric."
+}

@@ -1,0 +1,101 @@
+{
+  "created_at_utc": "2026-10-28T19:01:07.239325+00:00",
+  "git_commit": "304ce9625a046cea97d64e3b1ba5d19217b5095c",
+  "sources": [
+    {
+      "path": "data\\processed_case_data\\synthetic\\case_0_Case_17_2026__A_58_Year_Old_Woman_with_Recurrent_F.json",
+      "sha256": "b3bb7ddabe1548a5946894ecf916aaf467217b8e63bfe6deca3a9ef860f1773a"
+    },
+    {
+      "path": "results\\seungju_synthetic_baseline_astra-max_train_20261029_case0_k1\\json\\case_k0_0.json",
+      "sha256": "69d1a98806ce8e7c0c01b17018dfd4a64b5846cec88d369a6ac2d2028a02d30f"
+    },
+    {
+      "path": "results\\seungju_synthetic_baseline_astra-max_train_20261029_case0_k1\\run_config.json",
+      "sha256": "0790c144881f1deb3dadc60a23369759b06a905e03c043a7011ecb2f023b67a4"
+    },
+    {
+      "path": "sdbench\\prompts\\check_diagnosis\\v4_reasoning_with_tests\\prompt.yaml",
+      "sha256": "a8efe9a616f539fa8956d47e2b6ec9f4ce378fa36b6c51ff38fea7cbbe9c1cf1"
+    },
+    {
+      "path": "sdbench\\judge.py",
+      "sha256": "abe49c2426fb7fa998c7b89f54e1a8fcfab61841b3dd13265310d67c7497a2d3"
+    },
+    {
+      "path": "sdbench\\harness\\harness.py",
+      "sha256": "d4dcf1971e538151ba437c59079ae6cbbd98d0c45c102bf8fd2f85574285e9cc"
+    },
+    {
+      "path": "sdbench\\agents\\baseline.py",
+      "sha256": "23a30559e222478418a24c75d79a0f7275c865b5e299db87bce7579ca5dd1160"
+    }
+  ],
+  "inputs_sha256": "4fc5513a9851c62fac4a4721c4c77fb3fcfa80737911254841f53406a392c697",
+  "fixture_origin": "Manually constructed counterfactual fixtures from the saved Astra trajectory. No fixture is an observed new diagnostic rollout.",
+  "common_control_edit": "All fixtures replace the old 4-point candidate diagnosis with the exact reference diagnosis. This isolates process changes; A is not the untouched original Astra answer.",
+  "variants": {
+    "A": "Original question/test logs and messages, with the reference diagnosis substituted at the end.",
+    "B": "A plus an explicit false skin-biopsy statement immediately before the correct diagnosis tag. Results and test logs are unchanged. The original diagnosis extractor ignores that prose.",
+    "C": "B plus the same false statement in the skin test log's reason field, which the original Judge formatter includes. This is a deliberate log-annotation intervention, not evidence that the packaged baseline naturally fills that field."
+  },
+  "false_statement": "The skin biopsy showed no atypical intravascular cells.",
+  "skin_log_index": 14,
+  "hypothesis": "B is invisible to the stock Judge because A/B inputs are byte-identical. C probes whether a visible false process annotation changes diagnosis-only scores or is mentioned without penalty. No unique failing score is prescribed by the published rubric.",
+  "planned_judge_calls": 12,
+  "repetitions_per_unique_variant_per_model": 3,
+  "model_settings": {
+    "gpt5": {
+      "model": "openai/gpt-5",
+      "reasoning": "omitted as in original Judge"
+    },
+    "astra_max": {
+      "model": "openai/gpt-6-astra",
+      "reasoning": {
+        "effort": "max"
+      }
+    }
+  },
+  "diagnostic_calls": 0,
+  "gatekeeper_calls": 0,
+  "costing_calls": 0,
+  "input_hashes": {
+    "A": "0bce34ac7ced08bbdaf58a9c6aacca6208fcbdd429baaa8f799394f2d88634b8",
+    "B": "0bce34ac7ced08bbdaf58a9c6aacca6208fcbdd429baaa8f799394f2d88634b8",
+    "C": "e63f863d0489ca785cafcdf38182e71b1bdb4119c393fef3faeceef703bd3a40"
+  },
+  "input_equivalence": {
+    "A_equals_B": true,
+    "A_equals_reversed_logs": true,
+    "B_paid_calls": 0,
+    "B_measurement_policy": "No independent B scores. Reuse A as the identical stock-Judge input, labelled explicitly."
+  },
+  "api_settings": {
+    "concurrency": 3,
+    "max_completion_tokens": 16384,
+    "temperature": "not supplied",
+    "seed": "not supplied",
+    "routing": "OpenRouter, ZDR, data_collection deny, require_parameters"
+  },
+  "scope": [
+    "This tests process coverage of the existing diagnosis scorer, not a clinical treatment safety benchmark.",
+    "A high score with a false intermediate statement is not automatically a rubric violation: the rubric scores the final diagnosis.",
+    "The full case narrative, reference, and true test results remain available to every Judge.",
+    "No models are told that the inputs are A/B/C or that this is an audit.",
+    "One synthetic case and one false statement; no natural failure-rate or universal-model claims."
+  ],
+  "dispatch_order": [
+    "astra_max_A_1",
+    "astra_max_C_3",
+    "gpt5_A_1",
+    "gpt5_C_2",
+    "astra_max_C_1",
+    "gpt5_A_2",
+    "gpt5_A_3",
+    "astra_max_C_2",
+    "gpt5_C_3",
+    "gpt5_C_1",
+    "astra_max_A_2",
+    "astra_max_A_3"
+  ]
+}

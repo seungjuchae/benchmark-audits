@@ -1,0 +1,33 @@
+{
+  "agent": {
+    "calls": 3,
+    "api_cost_usd": 0.214626,
+    "prompt_tokens": 5955,
+    "completion_tokens": 3341,
+    "reasoning_tokens": 2761,
+    "providers": [
+      "Azure"
+    ]
+  },
+  "gatekeeper": {
+    "calls": 2,
+    "api_cost_usd": 0.12179575000000001,
+    "prompt_tokens": 19595,
+    "completion_tokens": 10767,
+    "reasoning_tokens": 8064,
+    "providers": [
+      "Azure"
+    ]
+  },
+  "judge": {
+    "calls": 1,
+    "api_cost_usd": 0.0163375,
+    "prompt_tokens": 12558,
+    "completion_tokens": 1144,
+    "reasoning_tokens": 768,
+    "providers": [
+      "Azure"
+    ]
+  },
+  "total_api_cost_usd": 0.35275925
+}

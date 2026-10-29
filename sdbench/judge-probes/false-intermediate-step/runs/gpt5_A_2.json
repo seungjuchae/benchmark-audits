@@ -1,0 +1,77 @@
+{
+  "id": "gpt5_A_2",
+  "model_key": "gpt5",
+  "variant": "A",
+  "repetition": 2,
+  "request_sha256": "6c5f6e14c505ccad8b85ce0b972c7d650973d07ee95575a5a7474af448460b7d",
+  "status": "complete",
+  "started_at_utc": "2026-10-28T19:02:02.133435+00:00",
+  "response": {
+    "id": "gen-1793214123-uufNWw2CFEOHpl4l6dT6",
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": "**REASONING**: The candidate diagnosis exactly matches the reference diagnosis in all key dimensions:\n- Core disease entity: Intravascular large B-cell lymphoma (IVLBCL) is identical.\n- Etiology/cause: Same neoplastic process without conflicting etiologies.\n- Anatomic site/location: Explicit CNS and cutaneous involvement, both supported by MRI (multi-territory small-vessel infarcts) and skin biopsies (intraluminal CD20+ large B cells), plus marrow sinusoidal involvement on re-review—fully concordant.\n- Specificity/qualifiers: Specifies non–germinal-center (activated B-cell–like) immunophenotype, consistent with pathology (CD20+, PAX5+, MUM1+, CD10−, weak BCL6, high Ki-67), and includes secondary hemophagocytic lymphohistiocytosis supported by HLH criteria (fever, splenomegaly, cytopenias, ferritin 3,150 ng/mL, hypertriglyceridemia, elevated sCD25, hemophagocytosis in marrow).\n- Completeness/purity: No unrelated or incorrect additions; all details are directly related manifestations/complications of IVLBCL.\n\nPer the rubric, this is a perfect, clinically equivalent match with appropriate, accurate specificity and directly related complications.\n\n**SCORE**: 5",
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": null,
+          "reasoning": null,
+          "reasoning_details": [
+            {
+              "type": "reasoning.encrypted",
+              "data": "gAAAAABq4kawTfv80eJKvjnkDmJjdafxyOPoXbPgdxyOIJPtRjrIXZnZDnmbHX_rEaIZMNNtYuzi3HwYoeQht3svxFJX4oMgwXuvS81TWJvkSYSyjMsqPzSfsZNmhd_jmZEZimlw_Cm-799tRQBV2w0Yv3ruMxJe3cbCUeyUmmA4YQvmZwMaYESpKU6DQAHHq8Ez5bV9AA1G-Pxr-aDRiW6vtBIlJAujTPK4nCWgJW_asj5g3A6Lo7lRmQbT7eJVDOHC78S8hkcx-CnpZyk_ZWUOCR5C1FNgCU6kZY3u189H2r4T9nD5TYmnBl4FpL0JBj-2KUIwWeBEA2nPSTcopxR2CJ0k7WSI-gNzMP9TV1ao-vbfkKsw4Z8q0IcdwuoBQc97fjRvrgWQfgHvojSBnwBKdxNKpVGlOCOo2gaTQtkVqeGDWRkAb2SyfGjw6-lOzheSNTntUi-2csP76jdjxZLy1000YDr9YPlgA_4PstT7X3c_1Hm7IjkUGg2OPYlW2QGGsrXw5BeV-pOtzpK6Ll18VcxkEW0-xRPNH-TNNME83B83NyFS6gJyglRQ5L8GVMtR5MsruTHAk1aWY6r0oYrkIu5Av2OIYL4nVzClotBKi5sI8MsW8sf_Fop_ovAkiptsKrMOQu2aEg_PpQmLTZTQWNdzGJW4JFLjVUPtjr_BNj7Dttjov9IhjSrxGxyIZnD1i-T1Ryhryq-2M7xKKkk4Kcyq2qJ2dbxgCpObEoMvO_x1ltw7LgKOVqeenvqyDcbzEEFzfiQdMpU4Jt8NuLUwFqznjKkbwSQWaxAmP41ZMF9PVuCb6SvUorZcOn-p-VBwu1eiuOWzloNmk55RPxxNTHcsr5YXmNYb2qjL9JGX0RemYf_UjJymObXHYtZXZlDscUbCkRvfvEZxFdAqP-XOgMBqdBCPB5rKevMIEPaP6z0IL2wiYil9aS_YWVSzPshs6vVOeo1NUykBWIOaJVNmMw8dp2rPV_tuhrFxG7R7I7CUdalZi7i4f9tfMj2NCkHNGLXpr9lm3WD9VCAn8VonIv3s1tYSryxGMtrNkysZxBnXwHjozCZ7NrDXQwrmhEHoCbrChmRHYgGOJSy0RkRB7yhmmPxTfczGA9xPV_27EHC-F4wjKEP31gUJvd74KAVCwe7CewUtJxhdFh8kI02vzUPjt5sqZeehNT-_hVvJWZbN9XxbNGdOv3sEMNaccVo6ZhxLHhzJgn-Y9Ajqo9sEnAH-a_lTBnFSNubk69PRF5UcUw6470ERzeIQAhKpPSc4DU1_hg1bkl9SvoZ2UzVwb34vovyjCelf873yPAuMAbpk2A_kPMD7OSSM-Hlo82hN7Q5RKErncYcOM--l8O1i53mAlsDtF_VLF8UXmKSAupYTLxhL8hHKcDYochC6IcaK2TK-xeOfMDpsmK_Zzq8Dr68sIYVQdoXORYGdmlf5JgFP_hSntxrgAybZEaPAFFuFdP7z1P-6siz1B7INg70ieSy3n3ubqgGUXWTjZKOIWwoCVA13mylTXc5YmlCutIFEDVHfNMlOa6SZiZaokmRU5NrDX-L5ZcMaQOxDdcOqhdgrxCG87c_AARko5L6SDPN_yKteneBhZSczcAtUjJwrGLYX7H4jQS0FVEFNmVIWhC9UDz_FMBwiDEyzXj_WkY-jWaOXRkrz88TG7_lMf78AF_1KiHPlTr7-r9d6xadCLW5ycg5Z9rKtdg5vEj3vC3R-SuXB4vquh2TwG3uKrM6Fwp9IVxwfdmZy9Lg9o2lIYkujX3Sq_MP2azcWPsol-Vrs2QgY_QqJOECam_sl4fptBVQiXoL8T_3u9ijf04y6d58E0rmysj2ElWm8wuWUghCdjAcEToUh4U-WH2WpZcSDMQ1khHYym5ebIEmd_siNhCZlYHvawgKmLPQ-uq-03N-By9GAT7dnl_oJU2eVLnztmqvrftlcPSAwBqVr4ftSmWTtnY6Xr89E_8PzH8cC2yBPp9GHKXp9yWHVFt_t9f080v33Sc4ZaimT5FIMzsJf3y8DvT65LdjcHspgYIdXEHVKfEuFsBMXVxGq63BuIJ4tXM93v5uS2ftF2UsfAIJdFEjm0Q8c1LdI5PcK5WsNRoz8uGYHq0XcM-bAxWyX3Y2ugxA3KlyS-BZr4SJ9eVYc_O4RxmIGvAG6CMelyp_e-coQSkwUVxuD47Y5wRS07FjuzkWUMPWsLPO5d3hfBJS-UQ5JsDTgXP28rQJb5sftvPe_ctisM9p6DVfhfnZSGshroP0WX4D5tkEqrK0RElmlGMHXlv0m8fNR0qZWcqa88AjDATSLLlLPIMS1lMah09MNjT8kTEuNhJ23p718wf2_tyne1R-5KJcjVTNS8qgRkB9J_gO-us_HeWQM4tWEFLloH5pJsjkfrw==.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC01LTIwMjUtMDgtMDd8YXp1cmUifQ",
+              "format": "azure-openai-responses-v1",
+              "id": "rs_0c0aef85f7517f30016ae246acb3ac81949430bb87b0b6a838",
+              "index": 0
+            }
+          ]
+        },
+        "native_finish_reason": "completed"
+      }
+    ],
+    "created": 1793214123,
+    "model": "openai/gpt-5",
+    "object": "chat.completion",
+    "moderation": null,
+    "service_tier": "default",
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 496,
+      "prompt_tokens": 12578,
+      "total_tokens": 13074,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": 0,
+        "reasoning_tokens": 192,
+        "rejected_prediction_tokens": null,
+        "image_tokens": 0
+      },
+      "prompt_tokens_details": {
+        "audio_tokens": 0,
+        "cached_tokens": 12416,
+        "cache_write_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost": 0.0067145,
+      "is_byok": false,
+      "cost_details": {
+        "upstream_inference_cost": 0.0067145,
+        "upstream_inference_prompt_cost": 0.0017545,
+        "upstream_inference_completions_cost": 0.00496
+      }
+    },
+    "provider": "Azure"
+  },
+  "completed_at_utc": "2026-10-28T19:02:09.335973+00:00",
+  "elapsed_seconds": 7.2,
+  "score": 5,
+  "passed": true,
+  "grading_output": "**REASONING**: The candidate diagnosis exactly matches the reference diagnosis in all key dimensions:\n- Core disease entity: Intravascular large B-cell lymphoma (IVLBCL) is identical.\n- Etiology/cause: Same neoplastic process without conflicting etiologies.\n- Anatomic site/location: Explicit CNS and cutaneous involvement, both supported by MRI (multi-territory small-vessel infarcts) and skin biopsies (intraluminal CD20+ large B cells), plus marrow sinusoidal involvement on re-review—fully concordant.\n- Specificity/qualifiers: Specifies non–germinal-center (activated B-cell–like) immunophenotype, consistent with pathology (CD20+, PAX5+, MUM1+, CD10−, weak BCL6, high Ki-67), and includes secondary hemophagocytic lymphohistiocytosis supported by HLH criteria (fever, splenomegaly, cytopenias, ferritin 3,150 ng/mL, hypertriglyceridemia, elevated sCD25, hemophagocytosis in marrow).\n- Completeness/purity: No unrelated or incorrect additions; all details are directly related manifestations/complications of IVLBCL.\n\nPer the rubric, this is a perfect, clinically equivalent match with appropriate, accurate specificity and directly related complications.\n\n**SCORE**: 5",
+  "grading_reason": "The candidate diagnosis exactly matches the reference diagnosis in all key dimensions:\n- Core disease entity: Intravascular large B-cell lymphoma (IVLBCL) is identical.\n- Etiology/cause: Same neoplastic process without conflicting etiologies.\n- Anatomic site/location: Explicit CNS and cutaneous involvement, both supported by MRI (multi-territory small-vessel infarcts) and skin biopsies (intraluminal CD20+ large B cells), plus marrow sinusoidal involvement on re-review—fully concordant.\n- Specificity/qualifiers: Specifies non–germinal-center (activated B-cell–like) immunophenotype, consistent with pathology (CD20+, PAX5+, MUM1+, CD10−, weak BCL6, high Ki-67), and includes secondary hemophagocytic lymphohistiocytosis supported by HLH criteria (fever, splenomegaly, cytopenias, ferritin 3,150 ng/mL, hypertriglyceridemia, elevated sCD25, hemophagocytosis in marrow).\n- Completeness/purity: No unrelated or incorrect additions; all details are directly related manifestations/complications of IVLBCL.\n\nPer the rubric, this is a perfect, clinically equivalent match with appropriate, accurate specificity and directly related complications."
+}

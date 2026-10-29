@@ -1,0 +1,77 @@
+{
+  "id": "gpt5_A_1",
+  "model_key": "gpt5",
+  "variant": "A",
+  "repetition": 1,
+  "request_sha256": "6c5f6e14c505ccad8b85ce0b972c7d650973d07ee95575a5a7474af448460b7d",
+  "status": "complete",
+  "started_at_utc": "2026-10-28T19:01:30.551631+00:00",
+  "response": {
+    "id": "gen-1793214092-wJOwIkstERODPvAwsKIY",
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": "**REASONING**: The candidate diagnosis exactly matches the reference diagnosis in all critical dimensions:\n- Core disease entity: Intravascular large B-cell lymphoma (IVLBCL).\n- Etiology and phenotype: Non–germinal-center (activated B-cell–like) immunophenotype, supported by MUM1/IRF4 positivity, CD10 negativity, weak BCL6, and high Ki-67 (~95%).\n- Anatomic involvement: Central nervous system (multifocal infarcts in multiple territories with normal large vessels, negative CSF cytology), and cutaneous involvement (livedo/telangiectatic lesions; skin biopsies showing CD20+/PAX5+ large B cells confined intraluminally in small vessels).\n- Associated condition: Secondary hemophagocytic lymphohistiocytosis (meets HLH-2004 criteria: fever, splenomegaly, bicytopenia, hypertriglyceridemia, ferritin 3,150 ng/mL, elevated sIL-2R 4,250 U/mL, and hemophagocytosis on marrow).\n- No unrelated or incorrect additions.\n\nAll added details are directly related to the core disease and confirmed by the provided pathology and imaging. This is a perfect match per the rubric.\n\n**SCORE**: 5",
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": null,
+          "reasoning": null,
+          "reasoning_details": [
+            {
+              "type": "reasoning.encrypted",
+              "data": "gAAAAABq4kaSIq6erb0ZR0tdlcZw7JSdFuZ2RZmwG8f6dklhLKgkHYyxzqxy6jae02UZ-GO3AJ7IS8FIbKVojjSAHgSbaa1acHBei3iSqRBjPTQF5iBfuAnrm46X2WXl0Tal7G5Efk493q1aeGvhzUq3wzpW3Q6Gldgl2-pLbwU_ABCiHD9Mn3pG-KXiDalRJZe5EHAui0VO8XunRk8vaCKJW-ua_ZcfmzFF8K522VqubT1y82S-btfmhriyqxzSbFGecxF3QKSGdGOWVaLoWa7hbGEjn44HkwimCCjEQYLnz6a-c-byqtbp3rRT_KNlMPm3o-P48ZNmZCcSZPNyz9VQJEn4ik1cF0sgt1oq7hiiEI9Mc7iOeNxeJvh89GlCPYAVhxt1ykTCg7Li2zKNwnqwh58peq-mfs2BHbEu8ATcNUL7WhB3eIC6HBnQwvAhmtkqHuQPpzz07AOK8qEAIgP6wsL6Ox_CLl5bb2jWzuowFSuLV0-0XElcJfXLC0Bo8LdezUTgxxaQzOsIhCg4yf74VjRnqSA0RkF-9WSlgia_u07anXBpT12j0mKJ62VthboiGTf9Njhpd6LQPXbZqUdYBXo5xefyIPbYrPJMODEKeEsdtsdzhQUXk-xhLy1qcLqr-sPON0DOGTXaF4kHc2j9gmX-WP9TnHNXuSsxRsPOJPrlgAl-iaZPOW85cMmnezWM7VudbdHdJ0J2tGg37lwK3QM5iLdAJsYZ90J__hD31eQHOp9D2ClDeRwhrH8SM6-aBk3n0o_720p695zGyIyWbaMRbXeB7hhauTsVVOeUOQkziUbhwXvEB5y2TsZPbv3aUT8ykTESoVcemBwU_d0ybHrnNB-xM3TkpnWrAK2P7KTOqs-Ay_HgUuLKa_sYowpQLpcLQ2H-fzaTJwG8qIgSRcbMEJg-iXGz8Z_DHob5Iaaq92TWmr1IpKkQ6N9WAwt7I_LEYOR2zoYjlEuboHqLUAM9kMQCZ2y3MNn0ZwfR00WUI4dRth26ljj058goMyu8pMJxErKFbTBGJ6PPB00kC1AJC3yW41WkFDWVClps6fiBlq5XdCUKsmTlPp4u2zeI1tuQTQeSawj93_iA1DQplajbPM-pzBK7qhlzIdXKuiz96e_5ofzl-mIrvNw8W3fCqjeM0NxFS0RZWKOS60CceubNc9M8UzVKnnIOEhTw5W_M5_E5UCbXDtMG4qx0YMA8ouLeBwMhb33S0CUkQBalI2WWM4iHslO5cDYC6LZikb6-Qj_MLhbbQSdYP8j9FUfBRPy6P0Zchrqw0Qj-zOndRgsJ5MN8cNKp3sJef_hUrzw89tGDimeFpwX-2MuCexlOB8_BymkVg2gAxhT1xMUw2DVuDlLZaJ_uWMVd1NX-3tN-87-XFMlFY7rmOgeqxXoBH0tPLLolEVxSHIvl0GKFv5l3Z_n2Og1eH-1DZYCBWnE9WiVRpugrFtL5dvyqOd8UFq0BIGexNGy6LdHQWIU7jW8BZfP0s28gaRZYv6pahYPWV2HvxEt2UB-2MD8H2zwFnmqgMyCxjFcYVjiTUAul8fEpEAr_O2jsL-guJ3I07VxMQXobf7s6autkTvP085fe4wASyOU6QCydNE001paT0OQoy1vo_wUxXTVvEXNHu0YurER-MUxJJvxR_ciSP89nD98dlOwi0EENdevW_QBwNyZ9DCd91raM1bWxDPKNLOtfkDK0aZso5LXsXAlOk0k_f_WtHUlZnQRkF_yql8lxxkQ-M2hW0GFL2GD1DwT8iDd-lN3l2pnSigWZ6wl6fj1XQU5smsnjuZTKayVaJy8wo8r0corWSNlYV4jURgxWW6p6iZtiK5r8U1TN3Fe72zgRJ_mgQ6ITVoWYA6Z6Zm9nHzXB0sorB79P7d4W3CD_Zqql6gzmEvFmMoE855nvmv615uokTPKUVYAQ63EM8MRDmM5IVHOffDoGrkg2xRFybnXTAn8Uske8260MXajOpwnW9pCgd_ys_4Rtl2fdcpSd5W0uazd4I-3Tzz2CLtsuVKSnzZS0EHn3HnPlsTJF3wkkjGKQPNDIMt1NEVN8E7A068LpkRXmVXBq0Dw6gzn8b7LWtGU8pGMu2PulPMZoau1r05GIaogQK0FaUB9SHu-20AaNXSw7WLdmv5hPGCqBKrsp02X_PWd3S7HBei516hgZ4tkp8srVa2nwY0-6K-7bv8_bmXMl2WnZgCM23IqTmt62Mm9iBLM32Tw6lKKCpJezEjOShJD-z7VDiDRfuIhGrMlfJA3YKbXYTbFPcpZuiEGBfhu9aEpJcSkN66mkuCkmTwuyqC2lcSgnEhv9khGr1RnbMYmVsoldKrdyPSirkbXZWpZ4iY3qrfeJqX6EkGHsMpIvrR2dmrzmSQt3lnToaudENTjzKBw1OSBRp1PNNvYobWSx8cqbu808LE1lTxLcS8Y0n37CQVI2aU1hmGPKCAccSpilsHUmih5HyG3slXBpmI1OlC-x4C18lb1yPdBfkkPe5p24a7h1nogS_kXUl2NlwZEXQ8Pc6_VvuSPQeic1ZTbQv-6iB_F75aJjP2IVWMvu2HO9VxdUiw-o_rx_YxLrSvD9DNuaDyfHV31JfJd_MHWyTfaGeLG2wU9anVCYPkqgqQscwnNQqX1E67FB3ir5XX78IpTHDEZzEqHxSH0w8N_2zwkAAgyU5CJfMDGw3ocCj0uE.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC01LTIwMjUtMDgtMDd8YXp1cmUifQ",
+              "format": "azure-openai-responses-v1",
+              "id": "rs_08c2be83ae3514ab016ae2468e01c48194af403bf4e8f0a3dc",
+              "index": 0
+            }
+          ]
+        },
+        "native_finish_reason": "completed"
+      }
+    ],
+    "created": 1793214092,
+    "model": "openai/gpt-5",
+    "object": "chat.completion",
+    "moderation": null,
+    "service_tier": "default",
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 540,
+      "prompt_tokens": 12578,
+      "total_tokens": 13118,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": 0,
+        "reasoning_tokens": 256,
+        "rejected_prediction_tokens": null,
+        "image_tokens": 0
+      },
+      "prompt_tokens_details": {
+        "audio_tokens": 0,
+        "cached_tokens": 12288,
+        "cache_write_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost": 0.0072985,
+      "is_byok": false,
+      "cost_details": {
+        "upstream_inference_cost": 0.0072985,
+        "upstream_inference_prompt_cost": 0.0018985,
+        "upstream_inference_completions_cost": 0.0054
+      }
+    },
+    "provider": "Azure"
+  },
+  "completed_at_utc": "2026-10-28T19:01:38.817881+00:00",
+  "elapsed_seconds": 8.26,
+  "score": 5,
+  "passed": true,
+  "grading_output": "**REASONING**: The candidate diagnosis exactly matches the reference diagnosis in all critical dimensions:\n- Core disease entity: Intravascular large B-cell lymphoma (IVLBCL).\n- Etiology and phenotype: Non–germinal-center (activated B-cell–like) immunophenotype, supported by MUM1/IRF4 positivity, CD10 negativity, weak BCL6, and high Ki-67 (~95%).\n- Anatomic involvement: Central nervous system (multifocal infarcts in multiple territories with normal large vessels, negative CSF cytology), and cutaneous involvement (livedo/telangiectatic lesions; skin biopsies showing CD20+/PAX5+ large B cells confined intraluminally in small vessels).\n- Associated condition: Secondary hemophagocytic lymphohistiocytosis (meets HLH-2004 criteria: fever, splenomegaly, bicytopenia, hypertriglyceridemia, ferritin 3,150 ng/mL, elevated sIL-2R 4,250 U/mL, and hemophagocytosis on marrow).\n- No unrelated or incorrect additions.\n\nAll added details are directly related to the core disease and confirmed by the provided pathology and imaging. This is a perfect match per the rubric.\n\n**SCORE**: 5",
+  "grading_reason": "The candidate diagnosis exactly matches the reference diagnosis in all critical dimensions:\n- Core disease entity: Intravascular large B-cell lymphoma (IVLBCL).\n- Etiology and phenotype: Non–germinal-center (activated B-cell–like) immunophenotype, supported by MUM1/IRF4 positivity, CD10 negativity, weak BCL6, and high Ki-67 (~95%).\n- Anatomic involvement: Central nervous system (multifocal infarcts in multiple territories with normal large vessels, negative CSF cytology), and cutaneous involvement (livedo/telangiectatic lesions; skin biopsies showing CD20+/PAX5+ large B cells confined intraluminally in small vessels).\n- Associated condition: Secondary hemophagocytic lymphohistiocytosis (meets HLH-2004 criteria: fever, splenomegaly, bicytopenia, hypertriglyceridemia, ferritin 3,150 ng/mL, elevated sIL-2R 4,250 U/mL, and hemophagocytosis on marrow).\n- No unrelated or incorrect additions.\n\nAll added details are directly related to the core disease and confirmed by the provided pathology and imaging. This is a perfect match per the rubric."
+}

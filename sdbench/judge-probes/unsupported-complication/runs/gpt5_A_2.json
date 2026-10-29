@@ -1,0 +1,79 @@
+{
+  "id": "gpt5_A_2",
+  "model_key": "gpt5",
+  "variant": "A",
+  "repetition": 2,
+  "request_sha256": "71d9438a39b8133e00f650eb8e6a7aed4f2eba09194b7c18677920e75ab44b36",
+  "started_at_utc": "2026-10-28T17:49:08.612528+00:00",
+  "status": "complete",
+  "response": {
+    "id": "gen-1793209749-jsPyCvenhjbM6UA4ryKe",
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": "**REASONING**: The candidate diagnosis exactly matches the reference in all key dimensions:\n- Core disease entity: Intravascular large B‑cell lymphoma (IVLBCL) — identical.\n- Etiology/cause: Neoplastic large B cells confined to small vessel lumina, consistent with pathology (CD20/PAX5/CD79a+, intraluminal localization, high Ki‑67, non‑germinal-center phenotype).\n- Anatomic sites: CNS and cutaneous involvement are specified and supported by MRI (multifocal infarcts in multiple territories with normal large vessels) and skin biopsies showing intravascular lymphoma; marrow involvement also corroborated.\n- Specificity/qualifiers: Non–germinal-center (ABC-like) immunophenotype, CD5 subset positivity, EBER negative — all align with the pathologic discussion. \n- Completeness/purity: Includes the directly related complication of secondary hemophagocytic lymphohistiocytosis (meets ≥6 HLH-2004 criteria: fever, splenomegaly, cytopenias, hypertriglyceridemia, ferritin 3150 ng/mL, elevated sIL-2R, and marrow hemophagocytosis). No unrelated or incorrect additions.\n\nAll supporting tests (skin biopsy, marrow findings, PET-CT, labs with high LDH/ferritin/sIL-2R, negative infectious/autoimmune workup) align. This is a perfect, clinically equivalent match with appropriate specificity and directly related complications.\n\n**SCORE**: 5",
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": null,
+          "reasoning": null,
+          "reasoning_details": [
+            {
+              "type": "reasoning.encrypted",
+              "data": "gAAAAABq4jWZu41FF_KpGpR-VuUuN-Jo3ZMl2R6asoqfwiZx9nPNcL9EUtlpMZNtyAxXMDodxOx2W9i0pxflll2gEhRJLpGFSEahaPoXrI3UvfBGuCa-7QuY3WHciCCwzEccuNcBCdvtsPq6i6JlgLMYxXSegKyByO0fyo6UvFYS5WBIhF_QJxD_2llKaO3Wr4Ey60iITasbrlhbC0vk5TbDhze_eNtxMh--eSuD4shJJmglRAlCZ14Hxe61zTEUeWXkqg2mtvQs5MbgyFLTFdvInfwqWQQXGrNiYlbLfV4TmOCXjwKb0iQJscyBZliJz4VzpusD6CiKOmJJuYeYzStH7_8YTZsicTlFnfC6pRVH0wcc4iMt7SyU2gy1bjSAYlaainGrjccFyVps91Fe5UaGVp7x8QwQ5glnfymOlZvdcL6noHgE14Q0N6ZkRkk_GSVAbrBiD9x_FNttJpPDeHxN5CaQvk9_Bl_t4ILSUjpiES9aL04-X4VinVGRvX5ajbCPWXm1nKuLA3im0wD0CMJ-7C0bct3HjGm66u2EZStv78diuudjIrrcvKrmaT46dZIOLBShzY2bPeuFkRJW_D1-hm8yX04VOyF5RwIhBLumMPBMe0ccZ5rlze1wlD2tUQFjmBkfikgriHff44TidgwnXM74beyzp8hFSPXRpPQ0jXlZ6q9tX6TQbzbdAU6515LCssvLkhH2WlPCQ_e0iKMkcyIsMZQFlSdJZIIrBB6_a-n8LSI0DzuUcNYpIcCp4GVy0__dULEjbEkLQIfN84O4gV--5J3i1RojxQqF9OWnVqe09FAlTQHJStDh6uCOQNbQ-onSEZDqPNf6SBOQeqA123MjiJ8_FOwKjH0kLE1K1dQ_ugu_6nEYeIkB5G2TwHyA6GPPhc_FBbDHC3z7B1pNaHduSggm2nsYZD0LlnhUPV4g-iFMPABFRi0JAM2rrmZUFe6clLWBQh53JQ_yD8nRgFGWB40Jil7yUkE66LifIzuK5NWvr_a5zeBOcVn4tX1sJzLJQ445En7eRaDZj7EuPeRXu9epKKy3gl-bXpPQpFiJyD59Npm9pOyiUdNnfxNBQV2N3IpkJUFRaoK81lvq3zFR7uM0YXdn2bEiMZ5kkKywvpl2lMIvHtBPJhfakaV7lkG_SVU-Xn8JRfO8HoxQPKkFSbNqKFvO0P3ydqOdxCLdLjLVC5pW-CRF6m5fiZbh8pLRmna4haFrHHdJnzmi0e52-DvJEb2Afwbg3TBSAR-RFb8Yv_iEueGWUgHprNSl1oG-JIx7V4ICPsv4Nu9OuVbHAISj5_6WgXH1OZlpJ524njTSLovsWJXxyI_PXloEB2vK8FeMne0AY7i7O5He12lyzejm2FanAqvaab_AKo-Hcdn8uF-dEWBPoDDXnWtV6zNYkCUFxHbMp_9q0gKg7lc_RyLT1jhhRB_hznslJDurGOsq_lj9kJgu1MvgsC_zjxbHDwtP8bQYSasr8cYtqShzYp3QYNchxQW7OkDyPvsTSULZyLmwwy_OApyOTmeUP5XqknfDn5XolOLQbsHdfgsZMPtwJpIaqfqNbxB0px__Nf9eGKpGIWup3EimA0VJkw06IMTf2KOwOQV7TLWuw5xYLJb4EqM7QnhWKXcXgSOxTfNk1i7oMNKxH9Swq0-4sf0opcbfd4c1MMV5ivDwTxMMpuAm2X083iDaNi2tI6YLAyynS9DsiG4A220dEwSDcpvt8cTBk3csVRi2Fx4qup3nv4cVrKY_mBuoYPmmF8f7EZNyvQ5e6_FmFHBEIaaI0s0iFz_2GAVw3G8w46lvzb0bUeFnu-xqJkP73x52GplmcrHk0ZLksMGna7uHL8tgKaGqCgiK5C-jLbYsaVms4KVb2U-HalgS4cbyMyoM7Ejty4AIpQ_1gEwLZhh6TvQMZwAB7nTTgQhEC2_-eSicknishJL9cnkwctQcAHyKwu_1EgAzHUtOU97hLNmrJRUMDW9Yk2f_f9E2KAaxTVIYf1HcEj96N1yXco-zpAFsX5StUZIx3_FHCKU9P3hOJhKGDuhPusXnVjS55PMQvQLJVQdQX_uEtzd4CqjWym-ITsXPdCYpXrRNh7iUWoQxnhs8EHv4MC_7cHVqpYrc9wnFW3qIMJibrwRt7QVsMqS4tbnUMkgOdC1lROInr3bRasfkZQaZnAEfpRRlOmRlzfflJTlr1WUtFb0lFsVSKKE9rrMC_sY0JXPJ-OtlN6uOehmiUIWZx9OkQpM9AgxeakkddjFLajl7BZLW9rSdWeuOmaPM8fXvq2wkKgR_vI6edp_EUvGjL02RN4eVHZgKhYHs3Q-46RJ3gg==.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC01LTIwMjUtMDgtMDd8YXp1cmUifQ",
+              "format": "azure-openai-responses-v1",
+              "id": "rs_0629d07f353a3d9d016ae2359697088194ae55ca4907db5620",
+              "index": 0
+            }
+          ]
+        },
+        "native_finish_reason": "completed"
+      }
+    ],
+    "created": 1793209749,
+    "model": "openai/gpt-5",
+    "object": "chat.completion",
+    "moderation": null,
+    "service_tier": "default",
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 537,
+      "prompt_tokens": 14382,
+      "total_tokens": 14919,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": 0,
+        "reasoning_tokens": 192,
+        "rejected_prediction_tokens": null,
+        "image_tokens": 0
+      },
+      "prompt_tokens_details": {
+        "audio_tokens": 0,
+        "cached_tokens": 14336,
+        "cache_write_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost": 0.0072195,
+      "is_byok": false,
+      "cost_details": {
+        "upstream_inference_cost": 0.0072195,
+        "upstream_inference_prompt_cost": 0.0018495,
+        "upstream_inference_completions_cost": 0.00537
+      }
+    },
+    "provider": "Azure"
+  },
+  "elapsed_seconds": 7.39,
+  "completed_at_utc": "2026-10-28T17:49:16.004064+00:00",
+  "score": 5,
+  "passed": true,
+  "grading_reason": "The candidate diagnosis exactly matches the reference in all key dimensions:\n- Core disease entity: Intravascular large B‑cell lymphoma (IVLBCL) — identical.\n- Etiology/cause: Neoplastic large B cells confined to small vessel lumina, consistent with pathology (CD20/PAX5/CD79a+, intraluminal localization, high Ki‑67, non‑germinal-center phenotype).\n- Anatomic sites: CNS and cutaneous involvement are specified and supported by MRI (multifocal infarcts in multiple territories with normal large vessels) and skin biopsies showing intravascular lymphoma; marrow involvement also corroborated.\n- Specificity/qualifiers: Non–germinal-center (ABC-like) immunophenotype, CD5 subset positivity, EBER negative — all align with the pathologic discussion. \n- Completeness/purity: Includes the directly related complication of secondary hemophagocytic lymphohistiocytosis (meets ≥6 HLH-2004 criteria: fever, splenomegaly, cytopenias, hypertriglyceridemia, ferritin 3150 ng/mL, elevated sIL-2R, and marrow hemophagocytosis). No unrelated or incorrect additions.\n\nAll supporting tests (skin biopsy, marrow findings, PET-CT, labs with high LDH/ferritin/sIL-2R, negative infectious/autoimmune workup) align. This is a perfect, clinically equivalent match with appropriate specificity and directly related complications.",
+  "grading_output": "**REASONING**: The candidate diagnosis exactly matches the reference in all key dimensions:\n- Core disease entity: Intravascular large B‑cell lymphoma (IVLBCL) — identical.\n- Etiology/cause: Neoplastic large B cells confined to small vessel lumina, consistent with pathology (CD20/PAX5/CD79a+, intraluminal localization, high Ki‑67, non‑germinal-center phenotype).\n- Anatomic sites: CNS and cutaneous involvement are specified and supported by MRI (multifocal infarcts in multiple territories with normal large vessels) and skin biopsies showing intravascular lymphoma; marrow involvement also corroborated.\n- Specificity/qualifiers: Non–germinal-center (ABC-like) immunophenotype, CD5 subset positivity, EBER negative — all align with the pathologic discussion. \n- Completeness/purity: Includes the directly related complication of secondary hemophagocytic lymphohistiocytosis (meets ≥6 HLH-2004 criteria: fever, splenomegaly, cytopenias, hypertriglyceridemia, ferritin 3150 ng/mL, elevated sIL-2R, and marrow hemophagocytosis). No unrelated or incorrect additions.\n\nAll supporting tests (skin biopsy, marrow findings, PET-CT, labs with high LDH/ferritin/sIL-2R, negative infectious/autoimmune workup) align. This is a perfect, clinically equivalent match with appropriate specificity and directly related complications.\n\n**SCORE**: 5",
+  "structured_score_present": true,
+  "structured_score_matches_parser": true
+}

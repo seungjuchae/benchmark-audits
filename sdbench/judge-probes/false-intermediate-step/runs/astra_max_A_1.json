@@ -1,0 +1,90 @@
+{
+  "id": "astra_max_A_1",
+  "model_key": "astra_max",
+  "variant": "A",
+  "repetition": 1,
+  "request_sha256": "83bf762bf7395407163c138023578ce2990cedbeac3cdb6d1de6ec08289777bb",
+  "status": "complete",
+  "started_at_utc": "2026-10-28T19:01:30.551049+00:00",
+  "response": {
+    "id": "gen-1793214092-WN4mz3Xrr7toY4FyL5W2",
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": "**REASONING**: The candidate and reference diagnoses are identical, matching the core disease, immunophenotype, involved organs, and secondary complication.\n\nThe findings substantiate each component:\n- **Intravascular large B-cell lymphoma:** Deep skin biopsies show large atypical CD20- and PAX5-positive, CD3-negative cells within small-vessel lumina. CD31/CD34 staining confirms intravascular localization, and Ki-67 is approximately 95%. Marrow re-review also demonstrates intravascular/intrasinusoidal large B cells.\n- **Non–germinal-center immunophenotype:** The case pathology documents MUM1 expression, absent CD10, and weak BCL6 expression, supporting this qualifier.\n- **CNS and cutaneous involvement:** Skin involvement is biopsy-proven. Progressive encephalopathy and multifocal cerebral infarcts of differing ages, without large-vessel disease or a cardiac embolic source, support CNS involvement. Negative CSF cytology and flow cytometry do not exclude predominantly intravascular CNS disease.\n- **Secondary hemophagocytic lymphohistiocytosis:** Fever, splenomegaly, hypertriglyceridemia, elevated ferritin and soluble IL-2 receptor, and marrow hemophagocytosis support lymphoma-associated HLH.\n\nThere are no omitted reference components, contradictory qualifiers, or unrelated diagnostic additions. This is a complete, clinically equivalent match.\n\n**SCORE**: 5",
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": null,
+          "reasoning": null,
+          "reasoning_details": [
+            {
+              "type": "reasoning.encrypted",
+              "data": "gAAAAABq4kaaOiyXoeshPBGoLnf2PEUm1ouCMt9nUBdHXAojv3ugvQ6sxLvnqNz5M0XNrKJ78Y8rABZdJft_3znTIOUsp8v1_bZHBjKH1tdDHmlEjFYdIZycA9M7TAoS-BeBvRRww_nSPGHarxBOf8YpvD7ROPb9QM4M8KrS-9c2jHs_pxwy0rtn5bTU4goQXXLLIBdlRixE2byOZuEQUmf97IWjb1XSG8ne9TRklLDhDa-R70WTNcduHyo-bW_UMdlIVF63EQDUN-4MkULp9ZKV7otteXKJG62ENNjIfXImCCNXIYcdXR5ENkZi3mw82AhGTYAx6ouOFwQX_yW1YQzog2Vj3Z0DTokUj1PuPwdsxe_RmYWIKYlgc2L6-es38L727SFql2Eupxx4446rdZhkLkR3nK_mVMxLnCd4NjbNDFUIuRxwXzdjItVus3SMhBc3gKRG9oIIHIjqm-mXZm_2kvedIauKqMBdKb_xnR9w9rjPxziKFo-r2Ea61DTuHG4btXzzNbpF-D40NIeaxzGWyLUHkpQm3Nty-cfWbq8ScrjgAVTGziamNVdfhOTAmhMatfK_PCsC9pw5XqZ7hVy6nrXhtRp5P8n_-C0-GyZfdM8YMeqDrj3PRWGew2y9o9142Dj0Y4CUA81GSvV9BA324rsVO4YTWbSXYEsIcTIbn12kqVWBD_DTerbM5zLG0-x971H-Npd5-9c8oxA86aTvNO4CDUTyJqTF8GkM6I8-S3EpjlX4-unUpxIxkFYnXyi_PNWdrzhJhe900B_nUWjWoH8yQQh2z911RSFUDgcDKblopVmZqkgu50HHyH7WTfRArwISUPCfiNyc4hklf6mwTa5d7kplBr1CHUY0qNZAGEM04eAgRVcDaSPo2Ns1-Xrg7X0FIrMlsgZuY-F3Bb-zsOBjfSSpHV3oOy1Ei1zS-TDxA2e6m6BBNde5TPhX2QjcszHV6fjDTCA1xdT2bwl-i8NFKKBc2A7JgeXOQO7EWGil1n9ZM8vYuUDST-Kloontt-_659DdY6N1VzmBlmOS5cw0xOKNK2-E6qARHT0ziier3edErXxKNnyyTjojVvW-Hpjm7yEGYFmdWHGwHbbh01OYk-asfdBDhW1JYNuX38ve6gBDr1IlKQZlwbC3uDa6QoOat5a7TvZu_JTKnjLIpji3zuDOufnIh8wseE6nuPuvINjgbaw8rsdIdiZy_Elcav7aDZPn6KSBtAaeurTfrwYLdV7ck784FyYvACzsb2R97bRAZ1RbsDd57FU0P4qOdqrPuwOtAzF0SSKpxjSbohbreOyfxLlVRVlc34iumHuFfQM71KY8FvfwcohfFGqW4IVhAIQP6-m-axCJjyX6N-tFym8rTsQs8IH87s6JSbS0aeJrVisb_SxrsKPqwa_xwanwYrSQAxJ1cH-NYjXiYwbCl8Rc8AHSF-6DVJEvYd3_LNUsYEVedANiCeM_C-HbZx6gl8Lr9yCzP_1n2MgMe-ARRSAQfGJpeAZUVhdHJKyPdM9to5xZJXe2-Du4ycQ2LR_aS5NfcDi8-WesU54-PGXhzgNho2jHhQJ47bZycgZ2dhPYm0XAWAdCVI6AiHdezFZDUsHCJGjs1VZycuKsTsftH_4zlTJRqqJY_lT_CJlD63p5-LYk5efz7vdFKlSvPwKJfaG-l6K3kfUyMMgsIf_56rO7BkftPr2V_UeOVBiZs3SDZmLe1lo2aTpVSkH1BXH8cDyB56xeBQiaOeqz-Bjbc89TuKyBMpTFoLFEtB4U6DMkiw84I3692K2_Ud21pmuTkMOVVUfdZFd2ywpOxAwgq2v1ylYKN_-LWDvkHt13aQuPAhS9v95WaQ7xhvCDHfA1H4g82n0BLqoGHAOr3hpB23d1WghM2xt2m2g1BGbiEZEy8Dt71RPGSs1llag2Iqx5mkulB87I66ndaoAKHIoHXnVN8uC9pMdISDsb5aKMnskoRLgCGbeUPk_rgnAoZrchqjyWiuzntOgs4PtL0fF-8mDXVscAvshszJNlb-ZdqrdkhyvxYzzRS1Jmd55QXMceNFzZeuOtiEmVV5tkifhuxwGLy7WCCOk36PQr0HvKzKtnD5yuSJWQNaUhSHIDj_4m3b_kh_L7V46BqLCUcYkhPnOSLni66G6artx1NG1CFp-UbZBfvptZMJ1vTJKKzaOXrvghXKwDTtKZZnkIZsO_RTe4C_DX1oJGekT7zYMRH4VMCrcbt0JWbtgOuqBDqf4aDkQZJ-a-ENqrIGaaO9jeybjGIABVNjZWyYW3_UNiKymSu3lCF0IZt_SXkRdtRUlQzQKuPf8nk5oq2qmdzeZhSTxbj_e3LzEOFYJAauHREQel1x60wMT8fTIazGU-MZ4pjtWgsNXjieoir64liKwwbWMVyMgfTMMI4Euaphc1UM4fSVTfIjCaBqrK6rUNo3X2YWo90JF3XGTSGW6sR3yZEHz0mto3gK57ujUeg2W4MfdVDV3xd3LDoI-entjWb9wBKiesM62-3_uWta0EgP5iJjtXG5Hzxpkzjn-KR9q8BL-M1OOgms8yjy82LbxKboS2EXb84FgPlnF79bpWYenlXVNcwsB0GQiW4Z2DqIJS_Hvba2hTqA2czsdaFEsDGn07TdFNHSQi4h96RsaZzPhQ16SHx1GpFfTn3w_zGe7ShIV5IOZdj3ZMgx08SBLzyAAkmj1WcSRqrD0H8k3bc9YlFyxV8uO4zhJ2VQfEr-H9kpQWEGb8CQtJPFRxqYdPYBBbjbCjEZuSjMgde8Q7nL8wWW1x-kZ2_-lNFE1X0VJDfCmnQhrths_C49ikiKEjNax8GUKF4IpTo4G5NHDLWzvTtHSgYwsU2MR0HPYkUFF_M4XtgnJanMUruMvNduSM5dJvG1ceeqn0lGs4R6HZicSO9T62ky5i9uAw32e6_KraE53Mhpl-Yf8xVHiT72YUupW1WkZ2HHE4GMQqnxUhwW1qSx9iF5xH3z0M4f3VRYLaeWtMlnfXWularZhJ0Urfer7Cz8pcNZzdbs814uZSi49r1JO1ea1Z3AVtdNUvIIm8ZslPvNLwTKU11GHHMhHnLa-X6rg58viusbBeaq99BcQXQ5n4eGuC8KcSJnklZAd_l0PTqRg_VxZLzqgKDUTNsHATrATr_emzPbk2TK2aiXRUtR-OEhNzHOoh845Y1RSTNxXJSdBE7ucsHeohqBbGt-ZZ7Z1BVUNO2WBdTczGBegYRtj7kfZ8nf_ajPSzhn_ONldg3n5SF15ooIcsSuFBjafl9CY-_RC_oFSd92vYkQ15sSL0wbejClECDLGfniLknS-RlUsMKG_27ijSAcbe-z1TWpRCEYB4EuOlWpRZb5qKgOh4lIVg0hNNF5B5IOLCk9BJcf090QfUPasxJ74gByPWpdooTGU9FtjGLL_Qw-zgF9c5LeLfy194DQX52B1XzHqMOqTa5dD24uUvGN9B6ENNkLynruwqPnxEED13vUMa3BqjX6C9-UpiyRtjx0vEeqg9RJA7HyRRuFZjNVonoZIzPYz0Vy69bbMyX55A5tO1knM57QEj0B3E-N_AYMi6tirT0e3ObaCHsK_qFjgxwsxB5FB89DTfOL_zDicKkRbbLfJK2RYj1B1Ks1cCUyHoWflmNzShaR6L8tDsrCvVLZ2GFNuA2RUKNp2nGH1xn-RKoZfy4PhzzP2cOr8z9lG4BzHCPq_nfcQGiYwKuY5rTUsawJAHvfCp1VO9bcdEQvkx5CT12HMxDCkRmssFGi5wsdG4Ja7aD9xA16ir2pV5rRN43jqDKwHps-fV7SguXNr0Jf6eHTzamxIhiM2FKwqeH3LbVWjA-XKu1AdZQPqJ3NafzeQJZv1cRq_u8fGNKdMR4sgmbusYPlgGyG8q1X6RKTQDCYULeFw4SmuzAmD4htleC4Joc7U84f4oVdaFJudYFyFLCQHylJgQKLcBm5raALYeWMrQomQiepYj7l_BBNO6RxgLEu17oKoPT_qp2kTrQ1aEa8kIei9kbTM-cce-mLE6hP56IatU4r4nBbqpaBoiy_2S2Ow5XFFo01bgFdZG-TapiqY9SsG41Zyjgry0MmT_5gXa3MI_y_817Kt-rJtI8w4FvX_XdbvlCtJCqmAWff_jEUePRM8nlUsEgZFJnhF2qFm-GE6oDEHRBiHhklEyz9XJp0bKF3znBWL3DBvD6AwSstmZq3gZNl0wmRM35vMYeT4-WUcy5pUcp3H_eoEAr1OT3wXdFkH8ydTt08tsusYa9ZcBkaR9RH_jb-H6kY2KgqPUhPMpW9TbvnvGgf1q9pLqvslAXMgAeObHYjHOg7--B3We3Vubn2b-4CIsFTNdRmyMWU8gIO5GSUeNyZYXFa0hBD2sjrZuy8ELOW26NxgZxGBn98XF6QFeObluKQsEappl9AxgiYHGS0-_lpFCFZqq.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWFzdHJhLTIwMjYwOTAzfGF6dXJlIn0",
+              "format": "azure-openai-responses-v1",
+              "id": "rs_01aed8927fa6948e016ae2468dfed481968dbcb571726af96c",
+              "index": 0
+            },
+            {
+              "type": "reasoning.summary",
+              "summary": "**Formatting and refining response**\n\nI need to structure my delivery now, aiming for around 215 words in a couple of paragraphs. I want to ensure that I properly format the score as “**SCORE**: 5.” I’ll include points like the anatomic distribution matching and the negative CSF findings. The cause of HLH relates correctly to lymphoma, suggesting that an infectious workup isn’t necessary. Including the supportive data and mentioning marrow involvement will enhance the answer without repeating details.",
+              "format": "azure-openai-responses-v1",
+              "index": 1
+            },
+            {
+              "type": "reasoning.encrypted",
+              "data": "gAAAAABq4kamAdtWqPwnOYjg9spCgfg6wPm8zTXFA6mUWAhd-Wi-vDzsCzpyugEPxVrj_n8-QUjHK_ayK0uRZPkh18u2PoOOIrZ17VJSwMXWzjoUvwbPl66_AyKaqKzopPkvB-1E5LDudpFC4RHFMIt6e788AT4bKVYX-ApcAXoMAUnH2IBPlPfhIfNyupZoNVI2MAlYMOCqJtgY2rl9NQWQL8kPyOi-_U0GIfJ-hTT9uh2l-85oIECCXig6OYVSiufRv4BNhaT6Dx5R2I10F50VBl32Qqf8Joy_k1vmQJ-MuIfEm-UYWDy3GTLGChW3RKY5oFCg_Z93H6gNBd73a-B_BaKZnwJcL_bVDSSmzi_nbxgeMmAtrotr5EggeYxp-jcg27iaN7B-P68BMYy794F3I65szLpXDw-eRa-pXvb9Im_mLqENPm-4h4xBD2RVl0dVXS2bLl6C1xNmBpS-NZmoCALoXAlQP6N80M9_pmF-BiCsVUejIZAyboIiWK7zT0y5pmk7ggvExGv94HOS6_y2z44URJi9ysdV060G0yiKLMbFbdIKSHEbYESbQlGtvAisalT9IX6dSarneIPaiEoCg2ynv3iWGD0Jr1phPTHcc3Kszso7G44Ds8nppKO-Q07uDmHEGVNnXatYRevB3A2moi_jH9L1BNetQsHn-ezYbuBz5z0xoCE8AUBvGMsFco8ZfhboNNqpczukEwpUpefvcS_3hNfdILe8BqgRn9xpJd2rkVmClw2sTI8xqUoGjBYEZugp8_c5nIRDmBFUCE9N_QiXC8zHKrE02zEI-v6LOCJ5ddTPvlTtGzdZbgsC16uyGD1MleiQ56hq954skLxtpk9cZtvC8HoETzMXMMXnMt6c4ddbq1iuNq1aRJKyitZTLdZPNEKcChgGk1qoWf5vG12tyDCEYz-kpz9k5nxrV5_JyG-XbScr_yJh8ObNRkQLHjCTL55_1XAYqLQ68w73Lzzfx1j-jhEQqz6eKFXbQpCW-0YalaSuOj23xUMDebrq3CGXXe3UdJIRecNo7DRpsOZ56lfZ_HZIln0MECGaaJXWSmck-pVh4TYUYAug1NJOCveEFZTYcl6AUzUH8ww_SgrqrMtEKnNfBVTeMaU7SycvWf6iYZAFB99S1FZPm7LvPjEPliw7FZSgO_xTwvkvSvOsghrTh3EbsU4rvfSMbF1El02Ciu0GC5mvC9uvVnmJl9nOs9H_E2pEO_zAJcoqgsG5nQUm42oOVCPhrOQIO5728gtVhXsnmGarN2ihllg-K8bsYcJw3dtTvO2wX3XjvG7aCsfpCqQuaQhQPrtTc_wEDq3HIvjF72_7XufEcx9IwqvH3vFBoNgXKeeq2CvhpoemR-DnN-V0oCZo2UJ9mDLgSZSWc3ZUVvEz3D61KrDRHsWaLplecAU92ZYCXtPl-Lr-Vl1Zg9CsRa6sDxr07FOjjC_zGYg6e-guzNw-_DQ9iK2c7UTPlO41bppf1kN172dpVNYUvKhu7y17EWEs9WyRUlO0ng-pr28Q8wPiFpltXejJV0-NV7NWYOWpsSQZjpRFAC9IEEhyvVK5L_78nbwwarAecUW0eFxQzvSuUdNprALoSX2B1-Dg3QUqL90CROWdOjIXScmjjenvkyoeTcjhmphyy7CKtHEEf74ZZDujP_LmTPm3tISLXeRd7f387KG5xbMA7-Vq_4RJLpmS0rvH24bYWyY9RDF2JcIUMwkLiF8s6kiu0sYKdRUP9CwcSY-cmXgL0391e-q-YLu8vjwE7xWSXF1lMKSl44Y0O7FpSaL4gspy-1cwNMUyrSgVz-ECdV1gT5MuHzcIAlfCeWSJkP6YJPwpeWvYSqBQGGk1J_jWroZ0TwNtYgqw1ipbJpMtKqGEhsqqvd34bkBZy9utQWjedpy8mO6k53GG2i0iG315UujtCU6pG9wOfm99x6xSUJJKQBbWcBFbtdpPPFmHTI1Nu4yEoTysgBD9LX6AZYl8X31ZHIRsyI5H9obNbuqxzOyNzaqeuM3AlC13suc4-lYVh1hUyzdO79BmMH223ASc9hDmsSXTNFTv0d6DzbwHOqUwPfSdm1D761GKXKwf5nAXKQp5sfiaVaXsiI71fiRoiPp__oHK-jhm6ExDIP7gyWKngrdAwxV4Pg1UfWN7QgRvTrdGTJW17lsfrv4f77yGoA0ObRM-nNqJpJ2TRGL1ro_mimqjRkV_JrHX789ogRru2DrOCev20BaZ0tgtZymtWamSUWGhjtUpMEDl3lGXVAgDt6gaAfjRlWNgkm4tDNJdnHvcalGYBr2SSYGm0sKO-thEpDRz2sX11IMi5FGY49ecSV8ETCa1ZFQw087isCy2SxQC5ekVXP-FXUTYlzknG-H80R9Yy-RXGDjEFgqZFS_4fBqpDBITycvQTlkBUv_i125a0WiJFD0a2tFn5FyfHf2eyb8S5ohmUBeiblJfcphjObfLitpSQWywWopkx8aDK0tfvBw3TPB7UAL4CYlZjVs5ZWN05M9hKrezkZtJV-qQoQpQ0v0wNOnhzWjE9SwO0gBxQ4QYjBOtpFnkeS4jed3QmPAHUyS_u1-vF_QX0DvP4Gah-p8yP4SQarWgArASSG71jb-8Xw1UfGzmAXteOO-qy-OBNqfkjU-HLtokzcBh02ptFu1bvjaZoD84oncy6WxAJVmoJ4jpRVMNNn4Pt5oPqISIHEILjF4inycndaSPACRuafLDBddaOrJwQxPUDYTDZY_lGO8RRg6qqsJ1pBhmCwaZhRLgQh5o6PzqW_fmEIvDNKFb2O18RAcwAXqaYaQE7_6zTrtooZ6UOOp20zZhiUWskF_QhWeYzvQyhrwICdbtIx0ANRFW73HQoI90PiYeFoSJ3JtbDUaMZClKScZKNTBcT81T2e2Sjpd7iU2ZEK31uvElX1kMIVlAm6-kol2ehpvWkK0Y0U582s0r3JNOfF17yjxugrp7HUQe6IPQE3Q3C_h_eAlgC18eQ26vUaFc4uqRRjBDVDrAwaPa6f6vkR6LTKd6D_mxjlyAGvbkbiw_LJZ5bJNaWKkQA5eomi4QRn0bNYE6WMJ6SrAgrLrkcXQh5rSPDj-yL-Et-t6mYX3mToPfaJKl6Tj5yEHF7XJX3sCFluJbP_4PSSJYxeKCExPdIHaI1Epiju_QsHEwdFVpP3RrE81CBERJ1Tua_TA3hRu1JvOSpE5QDAFuIkkr-9756I0iV_tNsG0pcImLVE6N06PHKGqonK00xLeTy0EeW6eL67LgARwU1X9qJY5I2OdosvA60FEJn5-OSIkEHxhRJftp1BdPpw7PrUGEtdamQzyxEuD_29RrvCRBzrSaPrA-m59WPk0FRmpJi8jvqbXGh9QqfYV8-8RhJYP28J3TtcAwnQReV3NPfPTkyR2LaBQIjFIV4O9LvVomi27D69YLFlF5AXSgF_z6_4JXW_fcxToFzWexUB_IOyXxaTTM78x-x7pVulBQJBCgQwMGQxoF9VOAVfKVorHTWZ_dZl0FsyBSebND0H4erp5kJYmwS4XJFmAq4R-zvF3S3y0ScUsr-3r19H1WqrIVm9ZzpA_PAYPA87ptm64GcDp-CgtmnKOO69g6JwVW82E5pjr3EMC5jXOBCW7MR_p-BulNV63felgowW_rTi0hDhkdaLnTS9YsRXC4RWgLtCN52Ssgy2kb6jH2Rk9QYKVyKLOCVdedDNPJ_UCyNWo9D0AAHHkrHR5_zLTOYF74b_iXnoi4c76MVjg8v7g0SHzxo0P59KIe9bTon4cgFP68KtlGLselBJfVemilJ3VIZ47GyrnWEmoT01r0xGTOxSG5MGXScTPURBGumf9QrhlndZiXF4OLN48MoXsn_L8F1mCUFjdsdZMfI9JbaM-vl5HfIdk_EGhVWlTK90RZCQ-coqIrycHqvunY6wLSv6atIfP_Isi8SLk06qkf_Et_KrzWs353h5D88RLq2qTLbi98qEaHp5NDlK8Hv0ROZYh230UQz4XdIf2sp29TRkFVzcg9wLWe7cRkwH9t7r4_x85mEfS9gavmGBbPeeHA6tE4QDRyKoaK62BdnbUD42QoXFl03SJGjJUHC751YnbFRFqK-hmWhdQynNvFaUA37HH4RlGR84sHElUflWSO1Zn-W6WCGNtbXDisHZ7LXfivpmnfmw5lnB-k.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWFzdHJhLTIwMjYwOTAzfGF6dXJlIn0",
+              "format": "azure-openai-responses-v1",
+              "id": "rs_01aed8927fa6948e016ae2469a22bc8196a7f0c2a484012e92",
+              "index": 2
+            }
+          ]
+        },
+        "native_finish_reason": "completed"
+      }
+    ],
+    "created": 1793214092,
+    "model": "openai/gpt-6-astra",
+    "object": "chat.completion",
+    "moderation": null,
+    "service_tier": "default",
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 1287,
+      "prompt_tokens": 12578,
+      "total_tokens": 13865,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": 0,
+        "reasoning_tokens": 985,
+        "rejected_prediction_tokens": null,
+        "image_tokens": 0
+      },
+      "prompt_tokens_details": {
+        "audio_tokens": 0,
+        "cached_tokens": 0,
+        "cache_write_tokens": 12575,
+        "video_tokens": 0
+      },
+      "cost": 0.2215675,
+      "is_byok": false,
+      "cost_details": {
+        "upstream_inference_cost": 0.2215675,
+        "upstream_inference_prompt_cost": 0.1572175,
+        "upstream_inference_completions_cost": 0.06435
+      }
+    },
+    "provider": "Azure"
+  },
+  "completed_at_utc": "2026-10-28T19:02:02.130312+00:00",
+  "elapsed_seconds": 31.58,
+  "score": 5,
+  "passed": true,
+  "grading_output": "**REASONING**: The candidate and reference diagnoses are identical, matching the core disease, immunophenotype, involved organs, and secondary complication.\n\nThe findings substantiate each component:\n- **Intravascular large B-cell lymphoma:** Deep skin biopsies show large atypical CD20- and PAX5-positive, CD3-negative cells within small-vessel lumina. CD31/CD34 staining confirms intravascular localization, and Ki-67 is approximately 95%. Marrow re-review also demonstrates intravascular/intrasinusoidal large B cells.\n- **Non–germinal-center immunophenotype:** The case pathology documents MUM1 expression, absent CD10, and weak BCL6 expression, supporting this qualifier.\n- **CNS and cutaneous involvement:** Skin involvement is biopsy-proven. Progressive encephalopathy and multifocal cerebral infarcts of differing ages, without large-vessel disease or a cardiac embolic source, support CNS involvement. Negative CSF cytology and flow cytometry do not exclude predominantly intravascular CNS disease.\n- **Secondary hemophagocytic lymphohistiocytosis:** Fever, splenomegaly, hypertriglyceridemia, elevated ferritin and soluble IL-2 receptor, and marrow hemophagocytosis support lymphoma-associated HLH.\n\nThere are no omitted reference components, contradictory qualifiers, or unrelated diagnostic additions. This is a complete, clinically equivalent match.\n\n**SCORE**: 5",
+  "grading_reason": "The candidate and reference diagnoses are identical, matching the core disease, immunophenotype, involved organs, and secondary complication.\n\nThe findings substantiate each component:\n- **Intravascular large B-cell lymphoma:** Deep skin biopsies show large atypical CD20- and PAX5-positive, CD3-negative cells within small-vessel lumina. CD31/CD34 staining confirms intravascular localization, and Ki-67 is approximately 95%. Marrow re-review also demonstrates intravascular/intrasinusoidal large B cells.\n- **Non–germinal-center immunophenotype:** The case pathology documents MUM1 expression, absent CD10, and weak BCL6 expression, supporting this qualifier.\n- **CNS and cutaneous involvement:** Skin involvement is biopsy-proven. Progressive encephalopathy and multifocal cerebral infarcts of differing ages, without large-vessel disease or a cardiac embolic source, support CNS involvement. Negative CSF cytology and flow cytometry do not exclude predominantly intravascular CNS disease.\n- **Secondary hemophagocytic lymphohistiocytosis:** Fever, splenomegaly, hypertriglyceridemia, elevated ferritin and soluble IL-2 receptor, and marrow hemophagocytosis support lymphoma-associated HLH.\n\nThere are no omitted reference components, contradictory qualifiers, or unrelated diagnostic additions. This is a complete, clinically equivalent match."
+}

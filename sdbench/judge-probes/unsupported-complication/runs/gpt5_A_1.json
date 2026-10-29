@@ -1,0 +1,79 @@
+{
+  "id": "gpt5_A_1",
+  "model_key": "gpt5",
+  "variant": "A",
+  "repetition": 1,
+  "request_sha256": "71d9438a39b8133e00f650eb8e6a7aed4f2eba09194b7c18677920e75ab44b36",
+  "started_at_utc": "2026-10-28T17:48:35.163669+00:00",
+  "status": "complete",
+  "response": {
+    "id": "gen-1793209717-7oq9qmd5qfCuXLNgRCot",
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": "**REASONING**: The candidate diagnosis is identical to the reference and matches all critical elements:\n- Core disease entity: Intravascular large B-cell lymphoma (IVLBCL) exactly identified.\n- Etiology and immunophenotype: Non–germinal-center (ABC-like) phenotype specified, consistent with pathology (CD20+, PAX5+, CD79a+, MUM1+, CD10–, weak BCL6, high Ki-67).\n- Anatomic involvement: Central nervous system and cutaneous involvement explicitly stated, aligning with MRI (multifocal, multi-territory infarcts, leptomeningeal/perivascular enhancement) and skin findings (livedo/telangiectatic lesions with intravascular CD20+ large B cells).\n- Secondary process: Associated hemophagocytic lymphohistiocytosis correctly included and supported by fever, splenomegaly, anemia/thrombocytopenia, hypertriglyceridemia, ferritin 3150 ng/mL, elevated sIL-2R (4250 U/mL), marrow hemophagocytosis, and PET showing diffuse marrow/splenic uptake.\n- Completeness/purity: No extraneous or incorrect diagnoses added. All added details (immunophenotype, CNS/cutaneous involvement, HLH) are directly related and confirmed by tests (random deep skin biopsies, marrow immunostains, imaging, labs).\n\nThis is a perfect match per rubric criteria.\n\n**SCORE**: 5",
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": null,
+          "reasoning": null,
+          "reasoning_details": [
+            {
+              "type": "reasoning.encrypted",
+              "data": "gAAAAABq4jV_YRHi-tHa28axfT17GeVe-YXFMbD1Pa4uiOfdDPbHks29rDTQnfpJpRmsx53VNzzdwjuemTJIvCkWLbEosMIjAJUmbPxa4S5TfH3QaM61VwONQZthHEDXanawdfKlyJDUB0adykeCUsQhtop9FHjZ4TKEvjAu6M0IUJkUNj1QtZoYkfoL8TbMMwBk4fFdlAFK9RVZ0UCV_9P2HB0YRr-3L8Ft50g_T7BNEwiePD7eU5t3VsCtfeHLAYP1Zz0MSfnJS0dFJLEwSJw9ts1ICGil8dHl_ZSJL7We4KKObi91S1dO2pOe0pS4t47rc72ZL3ATaTUe4qlp23RZZ3LrWCYdqtDYBYmXhDOLqO8h-IeUyZ1pBOfsk6h2gbtv1H2iZABribj54CwTSrf0aUUIE5QgipSyfySxXXQTdMVdC4wqrql-DQngiVqJ7FdSIqoFSqDN2n9G09IezKcUM9aIwAPnZi1L51JiBNwmmSlGxSu4Y13ca02MPMBpFQmpWZY58_GXy05ENfCa9hYaNcFOlNaa7xKToRfCb_8rrGuX5zvOJr6F5bO1rWFvpllXCYYqMtjNPuaPRjdhr3D2LP61B22IW-9gJTzxRePyI4sl2Pi4HrsrbE5yXc-TD618BKUaYQkbQvHbjT2VBlsBQi_-46Zcl3uwL2A58xq_Z1yUtaxXgRmrbGkVmDXJyriD4dpERC4_PeMtaHPjjQcjpDCf8UP31DC65cTezE9oePGItt8hyamiquap0tfBBS7aFBcOInOnKxyyobaMLRE10PmmDc5UgSJaOX5HmYnkeTpKHOyztflztYzEheVVPijVWUPjEHCu36UISkXPIXC7HwI-tmXFdrWAay-K0ASTSjuse9kN-pD6oTz1CdxQq2DFerQKtRIfYDBQUbLdr87BUQmY3YOM8O2Sb-Fcg7jX6Wsij8tqZ-XKJv3yxJ3BJt5At_2Yjq-CwNbpUYs2gMTwh8gMvyxmS7-P1G0LtiMPWp3p5AEbEOowxRQAwOcbWnu-h4T0Fi4WvZ-tIJlQBUWl62z2TB9kC6-5Qh-ljVe_fTMOgQGzyOcqBh7e1_epSPs10aAcpPa47NiplYi4O_Ky0zg7t3g78QgrWS8bMb1odiZBDgssQ54-4nQfcSo01geA14mjqfldfAuNGZ9F5h69SI949AhWppiIG4BreqKflut9qZmM1L6d00SIFzPMvHYTOIc__9qb1YW9DMBBIv_NvSAUV3s2pUUHDtyGTkbWNmg3CkXJA7cYiryjroLwS_3nNoXXnGqPiRbTNen-OA4mW-my-MujQYjSD4Yns3xpQLaAhs2G8_279pxh7Y3kznFqUMBmuG3HevAD1l72qJtgUDnx1523OrQOm-gqd87neIVSl5aHJbIBUDcyy7d03vzJUL4bSkhYXEb9E2NcdVjQ6p0DAinloZIGGghR0cnpBbUgW65yMFQ90hHGeUmicWhpSEJcmMS5Ci780V1zyEkTVPPpFfsG4lnAt9grtxQyJ_gjc0xD_by9OnYYqHBfiyQ6u55sM53qtJEWKg_lebaFYVWbpNCuCK8fr4NSYld8H94DtDdwyPxZ3lxtR4fVkcc_1kDDd_dpCLO2uEvJ0EnPL11bTvlassA8wyPQvQmsIcuxZ52cH8NzdPkoakD_harJSxg4S0tP7rM1aSISH4oPVtmNYvY_xGvscP0Or4fZqkvqYQfeUSK1MstMIHqkQN6YRTmTB8snJVXOrxmfWOKmlu1o-rL49vc_Dd36wy0JiAx7If8QhFYZDVwEyQsGozUfIKl9UE3Eg575LkkKq6TAEmwNF9vZx-LbjP6XTCOct0ChTsZ0V4oMkAr0tswvXhhGx5IJi3ILXHmBVU-2d-xCgjtMPZkPVEjm-PKIiBvrtLTmnE_JCTgisD0-h5bGGmoz43GPR5mb1hLEH0UoJ1nCz2PRqAeJstHEYz54Hf5VhdvcrkbB7-sBGVFuo9AM9nnkiqsHzg8vyyx1_4lCRpS4b6GDg2mQnfmw_Y7UVZ758OYRl30Fqj8rZRZrQm7jeRhgBgiJiIkbA6_qxC4VAC_jqIhbhodtvEPElUA2xT-l9bbCdUVBjD-XW5X48aI3DuB25mRksiELl2qpOS6qh5as3wKGTDhyFklORZIMsYwIhI_-Gbdfb0z_GjK3VTtDwGHDmtFUvGVaZ8oGOwQeaTtdeanl7zaG_HijAtL_ZPCajcBfsGiusgxIQnsnFPigGdiwIsMOrqZPS8GMrMwa-GNnr-OKnynU9Nm38McfKuz9vRpuk04n2C9ISBXUS1TiVRPZ7hNcLScuZqnnYDZrdIuZ15bLOk9sZ9uEOiqnxTRyVRO_MiTiBe0-hx5qPP1ksnIed_Mqz3PvqGTrfJL3HiKbPVsbOmDBrGKQlQUcL1hLxZ4MrSIC-7FghdvQdhn-CVVacKfA7-osirCnwqMkxWHh_C2L2X-tstLHcbLpWZi8PLonL3nJtIREIzfoQLVM7myuA2nyNbG1pp0D1LsdhQpL_eD5cmGaJIzRCL-ve5_K4VRXinrUbHmNf6Now7ZPPhv6puISSU_LRuh5-rZUO_a1bJL7loMICKX2t9uTOLgDIhuQnVM5U0jWEJ3zU_ASvMgi_3KXsrsEG_gW8a6e5Ui3SbnNPOi6ZFP97g8CuGRyfWiufEZSU1YM2PKnba6Ap-QsL1rdm8loYbM8UEdMmIUwlfF3r_yaNDArr--1IWbI1oWYoyNWGO6XB-b9q7lAgV3g7k9tufHct4vjMIw8htXXsKLxKUKsJnmELiQp3VzA4iyForzzTnCUVoO59_z-jpUJIaz1ODy2iVJNGEMDEgIZ5yxMzk6h-kqRjZ2dtz6_MgKr0DhYgsF9fPwFXMAYB96bPCO3K7COqahAMPcjCqKmGhP4C2wsD_HJlB47rmKktej0aWf8WrLJHjMTpedhVuAhDPsZymM7dfFSIzTj1EsG2KTYlWWlcSh1kXbSuWEw4SQrFPyMntRMfAWk6qUmOsoj2E24GglxJVbc8ziCJfwN55UujNaL-j6H3i8EY6GM0b0ONQ7BTmp7G4OLT90jfHbufc9paTrP16015HwgYf36xH-DjuHdxxQOssupDJwus11TJ9eyNQrXeUEg0S-UOm-2MEx9GHKBTRF-SErwyM8TgDwyXH3ocKzQ_h7KwinsTziqKnfk8ngfptLZzoqwBnJq3voh45M--fDv8NgfBP_hu7vGGN69quFh-0VmqSv8-P-YrA2SrmvQc2hLeIhY1NRR8WYYuhXsRzAxwhC874lE0jBfXZrGgtgl66TLL-kKvGp2JApYL3FgAH2usLXp11snMqxIECpE41N554gAVLWtD7ryBbOUEMadTt6c05r6iLZQh7bMR55FRudFbCDocQi6SZ3zJAOlcO4ggdX7RaneOP5vnRxVvQuVFCQ9p5A9E5ZTqoZ6CXIcMSbZqlpOf5I0jBc0f66bGn1ykQ66NilAP85QqmHaoz4r6mcp944qYx6YjFgBRvD4XuXGgamuOCHypeAKRQNHa5yrZVyGAHEHcwtmQu7p1tTiQ3ph5p7aXLKiHfw9ngSKD17k3W9DgRZuivgfdlwo8IluxZZo9zW5gpxivXyyQRGi4Pc-QiZU5hYcdxSRVO8oj2lDEKM-kjrYHVTUonjm9I9BDDbtmpTakuktV4J2t_zE9ax8SSImW2TV8bybgsBUWJln-dhsDkcr8unvcDNlZe3VZ4zVWi_JQ1tbW8MAgVoI5j3GWxUSyCUf5P4QlTOAWoPEzf_tQuansuvr3ig74MCMfcfHPaf0UgvGpnpvWrgSAcNjdfJZwNVzSqnSJnxcYXUz3057vdg98b6Ef6IE3lvCYB1qMGcQ3tFhQ-hLSHF7Sm84QIh8X793V4UCqfIfixss_GnBkdfsJcU6_L4C32q30GH9la4OW4rBQqHB_Yd5BWmHTBeomJz_wzl8VSBhE-iRq9anFBaGEIKfvQuf5ZwGjkPCrmC2XsBmRDODR0j8bEtOOOyO8a2baoa8DDCQv8bNjD8KW5zeIJkTosa2vbLZKxRFEAm99Ec6BDORKEfvpN_EFvNDk5MNDlQEyDc=.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC01LTIwMjUtMDgtMDd8YXp1cmUifQ",
+              "format": "azure-openai-responses-v1",
+              "id": "rs_00ee1bcf6642ee15016ae23577c7188190b91281bd70769ec0",
+              "index": 0
+            }
+          ]
+        },
+        "native_finish_reason": "completed"
+      }
+    ],
+    "created": 1793209717,
+    "model": "openai/gpt-5",
+    "object": "chat.completion",
+    "moderation": null,
+    "service_tier": "default",
+    "system_fingerprint": null,
+    "usage": {
+      "completion_tokens": 800,
+      "prompt_tokens": 14382,
+      "total_tokens": 15182,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": 0,
+        "reasoning_tokens": 448,
+        "rejected_prediction_tokens": null,
+        "image_tokens": 0
+      },
+      "prompt_tokens_details": {
+        "audio_tokens": 0,
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost": 0.0259775,
+      "is_byok": false,
+      "cost_details": {
+        "upstream_inference_cost": 0.0259775,
+        "upstream_inference_prompt_cost": 0.0179775,
+        "upstream_inference_completions_cost": 0.008
+      }
+    },
+    "provider": "Azure"
+  },
+  "elapsed_seconds": 13.95,
+  "completed_at_utc": "2026-10-28T17:48:49.110983+00:00",
+  "score": 5,
+  "passed": true,
+  "grading_reason": "The candidate diagnosis is identical to the reference and matches all critical elements:\n- Core disease entity: Intravascular large B-cell lymphoma (IVLBCL) exactly identified.\n- Etiology and immunophenotype: Non–germinal-center (ABC-like) phenotype specified, consistent with pathology (CD20+, PAX5+, CD79a+, MUM1+, CD10–, weak BCL6, high Ki-67).\n- Anatomic involvement: Central nervous system and cutaneous involvement explicitly stated, aligning with MRI (multifocal, multi-territory infarcts, leptomeningeal/perivascular enhancement) and skin findings (livedo/telangiectatic lesions with intravascular CD20+ large B cells).\n- Secondary process: Associated hemophagocytic lymphohistiocytosis correctly included and supported by fever, splenomegaly, anemia/thrombocytopenia, hypertriglyceridemia, ferritin 3150 ng/mL, elevated sIL-2R (4250 U/mL), marrow hemophagocytosis, and PET showing diffuse marrow/splenic uptake.\n- Completeness/purity: No extraneous or incorrect diagnoses added. All added details (immunophenotype, CNS/cutaneous involvement, HLH) are directly related and confirmed by tests (random deep skin biopsies, marrow immunostains, imaging, labs).\n\nThis is a perfect match per rubric criteria.",
+  "grading_output": "**REASONING**: The candidate diagnosis is identical to the reference and matches all critical elements:\n- Core disease entity: Intravascular large B-cell lymphoma (IVLBCL) exactly identified.\n- Etiology and immunophenotype: Non–germinal-center (ABC-like) phenotype specified, consistent with pathology (CD20+, PAX5+, CD79a+, MUM1+, CD10–, weak BCL6, high Ki-67).\n- Anatomic involvement: Central nervous system and cutaneous involvement explicitly stated, aligning with MRI (multifocal, multi-territory infarcts, leptomeningeal/perivascular enhancement) and skin findings (livedo/telangiectatic lesions with intravascular CD20+ large B cells).\n- Secondary process: Associated hemophagocytic lymphohistiocytosis correctly included and supported by fever, splenomegaly, anemia/thrombocytopenia, hypertriglyceridemia, ferritin 3150 ng/mL, elevated sIL-2R (4250 U/mL), marrow hemophagocytosis, and PET showing diffuse marrow/splenic uptake.\n- Completeness/purity: No extraneous or incorrect diagnoses added. All added details (immunophenotype, CNS/cutaneous involvement, HLH) are directly related and confirmed by tests (random deep skin biopsies, marrow immunostains, imaging, labs).\n\nThis is a perfect match per rubric criteria.\n\n**SCORE**: 5",
+  "structured_score_present": true,
+  "structured_score_matches_parser": true
+}

@@ -1,0 +1,61 @@
+{
+  "resume": null,
+  "max_workers": 1,
+  "debug": true,
+  "result_folder": "results",
+  "label": "astra-max-case0",
+  "azure_storage_enabled": false,
+  "azure_storage_account_name": null,
+  "azure_storage_container_name": null,
+  "azure_storage_result_folder": null,
+  "dataset": "synthetic",
+  "agent": "baseline",
+  "model": "openai/gpt-6-astra",
+  "model_args": {
+    "extra_body": {
+      "reasoning": {
+        "effort": "max"
+      }
+    }
+  },
+  "k": 1,
+  "case_set": "train",
+  "case_id": [
+    "0"
+  ],
+  "num_cases": 1,
+  "case_offset": 0,
+  "sdbench_config": {
+    "debug": true,
+    "compute_costs": false,
+    "compute_actual_workup_costs": false,
+    "clinician_cost": 300,
+    "costing_method": "batch_llm_only",
+    "costing_parallelism": 20,
+    "costing_multiprocess": false,
+    "costing_source_file_path": "910511770-central-hospital-standard-charges-wa-en.xlsx",
+    "costing_model": "gpt-5-mini",
+    "costing_model_args": {
+      "openrouter_zdr_only": false
+    },
+    "costing_cache_cosmosdb_enabled": false,
+    "costing_cache_cosmosdb_endpoint": null,
+    "costing_cache_cosmosdb_database": null,
+    "costing_cache_cosmosdb_container": null,
+    "costing_cache_use_managed_identity": false,
+    "test_runner_enforce_single_turn_type": true,
+    "max_turns": 70,
+    "max_questions_per_turn": null,
+    "max_tests_per_turn": null,
+    "agent_model_args": {},
+    "agent_extra_args": {},
+    "gatekeeper_prompt_version": "v6_fixed",
+    "gatekeeper_model": "gpt-5",
+    "gatekeeper_model_args": {},
+    "gatekeeper_chunk_size": 10,
+    "judge_prompt_version": "v4_reasoning_with_tests",
+    "judge_model": "gpt-5",
+    "judge_model_args": {}
+  },
+  "timestamp": "20261029_030557"
+}

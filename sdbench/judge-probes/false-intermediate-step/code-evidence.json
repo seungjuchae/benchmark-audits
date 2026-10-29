@@ -1,0 +1,22 @@
+[
+  {
+    "path": "sdbench/harness/harness.py",
+    "start_line": 81,
+    "excerpt": "    correct, judge_response = judge.check_diagnosis(\n        config,\n        agent_result,\n        case,\n        test_logs=results.get(\"test_logs\"),\n        llm=judge_llm,\n    )"
+  },
+  {
+    "path": "sdbench/judge.py",
+    "start_line": 56,
+    "excerpt": "    # Sort alphabetically by test name (case-insensitive) to hide original ordering\n    sorted_logs = sorted(\n        test_logs,\n        key=lambda log: (str(log.get(\"test_name\") or \"\").lower(), str(log.get(\"result\") or \"\")),\n    )"
+  },
+  {
+    "path": "sdbench/judge.py",
+    "start_line": 67,
+    "excerpt": "        reason = log.get(\"reason\")\n        annotations: list[str] = []\n        if is_synth:\n            annotations.append(\"synthetic\")\n        if reason:\n            annotations.append(reason.strip())\n\n        header = f\"{idx}. {name}\"\n        if annotations:\n            header += f\" ({'; '.join(annotations)})\""
+  },
+  {
+    "path": "sdbench/agents/baseline.py",
+    "start_line": 32,
+    "excerpt": "def extract_diagnosis_from_response(response_content: str) -> str | None:\n    \"\"\"Extract diagnosis from <diagnosis>...</diagnosis> tags.\"\"\"\n    pattern = r\"<diagnosis>(.*?)</diagnosis>\"\n    match = re.search(pattern, response_content, re.IGNORECASE | re.DOTALL)\n    return match.group(1).strip() if match else None"
+  }
+]

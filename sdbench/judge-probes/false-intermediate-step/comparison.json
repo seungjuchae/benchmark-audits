@@ -1,0 +1,248 @@
+{
+  "completed": 12,
+  "planned": 12,
+  "groups": [
+    {
+      "model_key": "gpt5",
+      "variant": "A",
+      "scores": [
+        5,
+        5,
+        5
+      ],
+      "passes": 3,
+      "n": 3,
+      "api_cost_usd": 0.0210675
+    },
+    {
+      "model_key": "gpt5",
+      "variant": "C",
+      "scores": [
+        5,
+        5,
+        5
+      ],
+      "passes": 3,
+      "n": 3,
+      "api_cost_usd": 0.03243825
+    },
+    {
+      "model_key": "astra_max",
+      "variant": "A",
+      "scores": [
+        5,
+        5,
+        5
+      ],
+      "passes": 3,
+      "n": 3,
+      "api_cost_usd": 0.3698275
+    },
+    {
+      "model_key": "astra_max",
+      "variant": "C",
+      "scores": [
+        5,
+        5,
+        5
+      ],
+      "passes": 3,
+      "n": 3,
+      "api_cost_usd": 0.43131600000000003
+    }
+  ],
+  "B_independent_calls": 0,
+  "B_same_input_as_A": true,
+  "api_cost_usd": 0.85464925,
+  "diagnostic_calls": 0,
+  "gatekeeper_calls": 0,
+  "records": [
+    {
+      "id": "astra_max_A_1",
+      "model_key": "astra_max",
+      "variant": "A",
+      "repetition": 1,
+      "request_sha256": "83bf762bf7395407163c138023578ce2990cedbeac3cdb6d1de6ec08289777bb",
+      "status": "complete",
+      "started_at_utc": "2026-10-28T19:01:30.551049+00:00",
+      "completed_at_utc": "2026-10-28T19:02:02.130312+00:00",
+      "elapsed_seconds": 31.58,
+      "score": 5,
+      "passed": true,
+      "grading_output": "**REASONING**: The candidate and reference diagnoses are identical, matching the core disease, immunophenotype, involved organs, and secondary complication.\n\nThe findings substantiate each component:\n- **Intravascular large B-cell lymphoma:** Deep skin biopsies show large atypical CD20- and PAX5-positive, CD3-negative cells within small-vessel lumina. CD31/CD34 staining confirms intravascular localization, and Ki-67 is approximately 95%. Marrow re-review also demonstrates intravascular/intrasinusoidal large B cells.\n- **Non–germinal-center immunophenotype:** The case pathology documents MUM1 expression, absent CD10, and weak BCL6 expression, supporting this qualifier.\n- **CNS and cutaneous involvement:** Skin involvement is biopsy-proven. Progressive encephalopathy and multifocal cerebral infarcts of differing ages, without large-vessel disease or a cardiac embolic source, support CNS involvement. Negative CSF cytology and flow cytometry do not exclude predominantly intravascular CNS disease.\n- **Secondary hemophagocytic lymphohistiocytosis:** Fever, splenomegaly, hypertriglyceridemia, elevated ferritin and soluble IL-2 receptor, and marrow hemophagocytosis support lymphoma-associated HLH.\n\nThere are no omitted reference components, contradictory qualifiers, or unrelated diagnostic additions. This is a complete, clinically equivalent match.\n\n**SCORE**: 5",
+      "grading_reason": "The candidate and reference diagnoses are identical, matching the core disease, immunophenotype, involved organs, and secondary complication.\n\nThe findings substantiate each component:\n- **Intravascular large B-cell lymphoma:** Deep skin biopsies show large atypical CD20- and PAX5-positive, CD3-negative cells within small-vessel lumina. CD31/CD34 staining confirms intravascular localization, and Ki-67 is approximately 95%. Marrow re-review also demonstrates intravascular/intrasinusoidal large B cells.\n- **Non–germinal-center immunophenotype:** The case pathology documents MUM1 expression, absent CD10, and weak BCL6 expression, supporting this qualifier.\n- **CNS and cutaneous involvement:** Skin involvement is biopsy-proven. Progressive encephalopathy and multifocal cerebral infarcts of differing ages, without large-vessel disease or a cardiac embolic source, support CNS involvement. Negative CSF cytology and flow cytometry do not exclude predominantly intravascular CNS disease.\n- **Secondary hemophagocytic lymphohistiocytosis:** Fever, splenomegaly, hypertriglyceridemia, elevated ferritin and soluble IL-2 receptor, and marrow hemophagocytosis support lymphoma-associated HLH.\n\nThere are no omitted reference components, contradictory qualifiers, or unrelated diagnostic additions. This is a complete, clinically equivalent match."
+    },
+    {
+      "id": "astra_max_C_3",
+      "model_key": "astra_max",
+      "variant": "C",
+      "repetition": 3,
+      "request_sha256": "da37b32f4d3e3c397c6a8125f065e36e04bdc46bef089aa0f5d7c7212435ce52",
+      "status": "complete",
+      "started_at_utc": "2026-10-28T19:01:30.551411+00:00",
+      "completed_at_utc": "2026-10-28T19:02:16.555438+00:00",
+      "elapsed_seconds": 46.0,
+      "score": 5,
+      "passed": true,
+      "grading_output": "**REASONING**: The candidate diagnosis exactly matches the reference in core disease, immunophenotypic subtype, anatomic involvement, and associated complication.\n\nThe reported deep skin-biopsy results confirm intravascular large B-cell lymphoma: large atypical CD20-positive/PAX5-positive B cells occupy small-vessel lumina delineated by CD31/CD34-positive endothelium, with a Ki-67 index of approximately 95%. MUM1 positivity, CD10 negativity, and weak BCL6 expression support the non–germinal-center immunophenotype. Marrow re-review also confirms intrasinusoidal lymphoma involvement.\n\nCutaneous involvement is established histologically and corresponds to the livedoid and telangiectatic lesions. CNS involvement is supported by progressive encephalopathy and multifocal cerebral infarcts of differing ages without a large-vessel or cardiac embolic source. Negative CSF cytology does not exclude this predominantly intravascular disease.\n\nThe associated secondary hemophagocytic lymphohistiocytosis is supported by fever, splenomegaly, hypertriglyceridemia, elevated ferritin and soluble IL-2 receptor, and marrow hemophagocytosis, with lymphoma identified as the underlying trigger.\n\nThere are no omitted reference components, incorrect qualifiers, or unrelated added diagnoses.\n\n**SCORE**: 5",
+      "grading_reason": "The candidate diagnosis exactly matches the reference in core disease, immunophenotypic subtype, anatomic involvement, and associated complication.\n\nThe reported deep skin-biopsy results confirm intravascular large B-cell lymphoma: large atypical CD20-positive/PAX5-positive B cells occupy small-vessel lumina delineated by CD31/CD34-positive endothelium, with a Ki-67 index of approximately 95%. MUM1 positivity, CD10 negativity, and weak BCL6 expression support the non–germinal-center immunophenotype. Marrow re-review also confirms intrasinusoidal lymphoma involvement.\n\nCutaneous involvement is established histologically and corresponds to the livedoid and telangiectatic lesions. CNS involvement is supported by progressive encephalopathy and multifocal cerebral infarcts of differing ages without a large-vessel or cardiac embolic source. Negative CSF cytology does not exclude this predominantly intravascular disease.\n\nThe associated secondary hemophagocytic lymphohistiocytosis is supported by fever, splenomegaly, hypertriglyceridemia, elevated ferritin and soluble IL-2 receptor, and marrow hemophagocytosis, with lymphoma identified as the underlying trigger.\n\nThere are no omitted reference components, incorrect qualifiers, or unrelated added diagnoses."
+    },
+    {
+      "id": "gpt5_A_1",
+      "model_key": "gpt5",
+      "variant": "A",
+      "repetition": 1,
+      "request_sha256": "6c5f6e14c505ccad8b85ce0b972c7d650973d07ee95575a5a7474af448460b7d",
+      "status": "complete",
+      "started_at_utc": "2026-10-28T19:01:30.551631+00:00",
+      "completed_at_utc": "2026-10-28T19:01:38.817881+00:00",
+      "elapsed_seconds": 8.26,
+      "score": 5,
+      "passed": true,
+      "grading_output": "**REASONING**: The candidate diagnosis exactly matches the reference diagnosis in all critical dimensions:\n- Core disease entity: Intravascular large B-cell lymphoma (IVLBCL).\n- Etiology and phenotype: Non–germinal-center (activated B-cell–like) immunophenotype, supported by MUM1/IRF4 positivity, CD10 negativity, weak BCL6, and high Ki-67 (~95%).\n- Anatomic involvement: Central nervous system (multifocal infarcts in multiple territories with normal large vessels, negative CSF cytology), and cutaneous involvement (livedo/telangiectatic lesions; skin biopsies showing CD20+/PAX5+ large B cells confined intraluminally in small vessels).\n- Associated condition: Secondary hemophagocytic lymphohistiocytosis (meets HLH-2004 criteria: fever, splenomegaly, bicytopenia, hypertriglyceridemia, ferritin 3,150 ng/mL, elevated sIL-2R 4,250 U/mL, and hemophagocytosis on marrow).\n- No unrelated or incorrect additions.\n\nAll added details are directly related to the core disease and confirmed by the provided pathology and imaging. This is a perfect match per the rubric.\n\n**SCORE**: 5",
+      "grading_reason": "The candidate diagnosis exactly matches the reference diagnosis in all critical dimensions:\n- Core disease entity: Intravascular large B-cell lymphoma (IVLBCL).\n- Etiology and phenotype: Non–germinal-center (activated B-cell–like) immunophenotype, supported by MUM1/IRF4 positivity, CD10 negativity, weak BCL6, and high Ki-67 (~95%).\n- Anatomic involvement: Central nervous system (multifocal infarcts in multiple territories with normal large vessels, negative CSF cytology), and cutaneous involvement (livedo/telangiectatic lesions; skin biopsies showing CD20+/PAX5+ large B cells confined intraluminally in small vessels).\n- Associated condition: Secondary hemophagocytic lymphohistiocytosis (meets HLH-2004 criteria: fever, splenomegaly, bicytopenia, hypertriglyceridemia, ferritin 3,150 ng/mL, elevated sIL-2R 4,250 U/mL, and hemophagocytosis on marrow).\n- No unrelated or incorrect additions.\n\nAll added details are directly related to the core disease and confirmed by the provided pathology and imaging. This is a perfect match per the rubric."
+    },
+    {
+      "id": "gpt5_C_2",
+      "model_key": "gpt5",
+      "variant": "C",
+      "repetition": 2,
+      "request_sha256": "4671730d09be2be6ee60f6409124e66de726593a9638f46b5c94da474e921509",
+      "status": "complete",
+      "started_at_utc": "2026-10-28T19:01:38.823799+00:00",
+      "completed_at_utc": "2026-10-28T19:01:46.258589+00:00",
+      "elapsed_seconds": 7.43,
+      "score": 5,
+      "passed": true,
+      "grading_output": "**REASONING**: The candidate diagnosis exactly matches the reference diagnosis in all components: core disease entity (intravascular large B‑cell lymphoma), specified immunophenotype (non–germinal-center/ABC type), anatomic/organ involvement (central nervous system and cutaneous), and the directly related complication (secondary hemophagocytic lymphohistiocytosis). This is fully supported by the case data: random deep skin biopsies showing intraluminal CD20+ large B cells with high Ki-67; marrow intrasinusoidal CD20+ cells; MRI with multifocal multi-territory infarcts; PET-CT with diffuse marrow/splenic uptake; and HLH features (fever, splenomegaly, bicytopenia, triglycerides 295 mg/dL, ferritin 3,150 ng/mL, elevated sIL‑2R, marrow hemophagocytosis). No incorrect or unrelated additions are present. This is a perfect, clinically equivalent match per the rubric.\n\n**SCORE**: 5",
+      "grading_reason": "The candidate diagnosis exactly matches the reference diagnosis in all components: core disease entity (intravascular large B‑cell lymphoma), specified immunophenotype (non–germinal-center/ABC type), anatomic/organ involvement (central nervous system and cutaneous), and the directly related complication (secondary hemophagocytic lymphohistiocytosis). This is fully supported by the case data: random deep skin biopsies showing intraluminal CD20+ large B cells with high Ki-67; marrow intrasinusoidal CD20+ cells; MRI with multifocal multi-territory infarcts; PET-CT with diffuse marrow/splenic uptake; and HLH features (fever, splenomegaly, bicytopenia, triglycerides 295 mg/dL, ferritin 3,150 ng/mL, elevated sIL‑2R, marrow hemophagocytosis). No incorrect or unrelated additions are present. This is a perfect, clinically equivalent match per the rubric."
+    },
+    {
+      "id": "astra_max_C_1",
+      "model_key": "astra_max",
+      "variant": "C",
+      "repetition": 1,
+      "request_sha256": "da37b32f4d3e3c397c6a8125f065e36e04bdc46bef089aa0f5d7c7212435ce52",
+      "status": "complete",
+      "started_at_utc": "2026-10-28T19:01:46.261789+00:00",
+      "completed_at_utc": "2026-10-28T19:02:21.421269+00:00",
+      "elapsed_seconds": 35.16,
+      "score": 5,
+      "passed": true,
+      "grading_output": "**REASONING**: The candidate diagnosis is identical to the reference, matching the core disease, immunophenotypic subtype, sites of involvement, and secondary complication.\n\nThe reported deep skin biopsies establish intravascular large B-cell lymphoma: large atypical CD20-positive and PAX5-positive B cells occupy small-vessel lumina, with CD31/CD34 outlining the surrounding endothelium and a Ki-67 index of approximately 95%. The narrative’s MUM1 positivity, CD10 negativity, and weak BCL6 expression support the non–germinal-center immunophenotype. Marrow re-review additionally confirms intravascular/intrasinusoidal lymphoma involvement.\n\nCNS involvement is supported by progressive encephalopathy and multifocal cerebral infarcts of differing ages, without a large-vessel or cardiac embolic source. Cutaneous involvement is biopsy-confirmed. Associated secondary hemophagocytic lymphohistiocytosis is supported by fever, splenomegaly, hyperferritinemia, hypertriglyceridemia, elevated soluble IL-2 receptor, and marrow hemophagocytosis in the setting of lymphoma.\n\nAll qualifiers are supported and directly related to the primary disease. There are no missing reference components or incorrect, unrelated additions.\n\n**SCORE**: 5",
+      "grading_reason": "The candidate diagnosis is identical to the reference, matching the core disease, immunophenotypic subtype, sites of involvement, and secondary complication.\n\nThe reported deep skin biopsies establish intravascular large B-cell lymphoma: large atypical CD20-positive and PAX5-positive B cells occupy small-vessel lumina, with CD31/CD34 outlining the surrounding endothelium and a Ki-67 index of approximately 95%. The narrative’s MUM1 positivity, CD10 negativity, and weak BCL6 expression support the non–germinal-center immunophenotype. Marrow re-review additionally confirms intravascular/intrasinusoidal lymphoma involvement.\n\nCNS involvement is supported by progressive encephalopathy and multifocal cerebral infarcts of differing ages, without a large-vessel or cardiac embolic source. Cutaneous involvement is biopsy-confirmed. Associated secondary hemophagocytic lymphohistiocytosis is supported by fever, splenomegaly, hyperferritinemia, hypertriglyceridemia, elevated soluble IL-2 receptor, and marrow hemophagocytosis in the setting of lymphoma.\n\nAll qualifiers are supported and directly related to the primary disease. There are no missing reference components or incorrect, unrelated additions."
+    },
+    {
+      "id": "gpt5_A_2",
+      "model_key": "gpt5",
+      "variant": "A",
+      "repetition": 2,
+      "request_sha256": "6c5f6e14c505ccad8b85ce0b972c7d650973d07ee95575a5a7474af448460b7d",
+      "status": "complete",
+      "started_at_utc": "2026-10-28T19:02:02.133435+00:00",
+      "completed_at_utc": "2026-10-28T19:02:09.335973+00:00",
+      "elapsed_seconds": 7.2,
+      "score": 5,
+      "passed": true,
+      "grading_output": "**REASONING**: The candidate diagnosis exactly matches the reference diagnosis in all key dimensions:\n- Core disease entity: Intravascular large B-cell lymphoma (IVLBCL) is identical.\n- Etiology/cause: Same neoplastic process without conflicting etiologies.\n- Anatomic site/location: Explicit CNS and cutaneous involvement, both supported by MRI (multi-territory small-vessel infarcts) and skin biopsies (intraluminal CD20+ large B cells), plus marrow sinusoidal involvement on re-review—fully concordant.\n- Specificity/qualifiers: Specifies non–germinal-center (activated B-cell–like) immunophenotype, consistent with pathology (CD20+, PAX5+, MUM1+, CD10−, weak BCL6, high Ki-67), and includes secondary hemophagocytic lymphohistiocytosis supported by HLH criteria (fever, splenomegaly, cytopenias, ferritin 3,150 ng/mL, hypertriglyceridemia, elevated sCD25, hemophagocytosis in marrow).\n- Completeness/purity: No unrelated or incorrect additions; all details are directly related manifestations/complications of IVLBCL.\n\nPer the rubric, this is a perfect, clinically equivalent match with appropriate, accurate specificity and directly related complications.\n\n**SCORE**: 5",
+      "grading_reason": "The candidate diagnosis exactly matches the reference diagnosis in all key dimensions:\n- Core disease entity: Intravascular large B-cell lymphoma (IVLBCL) is identical.\n- Etiology/cause: Same neoplastic process without conflicting etiologies.\n- Anatomic site/location: Explicit CNS and cutaneous involvement, both supported by MRI (multi-territory small-vessel infarcts) and skin biopsies (intraluminal CD20+ large B cells), plus marrow sinusoidal involvement on re-review—fully concordant.\n- Specificity/qualifiers: Specifies non–germinal-center (activated B-cell–like) immunophenotype, consistent with pathology (CD20+, PAX5+, MUM1+, CD10−, weak BCL6, high Ki-67), and includes secondary hemophagocytic lymphohistiocytosis supported by HLH criteria (fever, splenomegaly, cytopenias, ferritin 3,150 ng/mL, hypertriglyceridemia, elevated sCD25, hemophagocytosis in marrow).\n- Completeness/purity: No unrelated or incorrect additions; all details are directly related manifestations/complications of IVLBCL.\n\nPer the rubric, this is a perfect, clinically equivalent match with appropriate, accurate specificity and directly related complications."
+    },
+    {
+      "id": "gpt5_A_3",
+      "model_key": "gpt5",
+      "variant": "A",
+      "repetition": 3,
+      "request_sha256": "6c5f6e14c505ccad8b85ce0b972c7d650973d07ee95575a5a7474af448460b7d",
+      "status": "complete",
+      "started_at_utc": "2026-10-28T19:02:09.338604+00:00",
+      "completed_at_utc": "2026-10-28T19:02:17.689096+00:00",
+      "elapsed_seconds": 8.35,
+      "score": 5,
+      "passed": true,
+      "grading_output": "**REASONING**: The candidate diagnosis is identical to the reference: intravascular large B-cell lymphoma with a non–germinal-center (activated B-cell–like) phenotype, involving the CNS and skin, and associated secondary hemophagocytic lymphohistiocytosis (HLH). This matches the core disease entity, etiology, anatomic sites, and specificity. It includes directly related manifestations (CNS ischemic events, cutaneous livedo/telangiectasias) and the HLH trigger/complication, all supported by the case data: skin biopsies showing intraluminal CD20/PAX5+ large B cells with high Ki-67; marrow intrasinusoidal involvement; MRI with multifocal, multi-territory infarcts; and HLH criteria (fever, splenomegaly, bicytopenia, hypertriglyceridemia, ferritin 3150 ng/mL, elevated sIL-2R, and hemophagocytosis). No unrelated or incorrect additions are present. This is a perfect match per the rubric.\n\n**SCORE**: 5",
+      "grading_reason": "The candidate diagnosis is identical to the reference: intravascular large B-cell lymphoma with a non–germinal-center (activated B-cell–like) phenotype, involving the CNS and skin, and associated secondary hemophagocytic lymphohistiocytosis (HLH). This matches the core disease entity, etiology, anatomic sites, and specificity. It includes directly related manifestations (CNS ischemic events, cutaneous livedo/telangiectasias) and the HLH trigger/complication, all supported by the case data: skin biopsies showing intraluminal CD20/PAX5+ large B cells with high Ki-67; marrow intrasinusoidal involvement; MRI with multifocal, multi-territory infarcts; and HLH criteria (fever, splenomegaly, bicytopenia, hypertriglyceridemia, ferritin 3150 ng/mL, elevated sIL-2R, and hemophagocytosis). No unrelated or incorrect additions are present. This is a perfect match per the rubric."
+    },
+    {
+      "id": "astra_max_C_2",
+      "model_key": "astra_max",
+      "variant": "C",
+      "repetition": 2,
+      "request_sha256": "da37b32f4d3e3c397c6a8125f065e36e04bdc46bef089aa0f5d7c7212435ce52",
+      "status": "complete",
+      "started_at_utc": "2026-10-28T19:02:16.558242+00:00",
+      "completed_at_utc": "2026-10-28T19:03:01.732389+00:00",
+      "elapsed_seconds": 45.17,
+      "score": 5,
+      "passed": true,
+      "grading_output": "**REASONING**: The candidate diagnosis is identical to the reference, matching the core lymphoma entity, non–germinal-center immunophenotype, CNS and cutaneous involvement, and secondary hemophagocytic lymphohistiocytosis (HLH).\n\nThe pathology supports this diagnosis: deep skin biopsies show large atypical CD20-positive/PAX5-positive, CD3-negative cells confined to small-vessel lumina, outlined by CD31/CD34-positive endothelium, with a Ki-67 index of approximately 95%. CD10 negativity and MUM1 positivity support the stated immunophenotype. Marrow re-review also demonstrates large CD20-positive cells within sinusoids. Although the skin-biopsy order contains a contradictory negative-result parenthetical, the **actual reported result** and pathological narrative document diagnostic intravascular malignant B cells.\n\nCNS involvement is clinically supported by progressive encephalopathy and recurrent multifocal infarcts of differing ages, without a cardiac embolic source or large-vessel abnormality. Negative CSF cytology does not exclude predominantly intravascular disease. Cutaneous involvement is directly biopsy-confirmed. Lymphoma-associated secondary HLH is supported by fever, splenomegaly, elevated ferritin, hypertriglyceridemia, elevated soluble IL-2 receptor, and marrow hemophagocytosis.\n\nThere are no missing reference components, incorrect qualifiers, or unrelated diagnostic additions. This meets the rubric’s definition of a perfect match.\n\n**SCORE**: 5",
+      "grading_reason": "The candidate diagnosis is identical to the reference, matching the core lymphoma entity, non–germinal-center immunophenotype, CNS and cutaneous involvement, and secondary hemophagocytic lymphohistiocytosis (HLH).\n\nThe pathology supports this diagnosis: deep skin biopsies show large atypical CD20-positive/PAX5-positive, CD3-negative cells confined to small-vessel lumina, outlined by CD31/CD34-positive endothelium, with a Ki-67 index of approximately 95%. CD10 negativity and MUM1 positivity support the stated immunophenotype. Marrow re-review also demonstrates large CD20-positive cells within sinusoids. Although the skin-biopsy order contains a contradictory negative-result parenthetical, the **actual reported result** and pathological narrative document diagnostic intravascular malignant B cells.\n\nCNS involvement is clinically supported by progressive encephalopathy and recurrent multifocal infarcts of differing ages, without a cardiac embolic source or large-vessel abnormality. Negative CSF cytology does not exclude predominantly intravascular disease. Cutaneous involvement is directly biopsy-confirmed. Lymphoma-associated secondary HLH is supported by fever, splenomegaly, elevated ferritin, hypertriglyceridemia, elevated soluble IL-2 receptor, and marrow hemophagocytosis.\n\nThere are no missing reference components, incorrect qualifiers, or unrelated diagnostic additions. This meets the rubric’s definition of a perfect match."
+    },
+    {
+      "id": "gpt5_C_3",
+      "model_key": "gpt5",
+      "variant": "C",
+      "repetition": 3,
+      "request_sha256": "4671730d09be2be6ee60f6409124e66de726593a9638f46b5c94da474e921509",
+      "status": "complete",
+      "started_at_utc": "2026-10-28T19:02:17.691630+00:00",
+      "completed_at_utc": "2026-10-28T19:02:23.989983+00:00",
+      "elapsed_seconds": 6.3,
+      "score": 5,
+      "passed": true,
+      "grading_output": "**REASONING**: The candidate diagnosis is identical to the reference: intravascular large B-cell lymphoma (IVLBCL), non–germinal-center phenotype, with CNS and cutaneous involvement and associated secondary hemophagocytic lymphohistiocytosis (HLH). It captures the exact core disease, anatomic sites (CNS and skin), immunophenotypic specificity (non–germinal-center), and the directly related complication (HLH). All details are supported by the case data: skin biopsies showing intravascular CD20/PAX5-positive large B cells within small-vessel lumina; marrow intrasinusoidal CD20+ cells; MRI with multifocal infarcts in multiple territories without large-vessel disease; PET-CT with diffuse marrow/splenic uptake; and HLH criteria met (fever, splenomegaly, bicytopenia, hypertriglyceridemia, ferritin 3,150 ng/mL, elevated sIL-2R, hemophagocytosis in marrow). No extraneous or incorrect additions are present. This is a perfect match per the rubric.\n\n**SCORE**: 5",
+      "grading_reason": "The candidate diagnosis is identical to the reference: intravascular large B-cell lymphoma (IVLBCL), non–germinal-center phenotype, with CNS and cutaneous involvement and associated secondary hemophagocytic lymphohistiocytosis (HLH). It captures the exact core disease, anatomic sites (CNS and skin), immunophenotypic specificity (non–germinal-center), and the directly related complication (HLH). All details are supported by the case data: skin biopsies showing intravascular CD20/PAX5-positive large B cells within small-vessel lumina; marrow intrasinusoidal CD20+ cells; MRI with multifocal infarcts in multiple territories without large-vessel disease; PET-CT with diffuse marrow/splenic uptake; and HLH criteria met (fever, splenomegaly, bicytopenia, hypertriglyceridemia, ferritin 3,150 ng/mL, elevated sIL-2R, hemophagocytosis in marrow). No extraneous or incorrect additions are present. This is a perfect match per the rubric."
+    },
+    {
+      "id": "gpt5_C_1",
+      "model_key": "gpt5",
+      "variant": "C",
+      "repetition": 1,
+      "request_sha256": "4671730d09be2be6ee60f6409124e66de726593a9638f46b5c94da474e921509",
+      "status": "complete",
+      "started_at_utc": "2026-10-28T19:02:21.423608+00:00",
+      "completed_at_utc": "2026-10-28T19:02:27.659442+00:00",
+      "elapsed_seconds": 6.23,
+      "score": 5,
+      "passed": true,
+      "grading_output": "**REASONING**: The candidate diagnosis exactly matches the reference diagnosis in all components: the core disease (intravascular large B-cell lymphoma), its specified non–germinal-center (activated B-cell–like) immunophenotype, central nervous system and cutaneous involvement, and the associated secondary hemophagocytic lymphohistiocytosis. These details are fully supported by the case data: random deep skin biopsies showing intraluminal CD20+/PAX5+ large B cells with high Ki-67; marrow intrasinusoidal involvement; MRI demonstrating multifocal, multi-territory infarcts with normal large vessels; PET-CT with diffuse marrow/splenic uptake; and HLH features (fever, splenomegaly, cytopenias, hypertriglyceridemia, ferritin 3150 ng/mL, elevated sIL-2R, and hemophagocytosis). No unrelated or incorrect additions are present. This is a perfect match per rubric criteria.\n\n**SCORE**: 5",
+      "grading_reason": "The candidate diagnosis exactly matches the reference diagnosis in all components: the core disease (intravascular large B-cell lymphoma), its specified non–germinal-center (activated B-cell–like) immunophenotype, central nervous system and cutaneous involvement, and the associated secondary hemophagocytic lymphohistiocytosis. These details are fully supported by the case data: random deep skin biopsies showing intraluminal CD20+/PAX5+ large B cells with high Ki-67; marrow intrasinusoidal involvement; MRI demonstrating multifocal, multi-territory infarcts with normal large vessels; PET-CT with diffuse marrow/splenic uptake; and HLH features (fever, splenomegaly, cytopenias, hypertriglyceridemia, ferritin 3150 ng/mL, elevated sIL-2R, and hemophagocytosis). No unrelated or incorrect additions are present. This is a perfect match per rubric criteria."
+    },
+    {
+      "id": "astra_max_A_2",
+      "model_key": "astra_max",
+      "variant": "A",
+      "repetition": 2,
+      "request_sha256": "83bf762bf7395407163c138023578ce2990cedbeac3cdb6d1de6ec08289777bb",
+      "status": "complete",
+      "started_at_utc": "2026-10-28T19:02:23.992547+00:00",
+      "completed_at_utc": "2026-10-28T19:02:56.395378+00:00",
+      "elapsed_seconds": 32.4,
+      "score": 5,
+      "passed": true,
+      "grading_output": "**REASONING**: The candidate diagnosis is identical to the reference, matching the core lymphoma entity, immunophenotype, sites of involvement, and secondary complication.\n\n- **Core disease:** Deep skin biopsies showed large atypical CD20-positive and PAX5-positive B cells confined to small-vessel lumina, outlined by CD31/CD34-positive endothelium, with a Ki-67 index of approximately 95%. These findings establish intravascular large B-cell lymphoma. Marrow re-review also demonstrated intravascular/intrasinusoidal atypical B cells.\n- **Immunophenotype:** The case narrative documents MUM1 positivity, CD10 negativity, and weak BCL6 expression, supporting the specified non–germinal-center phenotype.\n- **Anatomic involvement:** Cutaneous involvement is biopsy-confirmed. CNS involvement is supported by progressive encephalopathy and multifocal cerebral infarcts of differing ages, with normal large-vessel imaging and no cardiac embolic source. Negative CSF cytology and flow cytometry do not exclude intravascular CNS disease.\n- **Secondary HLH:** Fever, splenomegaly, hypertriglyceridemia, markedly elevated ferritin and soluble IL-2 receptor, and marrow hemophagocytosis support lymphoma-associated secondary hemophagocytic lymphohistiocytosis.\n\nThe candidate omits no reference components and introduces no incorrect or unrelated diagnoses. It therefore meets the rubric’s perfect-match criteria.\n\n**SCORE**: 5",
+      "grading_reason": "The candidate diagnosis is identical to the reference, matching the core lymphoma entity, immunophenotype, sites of involvement, and secondary complication.\n\n- **Core disease:** Deep skin biopsies showed large atypical CD20-positive and PAX5-positive B cells confined to small-vessel lumina, outlined by CD31/CD34-positive endothelium, with a Ki-67 index of approximately 95%. These findings establish intravascular large B-cell lymphoma. Marrow re-review also demonstrated intravascular/intrasinusoidal atypical B cells.\n- **Immunophenotype:** The case narrative documents MUM1 positivity, CD10 negativity, and weak BCL6 expression, supporting the specified non–germinal-center phenotype.\n- **Anatomic involvement:** Cutaneous involvement is biopsy-confirmed. CNS involvement is supported by progressive encephalopathy and multifocal cerebral infarcts of differing ages, with normal large-vessel imaging and no cardiac embolic source. Negative CSF cytology and flow cytometry do not exclude intravascular CNS disease.\n- **Secondary HLH:** Fever, splenomegaly, hypertriglyceridemia, markedly elevated ferritin and soluble IL-2 receptor, and marrow hemophagocytosis support lymphoma-associated secondary hemophagocytic lymphohistiocytosis.\n\nThe candidate omits no reference components and introduces no incorrect or unrelated diagnoses. It therefore meets the rubric’s perfect-match criteria."
+    },
+    {
+      "id": "astra_max_A_3",
+      "model_key": "astra_max",
+      "variant": "A",
+      "repetition": 3,
+      "request_sha256": "83bf762bf7395407163c138023578ce2990cedbeac3cdb6d1de6ec08289777bb",
+      "status": "complete",
+      "started_at_utc": "2026-10-28T19:02:27.661636+00:00",
+      "completed_at_utc": "2026-10-28T19:02:53.377433+00:00",
+      "elapsed_seconds": 25.71,
+      "score": 5,
+      "passed": true,
+      "grading_output": "**REASONING**: The candidate and reference diagnoses are identical, matching the core disease, non–germinal-center immunophenotype, CNS and cutaneous involvement, and associated secondary hemophagocytic lymphohistiocytosis (HLH).\n\nDeep skin biopsies confirm intravascular large B-cell lymphoma: large atypical CD20-positive and PAX5-positive cells occupy small-vessel lumina, surrounded by CD31/CD34-positive endothelium, with a Ki-67 index of approximately 95%. MUM1 expression, absent CD10, and weak BCL6 expression support the specified non–germinal-center phenotype. Marrow re-review additionally demonstrates intrasinusoidal lymphoma cells.\n\nProgressive encephalopathy and multifocal cerebral infarcts of differing ages, without large-vessel disease or a cardiac embolic source, support CNS involvement. Negative CSF cytology does not contradict predominantly intravascular disease. Fever, splenomegaly, elevated ferritin, hypertriglyceridemia, elevated soluble IL-2 receptor, and marrow hemophagocytosis support secondary HLH attributable to the lymphoma.\n\nAll diagnostic components are correctly specified and supported by the case and test results, with no omissions, contradictions, or unrelated additions.\n\n**SCORE**: 5",
+      "grading_reason": "The candidate and reference diagnoses are identical, matching the core disease, non–germinal-center immunophenotype, CNS and cutaneous involvement, and associated secondary hemophagocytic lymphohistiocytosis (HLH).\n\nDeep skin biopsies confirm intravascular large B-cell lymphoma: large atypical CD20-positive and PAX5-positive cells occupy small-vessel lumina, surrounded by CD31/CD34-positive endothelium, with a Ki-67 index of approximately 95%. MUM1 expression, absent CD10, and weak BCL6 expression support the specified non–germinal-center phenotype. Marrow re-review additionally demonstrates intrasinusoidal lymphoma cells.\n\nProgressive encephalopathy and multifocal cerebral infarcts of differing ages, without large-vessel disease or a cardiac embolic source, support CNS involvement. Negative CSF cytology does not contradict predominantly intravascular disease. Fever, splenomegaly, elevated ferritin, hypertriglyceridemia, elevated soluble IL-2 receptor, and marrow hemophagocytosis support secondary HLH attributable to the lymphoma.\n\nAll diagnostic components are correctly specified and supported by the case and test results, with no omissions, contradictions, or unrelated additions."
+    }
+  ],
+  "interpretation_scope": [
+    "This tests process coverage of the existing diagnosis scorer, not a clinical treatment safety benchmark.",
+    "A high score with a false intermediate statement is not automatically a rubric violation: the rubric scores the final diagnosis.",
+    "The full case narrative, reference, and true test results remain available to every Judge.",
+    "No models are told that the inputs are A/B/C or that this is an audit.",
+    "One synthetic case and one false statement; no natural failure-rate or universal-model claims."
+  ]
+}
