@@ -4,7 +4,7 @@ Audits of AI benchmarks, checked against the saved logs. Each page keeps the evi
 
 ## SDBench
 
-Microsoft [SDBench](https://github.com/microsoft/sdbench), synthetic case 0. Start at [`sdbench/index.html`](sdbench/index.html).
+Microsoft [SDBench](https://github.com/microsoft/sdbench), synthetic case 0. Read it at <https://seungjuchae.github.io/benchmark-audits/sdbench/>, or as a PDF: [`sdbench/sdbench-case0-audit.pdf`](sdbench/sdbench-case0-audit.pdf).
 
 ```
 sdbench/
@@ -20,7 +20,8 @@ sdbench/
 │   ├── unsupported-complication/ Judge A/B: unsupported complication added
 │   └── false-intermediate-step/  Judge A/C: false intermediate explanation
 ├── daniel-brief/                 summary brief
-└── cost-leaderboard.html         estimated cost: physician path vs GPT-5
+├── cost-leaderboard.html         estimated cost: physician path vs GPT-5
+└── sdbench-case0-audit.pdf       main page as PDF, all sections expanded
 ```
 
 Scope: one synthetic case. These are reviews of saved runs, not a benchmark-wide audit or an expert clinical assessment. Links to SDBench source point to commit `304ce96`.
