@@ -8,8 +8,8 @@ Microsoft [SDBench](https://github.com/microsoft/sdbench), synthetic case 0. Sta
 
 ```
 sdbench/
-├── index.html                    list of all materials
-├── case0-audit.html              GPT-5 run: four findings
+├── index.html                    main page: case 0 audit, four findings from the GPT-5 run
+├── materials.html                list of all materials
 ├── gpt5-trajectory/              GPT-5 trajectory audit (en.html, ko.html) + trajectory JSON
 ├── astra-gatekeeper/
 │   ├── review.html               Astra Gatekeeper review
