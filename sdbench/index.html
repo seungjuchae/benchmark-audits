@@ -7,19 +7,21 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
 <style>
 :root{
   --paper:#fbfbf9; --ink:#272722; --text:#161616; --muted:#74746c; --soft:#66665d; --line:#dcdcd2;
   --chip:#f0efeb; --chip-line:#d6d3cb; --chip-ink:#494842;
   --flag:#fbe9e9; --flag-line:#e4b6b6; --flag-ink:#922c35;
   --pressed:#eaeae6; --pressed-line:#aaa99f; --open:#f1f0eb; --hover:#f5f4f0;
-  --mark:#f6e7ad; --code-bg:#f1f0eb;
-  --font-ui:Inter,system-ui,-apple-system,"Segoe UI","Malgun Gothic",sans-serif;
+  --mark:#f6e7ad; --code-bg:#f1f0eb; --seen:#b4434d; --clear:#9f9e94;
+  --font-ui:Inter,Pretendard,system-ui,-apple-system,"Segoe UI","Malgun Gothic",sans-serif;
   --font-code:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
 }
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
 body{margin:0;background:var(--paper);color:var(--ink);font:14px/1.65 var(--font-ui);overflow-wrap:break-word}
+html[lang="ko"] body{word-break:keep-all}
 a{color:inherit;text-decoration:none}
 a:hover{text-decoration:underline;text-underline-offset:3px}
 a,button,input,summary{outline-offset:4px}
@@ -30,7 +32,10 @@ code{font-family:var(--font-code);font-size:.86em}
 .wrap{max-width:1040px;margin:0 auto;padding:0 32px}
 .site-header{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-top:32px}
 .site-header .name{font-size:14px;color:var(--text)}
-.site-header nav{display:flex;flex-wrap:wrap;gap:4px 20px;font-size:14px;color:#3d3d37}
+.site-header nav{display:flex;flex-wrap:wrap;align-items:center;gap:4px 20px;font-size:14px;color:#3d3d37}
+.lang{display:inline-flex;gap:8px;padding-left:20px;border-left:1px solid var(--line)}
+.lang a{color:var(--muted)}
+.lang a[aria-current="page"]{color:var(--text);font-weight:600}
 
 main{padding-top:56px}
 .back-link{display:inline-block;font-size:11px;color:var(--muted)}
@@ -39,13 +44,15 @@ main{padding-top:56px}
 .audit-hero>p{margin:0;max-width:680px;font-size:16px;line-height:1.65;color:var(--soft)}
 .audit-meta{display:flex;flex-wrap:wrap;gap:6px 20px;margin-top:22px;font-size:11px;color:var(--muted)}
 .audit-meta a{color:var(--ink)}
+.legend{display:flex;flex-wrap:wrap;gap:6px 18px;margin-top:10px;font-size:11px;color:var(--muted)}
+.legend span{display:inline-flex;align-items:center;gap:6px}
 
 .task-controls{display:flex;align-items:center;gap:20px;padding-bottom:20px;border-bottom:1px solid var(--line)}
-.filters{display:flex;gap:6px;flex-shrink:0}
+.filters{display:flex;flex-wrap:wrap;gap:6px;flex-shrink:0}
 .filters button{font:inherit;font-size:14px;padding:7px 12px;border:1px solid var(--line);border-radius:0;background:transparent;color:var(--ink);cursor:pointer}
 .filters button:hover{border-color:var(--pressed-line)}
 .filters button[aria-pressed="true"]{background:var(--pressed);border-color:var(--pressed-line)}
-.search{flex:1;min-width:0}
+.search{flex:1;min-width:160px}
 .search input{width:100%;font:inherit;font-size:14px;padding:11px 12px;border:1px solid var(--line);border-radius:0;background:transparent;color:var(--ink)}
 .search input::placeholder{color:#9a9a90}
 .count{font-size:10px;color:var(--muted);white-space:nowrap}
@@ -65,15 +72,32 @@ main{padding-top:56px}
 .badge.flag{background:var(--flag);border-color:var(--flag-line);color:var(--flag-ink)}
 .task-impact{display:block;max-width:720px;margin-top:6px;font-size:14px;line-height:1.5;color:var(--muted)}
 .task-row[open] .task-impact{display:none}
+.seen-in{display:flex;flex-wrap:wrap;gap:4px 14px;margin-top:8px;font-size:12px;color:var(--muted)}
+.seen-in span{display:inline-flex;align-items:center;gap:6px}
 .task-status{font-size:14px;white-space:nowrap}
 .empty{padding:28px 0;color:var(--muted);border-bottom:1px solid var(--line)}
 
 .task-body{padding:0 0 20px 30px}
 .preview{max-width:82ch;padding:18px 0 12px;font-size:16px;line-height:1.65}
 .preview p{margin:0}
+.preview p+p{margin-top:10px}
 .intro{padding-bottom:20px;margin-bottom:24px;border-bottom:1px solid var(--line)}
 .finding+.finding{margin-top:24px}
 .finding h3{margin:0 0 10px;font-size:20px;line-height:1.4;font-weight:600;letter-spacing:-.01em;color:var(--text)}
+.preview a{color:var(--ink);text-decoration:underline;text-underline-offset:3px}
+
+.dot{display:inline-block;width:8px;height:8px;border-radius:50%;flex:none}
+.dot.seen{background:var(--seen)}
+.dot.clear{background:var(--clear)}
+.dot.na{border:1.3px solid var(--clear)}
+.runs{margin-top:18px}
+.run-tabs{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px}
+.run-tabs button{font:inherit;font-size:14px;display:inline-flex;align-items:center;gap:8px;padding:7px 12px;border:1px solid var(--line);border-radius:0;background:transparent;color:var(--ink);cursor:pointer}
+.run-tabs button:hover{border-color:var(--pressed-line)}
+.run-tabs button[aria-selected="true"]{background:var(--pressed);border-color:var(--pressed-line)}
+.run-tabs small{font-size:12px;color:var(--muted)}
+.run-title{display:none}
+.run-meta{font-size:13px!important;color:var(--muted);margin-bottom:6px!important}
 
 details.more{margin-top:12px}
 details.more>summary{display:inline-flex;align-items:center;gap:10px;padding:4px 0;font-size:14px;color:var(--muted);cursor:pointer;list-style:none}
@@ -105,10 +129,11 @@ mark{background:var(--mark);color:inherit;padding:0 1px}
 .info h4{margin:0 0 6px;font-size:15px;font-weight:600;color:var(--text)}
 .info p{margin:0}
 .info p+p{margin-top:10px}
+.info a{color:var(--ink);text-decoration:underline;text-underline-offset:3px}
 .info table{width:100%;border-collapse:collapse;margin-top:8px}
 .info th,.info td{text-align:left;vertical-align:top;padding:9px 16px 9px 0;border-top:1px solid var(--line)}
 .info tr:last-child th,.info tr:last-child td{border-bottom:1px solid var(--line)}
-.info th{width:30%;font-weight:500;color:var(--soft)}
+.info th{width:26%;font-weight:500;color:var(--soft)}
 .info dl{margin:10px 0 0}
 .info dl>div{padding:10px 0;border-top:1px solid var(--line)}
 .info dl>div:last-child{border-bottom:1px solid var(--line)}
@@ -130,8 +155,8 @@ mark{background:var(--mark);color:inherit;padding:0 1px}
   .audit-hero{padding:20px 0}
   .audit-hero h1{font-size:34px}
   .task-controls{flex-wrap:wrap;gap:12px}
-  .filters{width:100%;flex-wrap:wrap}
-  .filters button{min-height:44px}
+  .filters{width:100%}
+  .filters button,.run-tabs button{min-height:44px}
   .search input{font-size:16px;min-height:44px}
   .task-row>summary{align-items:flex-start;gap:10px}
   .task-row>summary::before{top:28px}
@@ -143,89 +168,151 @@ mark{background:var(--mark);color:inherit;padding:0 1px}
   details.more>summary{min-height:44px}
   .contact-line{flex-direction:column;gap:8px}
 }
+@media print{
+  .run-tabs{display:none}
+  .run-panel,.run-panel[hidden]{display:block!important}
+  .run-title{display:flex;align-items:center;gap:8px;margin:18px 0 6px;font-size:15px;font-weight:600}
+}
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
 </style>
 </head>
 <body>
 <div class="wrap">
   <header class="site-header">
-    <a class="name" href="index.html">Benchmark Audits</a>
-    <nav aria-label="Related reports">
-      <a href="materials.html">All SDBench materials</a>
-      <a href="astra-gatekeeper/review.html">Astra audit (Korean)</a>
-      <a href="gpt5-trajectory/ko.html" lang="ko">한국어</a>
+    <a class="name" href="../index.html">Benchmark Audits</a>
+    <nav aria-label="Site">
+      <a href="../index.html">Benchmarks</a>
+      <a href="https://github.com/seungjuchae/benchmark-audits" target="_blank" rel="noreferrer">GitHub ↗</a>
+      <span class="lang"><a href="index.html" lang="en" aria-current="page">EN</a><a href="index.ko.html" lang="ko" >KO</a></span>
     </nav>
   </header>
 
   <main id="top">
-    <a class="back-link" href="materials.html">← All SDBench materials</a>
+    <a class="back-link" href="../index.html">← All benchmarks</a>
 
     <header class="audit-hero">
       <h1>SDBench</h1>
-      <p>We reviewed the GPT-5 baseline trajectory on Microsoft SDBench’s synthetic case 0. The final diagnosis was correct (Judge 4/5), but we found four problems in how the agent received information. In two, the Gatekeeper returned results that were not requested. In the other two, it generated results that are not in the source case report. All four come from Gatekeeper responses, not from the diagnostic model. See below.</p>
+      <p>We audited Microsoft SDBench on synthetic case 0. Both doctor models we ran, GPT-5 and Astra max, passed with 4/5: each named the lymphoma (IVLBCL) but missed the associated HLH. We found eight issues in how the benchmark gets to that score: what the Gatekeeper reveals or makes up, how it handles grouped orders, and what the Judge checks. Open a finding to see how each setup we tested behaved. None shows incorrect work getting credit in a real run, so there is no P0 so far.</p>
       <div class="audit-meta">
         <a href="https://github.com/microsoft/sdbench/tree/304ce9625a046cea97d64e3b1ba5d19217b5095c" target="_blank" rel="noreferrer">Audited source · 304ce9625a04 ↗</a>
-        <span>Run 2026-10-25 · 1 case · findings from the saved run only</span>
+        <span>Runs 2026-10-25 (GPT-5) and 2026-10-29 (Astra max) · 1 of 5 synthetic cases</span>
+        <a href="sdbench-case0-audit.pdf">PDF</a>
+      </div>
+      <div class="legend" aria-label="Legend">
+        <span><i class="dot seen"></i>Seen: the issue showed up</span>
+        <span><i class="dot clear"></i>Not seen: tested, issue absent</span>
+        <span><i class="dot na"></i>Not tested in this setup</span>
       </div>
     </header>
 
     <section class="task-findings" aria-label="Findings">
-      <h2 class="sr-only">All 4 findings</h2>
+      <h2 class="sr-only">All 8 findings</h2>
       <div class="task-controls">
-        <div class="filters" role="group" aria-label="Filter by type">
-          <button type="button" data-filter="all" aria-pressed="true">All (4)</button>
-          <button type="button" data-filter="scope" aria-pressed="false">Beyond request (2)</button>
-          <button type="button" data-filter="synthetic" aria-pressed="false">Generated (2)</button>
+        <div class="filters" role="group" aria-label="Filter by issue type">
+          <button type="button" data-filter="all" aria-pressed="true">All (8)</button>
+          <button type="button" data-filter="leak" aria-pressed="false">Unrequested results (3)</button>
+          <button type="button" data-filter="generated" aria-pressed="false">Generated or inferred results (3)</button>
+          <button type="button" data-filter="orders" aria-pressed="false">Order handling (1)</button>
+          <button type="button" data-filter="grading" aria-pressed="false">Grading (1)</button>
         </div>
         <label class="search"><span class="sr-only">Search findings</span><input type="search" placeholder="Search findings…" autocomplete="off"></label>
-        <span class="count" aria-live="polite">4 of 4</span>
+        <span class="count" aria-live="polite">8 of 8</span>
       </div>
 
       <!-- 01 · Skin biopsy -->
-      <details class="task-row" data-cat="scope">
+      <details class="task-row" data-cat="leak">
         <summary>
           <span class="task-main">
-            <strong class="task-title">Skin biopsy returned the full immunohistochemistry panel<code>test_logs/53</code></strong>
+            <strong class="task-title">Skin biopsy returned an immunohistochemistry panel nobody ordered<code>skin biopsy</code></strong>
             <span class="badges"><span class="badge flag">Beyond the request</span><span class="badge">Requested items not reported</span></span>
-            <span class="task-impact">The agent ordered H&amp;E, direct immunofluorescence and infection stains. The Gatekeeper also returned CD20, PAX5, <span class="nw">Ki-67</span> and EBER results that were never requested.</span>
+            <span class="task-impact">GPT-5 ordered H&amp;E, immunofluorescence and infection stains, and the Gatekeeper also returned CD20, PAX5, <span class="nw">Ki-67</span> and EBER. In the other setups only the requested markers came back.</span>
+            <span class="seen-in"><span><i class="dot seen"></i>GPT-5</span><span><i class="dot clear"></i>Astra max</span><span><i class="dot clear"></i>Astra Gatekeeper</span></span>
           </span>
-          <span class="task-status" title="is_synthetic: false">Source-backed</span>
+          <span class="task-status">P1</span>
         </summary>
         <div class="task-body">
           <article class="preview">
             <div class="intro">
-              <p>The agent ordered deep punch biopsies of the skin lesions with H&amp;E, direct immunofluorescence and bacterial/fungal/AFB stains. It did not name CD20, PAX5, <span class="nw">Ki-67</span> or EBER. The Gatekeeper also returned the source report’s immunohistochemistry findings, while answering the immunofluorescence and stains the agent did name as “not reported.” The response was logged as <code>is_synthetic: false</code>.</p>
-              <details class="more">
-                <summary>Request and response</summary>
-                <div class="evidence">
-                  <div>
-                    <h4>What the agent requested<span>GPT-5 · matches the &lt;test&gt; in agent_messages</span></h4>
-                    <pre>Dermatology punch biopsies of the mottled/telangiectatic skin lesions (deep punch to subcutis) for H&amp;E and direct immunofluorescence; include bacterial/fungal/AFB stains</pre>
-                  </div>
-                  <div>
-                    <h4>What the Gatekeeper returned<span>GPT-5 · /test_logs/53/result · is_synthetic: false</span></h4>
-                    <pre>Dermatology deep punch biopsies (livedoid/telangiectatic lesions and clinically normal skin): Epidermis unremarkable. Numerous small vessels in deep dermis and subcutis (capillaries, postcapillary venules, small arterioles) are distended/occluded by cohesive aggregates of large atypical mononuclear cells with scant cytoplasm, vesicular nuclei, prominent nucleoli; mitoses frequent; occasional intraluminal fibrin thrombi. Minimal perivascular inflammation; atypical cells confined intraluminally. Similar findings present in biopsy of normal-appearing skin.
+              <p>The skin biopsy is the test that established the diagnosis in this case. What comes back with it should depend on what the doctor ordered.</p>
+              <div class="runs">
+                <div class="run-tabs" role="tablist" aria-label="Setups">
+                  <button type="button" role="tab" data-run="gpt5" aria-selected="true"><i class="dot seen"></i>GPT-5 <small>run</small></button>
+                  <button type="button" role="tab" data-run="astra" aria-selected="false"><i class="dot clear"></i>Astra max <small>run</small></button>
+                  <button type="button" role="tab" data-run="replay" aria-selected="false"><i class="dot clear"></i>Astra Gatekeeper</button>
+                </div>
+                <div class="run-panel" role="tabpanel" data-run="gpt5">
+                  <h4 class="run-title"><i class="dot seen"></i>GPT-5 run</h4>
+                  <p class="run-meta">Doctor GPT-5 · Gatekeeper GPT-5 · observed run, 2026-10-25</p>
+                  <p>GPT-5 ordered deep punch biopsies with H&amp;E, direct immunofluorescence and bacterial/fungal/AFB stains. It did not name CD20, PAX5, <span class="nw">Ki-67</span> or EBER. The Gatekeeper returned the source report’s immunohistochemistry findings anyway, while answering the immunofluorescence and stains it did name as “not reported.” The response was logged as <code>is_synthetic: false</code>.</p>
+                  <details class="more">
+                    <summary>Request and response</summary>
+                    <div class="evidence">
+                      <div>
+                        <h4>What the doctor requested<span>GPT-5 · /test_logs/53/test_name</span></h4>
+                        <pre>Dermatology punch biopsies of the mottled/telangiectatic skin lesions (deep punch to subcutis) for H&amp;E and direct immunofluorescence; include bacterial/fungal/AFB stains</pre>
+                      </div>
+                      <div>
+                        <h4>What the Gatekeeper returned<span>GPT-5 · /test_logs/53/result · is_synthetic: false</span></h4>
+                        <pre>Dermatology deep punch biopsies (livedoid/telangiectatic lesions and clinically normal skin): Epidermis unremarkable. Numerous small vessels in deep dermis and subcutis (capillaries, postcapillary venules, small arterioles) are distended/occluded by cohesive aggregates of large atypical mononuclear cells with scant cytoplasm, vesicular nuclei, prominent nucleoli; mitoses frequent; occasional intraluminal fibrin thrombi. Minimal perivascular inflammation; atypical cells confined intraluminally. Similar findings present in biopsy of normal-appearing skin.
 
 <mark>Immunohistochemistry:</mark> Atypical intraluminal cells positive for <mark>CD20, PAX5, CD79a</mark>; negative for CD3 and cytokeratin. Endothelial markers (CD31/CD34) highlight endothelium encasing intraluminal aggregates. Cells express MUM1/IRF4 and BCL2; CD10 negative; BCL6 weak; subset CD5 positive. <mark>Ki-67 proliferation index approximately 95%.</mark> <mark>EBER in-situ hybridization: negative.</mark> <mark>Direct immunofluorescence and special stains for bacteria/fungi/AFB: not reported.</mark></pre>
-                  </div>
-                  <details class="more">
-                    <summary>Raw JSON log</summary>
-                    <pre>{
-  "test_name": "Test to order: Dermatology punch biopsies of the mottled/telangiectatic skin lesions (deep punch to subcutis) for H&amp;E and direct immunofluorescence; include bacterial/fungal/AFB stains",
-  "reason": "",
-  "result": "Dermatology deep punch biopsies (livedoid/telangiectatic lesions and clinically normal skin): Epidermis unremarkable. Numerous small vessels in deep dermis and subcutis (capillaries, postcapillary venules, small arterioles) are distended/occluded by cohesive aggregates of large atypical mononuclear cells with scant cytoplasm, vesicular nuclei, prominent nucleoli; mitoses frequent; occasional intraluminal fibrin thrombi. Minimal perivascular inflammation; atypical cells confined intraluminally. Similar findings present in biopsy of normal-appearing skin.\n\nImmunohistochemistry: Atypical intraluminal cells positive for CD20, PAX5, CD79a; negative for CD3 and cytokeratin. Endothelial markers (CD31/CD34) highlight endothelium encasing intraluminal aggregates. Cells express MUM1/IRF4 and BCL2; CD10 negative; BCL6 weak; subset CD5 positive. Ki-67 proliferation index approximately 95%. EBER in-situ hybridization: negative. Direct immunofluorescence and special stains for bacteria/fungi/AFB: not reported.",
-  "is_synthetic": false,
-  "timestamp": "2026-10-25T18:41:25.721187",
-  "batch_mode": true
+                      </div>
+                      <details class="more">
+                        <summary>Raw JSON log</summary>
+                        <pre>{
+  &quot;test_name&quot;: &quot;Test to order: Dermatology punch biopsies of the mottled/telangiectatic skin lesions (deep punch to subcutis) for H&amp;E and direct immunofluorescence; include bacterial/fungal/AFB stains&quot;,
+  &quot;reason&quot;: &quot;&quot;,
+  &quot;result&quot;: &quot;Dermatology deep punch biopsies (livedoid/telangiectatic lesions and clinically normal skin): Epidermis unremarkable. Numerous small vessels in deep dermis and subcutis (capillaries, postcapillary venules, small arterioles) are distended/occluded by cohesive aggregates of large atypical mononuclear cells with scant cytoplasm, vesicular nuclei, prominent nucleoli; mitoses frequent; occasional intraluminal fibrin thrombi. Minimal perivascular inflammation; atypical cells confined intraluminally. Similar findings present in biopsy of normal-appearing skin.\n\nImmunohistochemistry: Atypical intraluminal cells positive for CD20, PAX5, CD79a; negative for CD3 and cytokeratin. Endothelial markers (CD31/CD34) highlight endothelium encasing intraluminal aggregates. Cells express MUM1/IRF4 and BCL2; CD10 negative; BCL6 weak; subset CD5 positive. Ki-67 proliferation index approximately 95%. EBER in-situ hybridization: negative. Direct immunofluorescence and special stains for bacteria/fungi/AFB: not reported.&quot;,
+  &quot;is_synthetic&quot;: false,
+  &quot;timestamp&quot;: &quot;2026-10-25T18:41:25.721187&quot;,
+  &quot;batch_mode&quot;: true
 }</pre>
+                      </details>
+                    </div>
                   </details>
                 </div>
-              </details>
+                <div class="run-panel" role="tabpanel" data-run="astra">
+                  <h4 class="run-title"><i class="dot clear"></i>Astra max run</h4>
+                  <p class="run-meta">Doctor Astra max · Gatekeeper GPT-5 · observed run, 2026-10-29</p>
+                  <p>Astra named the markers itself: CD20, PAX5, CD3, CD31/CD34 and <span class="nw">Ki-67</span>. The same GPT-5 Gatekeeper returned exactly those, under “Immunohistochemistry (requested markers)”, and none of the rest of the panel. So the same Gatekeeper drew the boundary differently in the two runs.</p>
+                  <details class="more">
+                    <summary>Request and response</summary>
+                    <div class="evidence">
+                      <div>
+                        <h4>What the doctor requested<span>Astra max · /test_logs/14/test_name</span></h4>
+                        <pre>Obtain three deep skin biopsies, sampling the mottled/telangiectatic areas and clinically normal skin, with each specimen including subcutaneous fat. Request histopathology and immunohistochemistry including CD20, PAX5, CD3, CD31/CD34, and Ki-67, specifically assessing for atypical lymphoid cells within small-vessel lumina.</pre>
+                      </div>
+                      <div>
+                        <h4>What the Gatekeeper returned<span>GPT-5 · /test_logs/14/result · is_synthetic: false</span></h4>
+                        <pre>Random deep skin biopsies (thigh livedoid area, trunk telangiectatic patch, and clinically normal upper arm), each extending into subcutaneous fat:
+
+Histopathology: Epidermis unremarkable. Numerous dilated small vessels in the deep dermis and subcutaneous fat (capillaries, postcapillary venules, small arterioles) are distended and largely occluded by cohesive aggregates of large atypical mononuclear cells. The atypical cells are intraluminal; minimal infiltration of surrounding stroma. Mitotic figures are frequent; apoptotic debris present. Fibrin thrombi noted in several involved vessels. Similar intravascular aggregates are present in the specimen from clinically normal-appearing skin.
+
+<mark>Immunohistochemistry (requested markers):</mark> The intraluminal large cells are strongly positive for CD20 and PAX5; negative for CD3. Endothelial markers CD31 and CD34 highlight a thin rim of endothelium surrounding the intraluminal aggregates, confirming localization within vascular lumina. Ki-67 proliferation index is approximately 95%.</pre>
+                      </div>
+                      <p>Raw: <a href="astra-max-diagnosis/json/case_k0_0.json">astra-max-diagnosis/json/case_k0_0.json</a></p>
+                    </div>
+                  </details>
+                </div>
+                <div class="run-panel" role="tabpanel" data-run="replay">
+                  <h4 class="run-title"><i class="dot clear"></i>Astra Gatekeeper</h4>
+                  <p class="run-meta">GPT-5’s saved order resent to an Astra Gatekeeper · replay, no diagnosis or Judge</p>
+                  <p>Given GPT-5’s exact order, an Astra Gatekeeper returned the documented histology without the immunohistochemistry panel. It generated the requested immunofluorescence and stains under a separate “Synthetic ancillary results” label. Each setup ran once, so we can’t tell how much of the difference is the model and how much is run-to-run variation.</p>
+                  <details class="more">
+                    <summary>Astra Gatekeeper response</summary>
+                    <div class="evidence">
+                      <pre>Documented histologic findings: Numerous dilated small vessels in the deep dermis and within the subcutaneous fat — capillaries, postcapillary venules, and small arterioles — were distended and largely occluded by cohesive aggregates of large, atypical mononuclear cells. These cells had scant cytoplasm, large vesicular nuclei with coarse chromatin, and one or more prominent nucleoli; mitotic figures were frequent, and apoptotic debris was present. Admixed fibrin thrombi were noted within several involved vessels. There was minimal infiltration of the surrounding dermal or subcutaneous stroma.
+<mark>Synthetic ancillary results:</mark> Direct immunofluorescence showed no specific vascular or dermoepidermal immune deposits. Bacterial, fungal, and acid-fast stains showed no organisms.</pre>
+                      <p>Raw: <a href="astra-gatekeeper/replay/comparison.json">astra-gatekeeper/replay/comparison.json</a></p>
+                    </div>
+                  </details>
+                </div>
+              </div>
             </div>
 
             <div class="finding">
-              <h3>An unrequested immunohistochemistry panel was supplied</h3>
-              <p>The agent received B-cell markers (CD20, PAX5, CD79a), a <span class="nw">Ki-67</span> index of about 95% and a negative EBER result. It got diagnostically important information without choosing the detailed panel itself. These findings do exist in the source case report.</p>
+              <h3>The panel is in the source report</h3>
+              <p>Nothing was invented: the full panel, with B-cell markers, <span class="nw">Ki-67</span> of about 95% and a negative EBER, is in the source. The question is scope, meaning which results belong to which order.</p>
               <details class="more">
                 <summary>Source case report</summary>
                 <div class="evidence">
@@ -235,13 +322,8 @@ mark{background:var(--mark);color:inherit;padding:0 1px}
             </div>
 
             <div class="finding">
-              <h3>The tests it did name came back “not reported”</h3>
-              <p>Direct immunofluorescence and the bacterial, fungal and AFB stains were on the order, but the Gatekeeper answered them as “not reported.” What was requested and what was returned do not line up.</p>
-            </div>
-
-            <div class="finding">
-              <h3>The Gatekeeper’s own instructions pull in two directions</h3>
-              <p>The prompt forbids diagnosis-identifying information beyond what is requested, and it also tells the Gatekeeper to return an existing report verbatim. It does not define which ancillary tests belong to a biopsy order. This example alone does not establish a definite rule violation.</p>
+              <h3>The Gatekeeper’s instructions pull in two directions</h3>
+              <p>The prompt forbids diagnosis-identifying information beyond what is requested, and it also says to return an existing report verbatim. It does not define which ancillary tests belong to a biopsy order, so this is not a definite rule violation.</p>
               <details class="more">
                 <summary>Gatekeeper prompt · v6_fixed</summary>
                 <div class="evidence">
@@ -253,55 +335,86 @@ mark{background:var(--mark);color:inherit;padding:0 1px}
 
             <div class="finding">
               <h3>Why this may affect evaluation</h3>
-              <p>If the rule is to return only explicitly named tests, this exceeds scope. If a biopsy order includes the pathology department’s follow-up panel, it may be allowed, but that scope and its full cost must apply to every participant. This is not a claim that the tests are clinically inappropriate.</p>
+              <p>If only named tests should be returned, the GPT-5 run exceeded scope. If a biopsy order includes the pathology department’s follow-up panel, that scope and its cost must apply to every participant. As it stands, the same Gatekeeper gave one doctor the full panel unasked and gave the other only what it asked for. This is not a claim that the tests are clinically inappropriate.</p>
             </div>
           </article>
         </div>
       </details>
 
       <!-- 02 · CSF -->
-      <details class="task-row" data-cat="scope">
+      <details class="task-row" data-cat="leak">
         <summary>
           <span class="task-main">
-            <strong class="task-title">CSF cytology also returned flow cytometry<code>test_logs/52</code></strong>
+            <strong class="task-title">CSF cytology also returned flow cytometry<code>lumbar puncture</code></strong>
             <span class="badges"><span class="badge flag">Beyond the request</span><span class="badge">Requested items not reported</span></span>
-            <span class="task-impact">The agent ordered a lumbar puncture panel ending with cytology. The Gatekeeper added a CSF flow cytometry result that was not on the list.</span>
+            <span class="task-impact">GPT-5 ordered a lumbar puncture panel ending with cytology. The Gatekeeper added a CSF flow cytometry result that was not on the list.</span>
+            <span class="seen-in"><span><i class="dot seen"></i>GPT-5</span><span><i class="dot na"></i>Astra max</span><span><i class="dot clear"></i>Astra Gatekeeper</span></span>
           </span>
-          <span class="task-status" title="is_synthetic: false">Source-backed</span>
+          <span class="task-status">P1</span>
         </summary>
         <div class="task-body">
           <article class="preview">
             <div class="intro">
-              <p>The agent ordered a lumbar puncture with opening pressure, cell count, protein and glucose, Gram stain and culture, viral PCRs, cryptococcal antigen, fungal and AFB studies, and, last, CSF cytology. Flow cytometry was not on the list. The response was logged as <code>is_synthetic: false</code>.</p>
-              <details class="more">
-                <summary>Request and response</summary>
-                <div class="evidence">
-                  <div>
-                    <h4>What the agent requested<span>GPT-5 · matches the &lt;test&gt; in agent_messages</span></h4>
-                    <pre>Lumbar puncture after neuroimaging: opening pressure; CSF cell count with differential, protein, glucose; Gram stain and bacterial culture; HSV-1/2 PCR; VZV PCR; enterovirus PCR; cryptococcal antigen; fungal culture; AFB smear/culture; CSF cytology</pre>
-                  </div>
-                  <div>
-                    <h4>What the Gatekeeper returned<span>GPT-5 · /test_logs/52/result · is_synthetic: false</span></h4>
-                    <pre>Lumbar puncture: Opening pressure 17 cm H2O. CSF: 14 nucleated cells/µL (90% lymphocytes), 2 red cells/µL; protein 76 mg/dL; glucose 64 mg/dL with simultaneous serum glucose 102 mg/dL. Gram stain: no organisms; bacterial cultures: no growth. HSV-1/2 PCR: negative; VZV PCR: negative; cryptococcal antigen: negative. CSF cytology: reactive lymphocytes, no malignant cells. <mark>CSF flow cytometry: no clonal lymphoid population.</mark> <mark>Enterovirus PCR, fungal culture, and AFB smear/culture: not reported in the current record.</mark></pre>
-                  </div>
+              <p>Cytology and flow cytometry are separate CSF tests. Only cytology was ordered.</p>
+              <div class="runs">
+                <div class="run-tabs" role="tablist" aria-label="Setups">
+                  <button type="button" role="tab" data-run="gpt5" aria-selected="true"><i class="dot seen"></i>GPT-5 <small>run</small></button>
+                  <button type="button" role="tab" data-run="astra" aria-selected="false"><i class="dot na"></i>Astra max <small>run</small></button>
+                  <button type="button" role="tab" data-run="replay" aria-selected="false"><i class="dot clear"></i>Astra Gatekeeper</button>
+                </div>
+                <div class="run-panel" role="tabpanel" data-run="gpt5">
+                  <h4 class="run-title"><i class="dot seen"></i>GPT-5 run</h4>
+                  <p class="run-meta">Doctor GPT-5 · Gatekeeper GPT-5 · observed run, 2026-10-25</p>
+                  <p>GPT-5 ordered opening pressure, cell count, protein and glucose, Gram stain and culture, viral PCRs, cryptococcal antigen, fungal and AFB studies and, last, CSF cytology. The Gatekeeper appended <code>CSF flow cytometry: no clonal lymphoid population.</code> Meanwhile the requested enterovirus PCR, fungal culture and AFB studies came back “not reported in the current record”; none of them are in the source. The response was logged as <code>is_synthetic: false</code>.</p>
                   <details class="more">
-                    <summary>Raw JSON log</summary>
-                    <pre>{
-  "test_name": "Test to order: Lumbar puncture after neuroimaging: opening pressure; CSF cell count with differential, protein, glucose; Gram stain and bacterial culture; HSV-1/2 PCR; VZV PCR; enterovirus PCR; cryptococcal antigen; fungal culture; AFB smear/culture; CSF cytology",
-  "reason": "",
-  "result": "Lumbar puncture: Opening pressure 17 cm H2O. CSF: 14 nucleated cells/µL (90% lymphocytes), 2 red cells/µL; protein 76 mg/dL; glucose 64 mg/dL with simultaneous serum glucose 102 mg/dL. Gram stain: no organisms; bacterial cultures: no growth. HSV-1/2 PCR: negative; VZV PCR: negative; cryptococcal antigen: negative. CSF cytology: reactive lymphocytes, no malignant cells. CSF flow cytometry: no clonal lymphoid population. Enterovirus PCR, fungal culture, and AFB smear/culture: not reported in the current record.",
-  "is_synthetic": false,
-  "timestamp": "2026-10-25T18:41:25.721185",
-  "batch_mode": true
+                    <summary>Request and response</summary>
+                    <div class="evidence">
+                      <div>
+                        <h4>What the doctor requested<span>GPT-5 · /test_logs/52/test_name</span></h4>
+                        <pre>Lumbar puncture after neuroimaging: opening pressure; CSF cell count with differential, protein, glucose; Gram stain and bacterial culture; HSV-1/2 PCR; VZV PCR; enterovirus PCR; cryptococcal antigen; fungal culture; AFB smear/culture; CSF cytology</pre>
+                      </div>
+                      <div>
+                        <h4>What the Gatekeeper returned<span>GPT-5 · /test_logs/52/result · is_synthetic: false</span></h4>
+                        <pre>Lumbar puncture: Opening pressure 17 cm H2O. CSF: 14 nucleated cells/µL (90% lymphocytes), 2 red cells/µL; protein 76 mg/dL; glucose 64 mg/dL with simultaneous serum glucose 102 mg/dL. Gram stain: no organisms; bacterial cultures: no growth. HSV-1/2 PCR: negative; VZV PCR: negative; cryptococcal antigen: negative. CSF cytology: reactive lymphocytes, no malignant cells. <mark>CSF flow cytometry: no clonal lymphoid population.</mark> <mark>Enterovirus PCR, fungal culture, and AFB smear/culture: not reported in the current record.</mark></pre>
+                      </div>
+                      <details class="more">
+                        <summary>Raw JSON log</summary>
+                        <pre>{
+  &quot;test_name&quot;: &quot;Test to order: Lumbar puncture after neuroimaging: opening pressure; CSF cell count with differential, protein, glucose; Gram stain and bacterial culture; HSV-1/2 PCR; VZV PCR; enterovirus PCR; cryptococcal antigen; fungal culture; AFB smear/culture; CSF cytology&quot;,
+  &quot;reason&quot;: &quot;&quot;,
+  &quot;result&quot;: &quot;Lumbar puncture: Opening pressure 17 cm H2O. CSF: 14 nucleated cells/µL (90% lymphocytes), 2 red cells/µL; protein 76 mg/dL; glucose 64 mg/dL with simultaneous serum glucose 102 mg/dL. Gram stain: no organisms; bacterial cultures: no growth. HSV-1/2 PCR: negative; VZV PCR: negative; cryptococcal antigen: negative. CSF cytology: reactive lymphocytes, no malignant cells. CSF flow cytometry: no clonal lymphoid population. Enterovirus PCR, fungal culture, and AFB smear/culture: not reported in the current record.&quot;,
+  &quot;is_synthetic&quot;: false,
+  &quot;timestamp&quot;: &quot;2026-10-25T18:41:25.721185&quot;,
+  &quot;batch_mode&quot;: true
 }</pre>
+                      </details>
+                    </div>
                   </details>
                 </div>
-              </details>
+                <div class="run-panel" role="tabpanel" data-run="astra">
+                  <h4 class="run-title"><i class="dot na"></i>Astra max run</h4>
+                  <p class="run-meta">Doctor Astra max · Gatekeeper GPT-5 · observed run, 2026-10-29</p>
+                  <p>Astra never ordered a lumbar puncture. The CSF results, flow cytometry included, reached it through one broad question instead (see the broad-question finding below).</p>
+                </div>
+                <div class="run-panel" role="tabpanel" data-run="replay">
+                  <h4 class="run-title"><i class="dot clear"></i>Astra Gatekeeper</h4>
+                  <p class="run-meta">GPT-5’s saved order resent to an Astra Gatekeeper · replay, no diagnosis or Judge</p>
+                  <p>Given the same order, an Astra Gatekeeper returned the documented CSF results without flow cytometry. For enterovirus PCR, fungal culture and AFB studies it generated negative results, labeled “Synthetic additional results.”</p>
+                  <details class="more">
+                    <summary>Astra Gatekeeper response</summary>
+                    <div class="evidence">
+                      <pre>Documented results: Opening pressure, 17 cm of water. CSF contained 14 nucleated cells per cubic millimeter (90% lymphocytes) and 2 red cells per cubic millimeter; protein, 76 mg/dL; glucose, 64 mg/dL, with simultaneous serum glucose of 102 mg/dL. Gram staining and bacterial cultures were negative, as were PCR assays for herpes simplex virus and varicella–zoster virus and a cryptococcal antigen assay. CSF cytologic examination revealed reactive lymphocytes but no malignant cells.
+<mark>Synthetic additional results:</mark> Enterovirus PCR negative. Fungal culture showed no growth after final incubation. AFB smear negative; mycobacterial culture showed no growth after final incubation.</pre>
+                      <p>Raw: <a href="astra-gatekeeper/replay/comparison.json">astra-gatekeeper/replay/comparison.json</a></p>
+                    </div>
+                  </details>
+                </div>
+              </div>
             </div>
 
             <div class="finding">
-              <h3>An unrequested flow cytometry result was added</h3>
-              <p>The Gatekeeper appended <code>CSF flow cytometry: no clonal lymphoid population.</code> Cytology and flow cytometry are distinct tests, and only cytology was ordered. The result is in the source case report.</p>
+              <h3>The flow cytometry result is in the source report</h3>
+              <p>The source reports CSF cytology and flow cytometry in the same sentence. The Gatekeeper returned both for an order that named one.</p>
               <details class="more">
                 <summary>Source case report</summary>
                 <div class="evidence">
@@ -311,62 +424,93 @@ mark{background:var(--mark);color:inherit;padding:0 1px}
             </div>
 
             <div class="finding">
-              <h3>Some requested items came back “not reported”</h3>
-              <p>Enterovirus PCR, fungal culture and AFB smear/culture were on the order but were returned as “not reported in the current record.” None of them appear in the source report. In the same run, the Gatekeeper handled other tests missing from the source by generating results instead (see the two findings below).</p>
-            </div>
-
-            <div class="finding">
               <h3>Why this may affect evaluation</h3>
-              <p>The agent receives a result for a test it did not select. If the benchmark measures test-level information gathering and cost, what is disclosed should match the actual order. If CSF testing is treated as a package, its components and price should be fixed in advance. As with the skin biopsy, whether this is a violation depends on that package boundary.</p>
+              <p>The doctor receives a result for a test it did not select. If the benchmark measures test-level information gathering and cost, what is disclosed should match the actual order. If CSF testing is treated as a package, its components and price should be fixed in advance.</p>
             </div>
           </article>
         </div>
       </details>
 
       <!-- 03 · Urine culture -->
-      <details class="task-row" data-cat="synthetic">
+      <details class="task-row" data-cat="generated">
         <summary>
           <span class="task-main">
-            <strong class="task-title">Urine culture returned a negative result not in the source<code>test_logs/29</code></strong>
+            <strong class="task-title">Urine culture returned a negative result that isn’t in the source<code>urine culture</code></strong>
             <span class="badges"><span class="badge flag">Not in source</span><span class="badge">Source and generated mixed</span></span>
-            <span class="task-impact">The urinalysis values match the source, but “Urine culture: No growth at 48 hours.” appears nowhere in it.</span>
+            <span class="task-impact">The urinalysis matches the source, but “Urine culture: No growth at 48 hours.” appears nowhere in it.</span>
+            <span class="seen-in"><span><i class="dot seen"></i>GPT-5</span><span><i class="dot na"></i>Astra max</span><span><i class="dot seen"></i>Astra Gatekeeper</span></span>
           </span>
-          <span class="task-status" title="is_synthetic: true">Synthetic</span>
+          <span class="task-status">P1</span>
         </summary>
         <div class="task-body">
           <article class="preview">
             <div class="intro">
-              <p>The agent explicitly ordered a urinalysis and urine culture. It did not write the negative result itself. The response was flagged <code>is_synthetic: true</code>.</p>
-              <details class="more">
-                <summary>Request and response</summary>
-                <div class="evidence">
-                  <div>
-                    <h4>What the agent requested<span>GPT-5 · matches the &lt;test&gt; in agent_messages</span></h4>
-                    <pre>Urinalysis and urine culture</pre>
-                  </div>
-                  <div>
-                    <h4>What the Gatekeeper returned<span>GPT-5 · /test_logs/29/result · is_synthetic: true</span></h4>
-                    <pre>Urinalysis: Specific gravity 1.015; trace protein; no glucose; no leukocyte esterase or nitrites; 0–2 RBC/HPF; 0–2 WBC/HPF; no casts.
-<mark>Urine culture: No growth at 48 hours.</mark></pre>
-                  </div>
+              <p>The source report has a urinalysis but no urine culture. For anything missing, the prompt tells the Gatekeeper to generate a plausible result and flag it.</p>
+              <div class="runs">
+                <div class="run-tabs" role="tablist" aria-label="Setups">
+                  <button type="button" role="tab" data-run="gpt5" aria-selected="true"><i class="dot seen"></i>GPT-5 <small>run</small></button>
+                  <button type="button" role="tab" data-run="astra" aria-selected="false"><i class="dot na"></i>Astra max <small>run</small></button>
+                  <button type="button" role="tab" data-run="replay" aria-selected="false"><i class="dot seen"></i>Astra Gatekeeper</button>
+                </div>
+                <div class="run-panel" role="tabpanel" data-run="gpt5">
+                  <h4 class="run-title"><i class="dot seen"></i>GPT-5 run</h4>
+                  <p class="run-meta">Doctor GPT-5 · Gatekeeper GPT-5 · observed run, 2026-10-25</p>
+                  <p>GPT-5 ordered a urinalysis and urine culture. The Gatekeeper returned the urinalysis from the source plus a generated negative culture. The whole response carries a single <code>is_synthetic: true</code> flag, so it doesn’t say which line was generated.</p>
                   <details class="more">
-                    <summary>Raw JSON log</summary>
-                    <pre>{
-  "test_name": "Test to order: Urinalysis and urine culture",
-  "reason": "",
-  "result": "Urinalysis: Specific gravity 1.015; trace protein; no glucose; no leukocyte esterase or nitrites; 0–2 RBC/HPF; 0–2 WBC/HPF; no casts.\nUrine culture: No growth at 48 hours.",
-  "is_synthetic": true,
-  "timestamp": "2026-10-25T18:41:25.721160",
-  "batch_mode": true
+                    <summary>Request and response</summary>
+                    <div class="evidence">
+                      <div>
+                        <h4>What the doctor requested<span>GPT-5 · /test_logs/29/test_name</span></h4>
+                        <pre>Urinalysis and urine culture</pre>
+                      </div>
+                      <div>
+                        <h4>What the Gatekeeper returned<span>GPT-5 · /test_logs/29/result · is_synthetic: true</span></h4>
+                        <pre>Urinalysis: Specific gravity 1.015; trace protein; no glucose; no leukocyte esterase or nitrites; 0–2 RBC/HPF; 0–2 WBC/HPF; no casts.
+<mark>Urine culture: No growth at 48 hours.</mark></pre>
+                      </div>
+                      <details class="more">
+                        <summary>Raw JSON log</summary>
+                        <pre>{
+  &quot;test_name&quot;: &quot;Test to order: Urinalysis and urine culture&quot;,
+  &quot;reason&quot;: &quot;&quot;,
+  &quot;result&quot;: &quot;Urinalysis: Specific gravity 1.015; trace protein; no glucose; no leukocyte esterase or nitrites; 0–2 RBC/HPF; 0–2 WBC/HPF; no casts.\nUrine culture: No growth at 48 hours.&quot;,
+  &quot;is_synthetic&quot;: true,
+  &quot;timestamp&quot;: &quot;2026-10-25T18:41:25.721160&quot;,
+  &quot;batch_mode&quot;: true
 }</pre>
+                      </details>
+                    </div>
                   </details>
                 </div>
-              </details>
+                <div class="run-panel" role="tabpanel" data-run="astra">
+                  <h4 class="run-title"><i class="dot na"></i>Astra max run</h4>
+                  <p class="run-meta">Doctor Astra max · Gatekeeper GPT-5 · observed run, 2026-10-29</p>
+                  <p>Astra did not order a urine culture. The urinalysis reached it through the broad question, without a culture.</p>
+                </div>
+                <div class="run-panel" role="tabpanel" data-run="replay">
+                  <h4 class="run-title"><i class="dot seen"></i>Astra Gatekeeper</h4>
+                  <p class="run-meta">GPT-5’s saved order resent to an Astra Gatekeeper, then split · replay, no diagnosis or Judge</p>
+                  <p>An Astra Gatekeeper refused the combined order. Sent as two requests, it returned the urinalysis from the source and generated a negative culture, flagged synthetic.</p>
+                  <details class="more">
+                    <summary>Astra Gatekeeper responses</summary>
+                    <div class="evidence">
+                      <pre>Request: Urinalysis
+Response: The urinalysis showed a specific gravity of 1.015, trace protein, no glucose, no leukocyte esterase or nitrites, and 0–2 red cells and 0–2 white cells per high-power field, without casts.
+is_synthetic: false
+
+Request: Urine culture
+Response: Urine culture: No growth after 48 hours.
+is_synthetic: true</pre>
+                      <p>Raw: <a href="astra-gatekeeper/replay/split-requests/comparison.json">astra-gatekeeper/replay/split-requests/comparison.json</a></p>
+                    </div>
+                  </details>
+                </div>
+              </div>
             </div>
 
             <div class="finding">
-              <h3>Source-backed and generated results in one response</h3>
-              <p>The urinalysis findings correspond to the source; the urine-culture result does not. The source’s “three sets of blood cultures” are blood cultures, not urine cultures. Because <code>is_synthetic</code> is a single flag for the whole response, it does not tell you which line was generated.</p>
+              <h3>The source has blood cultures, not a urine culture</h3>
+              <p>The source’s “three sets of blood cultures” are blood cultures. No urine culture is reported anywhere.</p>
               <details class="more">
                 <summary>Source case report</summary>
                 <div class="evidence">
@@ -377,7 +521,7 @@ mark{background:var(--mark);color:inherit;padding:0 1px}
 
             <div class="finding">
               <h3>The current configuration allows this</h3>
-              <p>For tests absent from the report, the Gatekeeper prompt says to fabricate a plausible synthetic result and flag it. Generation is therefore not evidence of an implementation error. The design question is how the validity and consistency of generated results are established.</p>
+              <p>Generation is what the prompt asks for, so it is not evidence of an implementation error. The design question is how the validity and consistency of generated results are established.</p>
               <details class="more">
                 <summary>Gatekeeper prompt · v6_fixed</summary>
                 <div class="evidence">
@@ -388,36 +532,47 @@ mark{background:var(--mark);color:inherit;padding:0 1px}
 
             <div class="finding">
               <h3>Why this may affect evaluation</h3>
-              <p>A generated negative culture could lead an agent to deprioritize a urinary source of fever. This single run does not establish that it actually changed the model’s decision.</p>
+              <p>A generated negative culture could lead a doctor model to deprioritize a urinary source of fever. These runs do not establish that it changed any decision.</p>
             </div>
           </article>
         </div>
       </details>
 
       <!-- 04 · Anaplasma / Ehrlichia -->
-      <details class="task-row" data-cat="synthetic">
+      <details class="task-row" data-cat="generated">
         <summary>
           <span class="task-main">
-            <strong class="task-title">Anaplasma and Ehrlichia returned generated negative PCR and serology<code>test_logs/43</code></strong>
+            <strong class="task-title">Anaplasma and Ehrlichia tests returned generated negatives<code>Anaplasma · Ehrlichia</code></strong>
             <span class="badges"><span class="badge flag">Not in source</span></span>
-            <span class="task-impact">Neither organism appears in the source, yet the Gatekeeper returned negative PCR, IgG and IgM results for both.</span>
+            <span class="task-impact">Neither organism appears in the source, yet both Gatekeepers returned negative PCR, IgG and IgM results for both.</span>
+            <span class="seen-in"><span><i class="dot seen"></i>GPT-5</span><span><i class="dot na"></i>Astra max</span><span><i class="dot seen"></i>Astra Gatekeeper</span></span>
           </span>
-          <span class="task-status" title="is_synthetic: true">Synthetic</span>
+          <span class="task-status">P1</span>
         </summary>
         <div class="task-body">
           <article class="preview">
             <div class="intro">
-              <p>The agent explicitly ordered Anaplasma and Ehrlichia PCR/serology. The source <code>full_text</code> contains no Anaplasma or Ehrlichia entries. The response was flagged <code>is_synthetic: true</code>.</p>
-              <details class="more">
-                <summary>Request and response</summary>
-                <div class="evidence">
-                  <div>
-                    <h4>What the agent requested<span>GPT-5 · matches the &lt;test&gt; in agent_messages</span></h4>
-                    <pre>Anaplasma and Ehrlichia PCR/serology</pre>
-                  </div>
-                  <div>
-                    <h4>What the Gatekeeper returned<span>GPT-5 · /test_logs/43/result · is_synthetic: true</span></h4>
-                    <pre>Anaplasma phagocytophilum:
+              <p>The source lists other infection serologies but nothing on Anaplasma or Ehrlichia, two tick-borne infections.</p>
+              <div class="runs">
+                <div class="run-tabs" role="tablist" aria-label="Setups">
+                  <button type="button" role="tab" data-run="gpt5" aria-selected="true"><i class="dot seen"></i>GPT-5 <small>run</small></button>
+                  <button type="button" role="tab" data-run="astra" aria-selected="false"><i class="dot na"></i>Astra max <small>run</small></button>
+                  <button type="button" role="tab" data-run="replay" aria-selected="false"><i class="dot seen"></i>Astra Gatekeeper</button>
+                </div>
+                <div class="run-panel" role="tabpanel" data-run="gpt5">
+                  <h4 class="run-title"><i class="dot seen"></i>GPT-5 run</h4>
+                  <p class="run-meta">Doctor GPT-5 · Gatekeeper GPT-5 · observed run, 2026-10-25</p>
+                  <p>GPT-5 ordered PCR and serology for both organisms. The Gatekeeper returned “PCR: Not detected” and negative IgG and IgM for each, flagged <code>is_synthetic: true</code>.</p>
+                  <details class="more">
+                    <summary>Request and response</summary>
+                    <div class="evidence">
+                      <div>
+                        <h4>What the doctor requested<span>GPT-5 · /test_logs/43/test_name</span></h4>
+                        <pre>Anaplasma and Ehrlichia PCR/serology</pre>
+                      </div>
+                      <div>
+                        <h4>What the Gatekeeper returned<span>GPT-5 · /test_logs/43/result · is_synthetic: true</span></h4>
+                        <pre>Anaplasma phagocytophilum:
 - <mark>PCR: Not detected</mark>
 - <mark>IgG: Negative</mark>
 - <mark>IgM: Negative</mark>
@@ -425,42 +580,425 @@ Ehrlichia chaffeensis:
 - <mark>PCR: Not detected</mark>
 - <mark>IgG: Negative</mark>
 - <mark>IgM: Negative</mark></pre>
-                  </div>
-                  <details class="more">
-                    <summary>Raw JSON log</summary>
-                    <pre>{
-  "test_name": "Test to order: Anaplasma and Ehrlichia PCR/serology",
-  "reason": "",
-  "result": "Anaplasma phagocytophilum:\n- PCR: Not detected\n- IgG: Negative\n- IgM: Negative\nEhrlichia chaffeensis:\n- PCR: Not detected\n- IgG: Negative\n- IgM: Negative",
-  "is_synthetic": true,
-  "timestamp": "2026-10-25T18:41:25.721175",
-  "batch_mode": true
+                      </div>
+                      <details class="more">
+                        <summary>Raw JSON log</summary>
+                        <pre>{
+  &quot;test_name&quot;: &quot;Test to order: Anaplasma and Ehrlichia PCR/serology&quot;,
+  &quot;reason&quot;: &quot;&quot;,
+  &quot;result&quot;: &quot;Anaplasma phagocytophilum:\n- PCR: Not detected\n- IgG: Negative\n- IgM: Negative\nEhrlichia chaffeensis:\n- PCR: Not detected\n- IgG: Negative\n- IgM: Negative&quot;,
+  &quot;is_synthetic&quot;: true,
+  &quot;timestamp&quot;: &quot;2026-10-25T18:41:25.721175&quot;,
+  &quot;batch_mode&quot;: true
 }</pre>
+                      </details>
+                    </div>
                   </details>
                 </div>
-              </details>
+                <div class="run-panel" role="tabpanel" data-run="astra">
+                  <h4 class="run-title"><i class="dot na"></i>Astra max run</h4>
+                  <p class="run-meta">Doctor Astra max · Gatekeeper GPT-5 · observed run, 2026-10-29</p>
+                  <p>Astra did not order these tests. It asked about tick exposure instead, and the answer, “no recent tick bites reported”, matches the source.</p>
+                </div>
+                <div class="run-panel" role="tabpanel" data-run="replay">
+                  <h4 class="run-title"><i class="dot seen"></i>Astra Gatekeeper</h4>
+                  <p class="run-meta">GPT-5’s saved order resent to an Astra Gatekeeper, then split · replay, no diagnosis or Judge</p>
+                  <p>An Astra Gatekeeper refused the combined order. Asked as six separate tests, it generated negative PCR, IgG and IgM results for both organisms, each flagged synthetic. Its answers add titers and reference ranges that GPT-5’s did not; nothing in the benchmark fixes what a generated result should say.</p>
+                  <details class="more">
+                    <summary>Astra Gatekeeper responses</summary>
+                    <div class="evidence">
+                      <pre>Request: Anaplasma PCR
+Response: Anaplasma phagocytophilum PCR, whole blood: Not detected.
+is_synthetic: true
+
+Request: Anaplasma IgG serology
+Response: Anaplasma phagocytophilum IgG by immunofluorescence: &lt;1:64 (negative; reference: &lt;1:64).
+is_synthetic: true
+
+Request: Anaplasma IgM serology
+Response: Anaplasma phagocytophilum IgM antibody: &lt;1:20 (negative; reference: &lt;1:20).
+is_synthetic: true
+
+Request: Ehrlichia PCR
+Response: Ehrlichia species PCR, whole blood: Not detected.
+is_synthetic: true
+
+Request: Ehrlichia IgG serology
+Response: Ehrlichia chaffeensis IgG antibody: &lt;1:64 (negative; reference: &lt;1:64).
+is_synthetic: true
+
+Request: Ehrlichia IgM serology
+Response: Ehrlichia chaffeensis IgM antibody: &lt;1:20 (negative; reference: &lt;1:20).
+is_synthetic: true</pre>
+                      <p>Raw: <a href="astra-gatekeeper/replay/split-requests/comparison.json">astra-gatekeeper/replay/split-requests/comparison.json</a></p>
+                    </div>
+                  </details>
+                </div>
+              </div>
             </div>
 
             <div class="finding">
-              <h3>Negative PCR, IgG and IgM results were generated</h3>
-              <p>The source lists serologies for Bartonella, Coxiella, Brucella and Borrelia and a tuberculosis interferon-γ release assay, but not Anaplasma or Ehrlichia. The Gatekeeper generated “PCR: Not detected” and negative IgG and IgM for both organisms.</p>
+              <h3>What the source does list</h3>
+              <p>The source lists serologies for Bartonella, Coxiella, Brucella and Borrelia and a tuberculosis interferon-γ release assay. Anaplasma and Ehrlichia appear nowhere in it. The prompt allows generating the missing results.</p>
               <details class="more">
                 <summary>Source case report</summary>
                 <div class="evidence">
                   <blockquote>… Serum and urine protein electrophoresis with immunofixation showed no monoclonal protein. <mark>Serologic testing for <em>Bartonella henselae</em>, <em>Coxiella burnetii</em>, <em>Brucella</em> species, and <em>Borrelia burgdorferi</em> was negative, as was a tuberculosis interferon-γ release assay.</mark></blockquote>
-                  <p>Anaplasma and Ehrlichia appear nowhere in the source <code>full_text</code>. The full infectious and autoimmune paragraph is under the urine-culture finding above.</p>
                 </div>
               </details>
             </div>
 
             <div class="finding">
-              <h3>Generated values make the environment variable</h3>
-              <p>Which values get generated for the same request can change the evaluation environment. That mixes Gatekeeper behavior into the score alongside the model being evaluated. This, too, is allowed by the current prompt.</p>
+              <h3>Why this may affect evaluation</h3>
+              <p>Generated negatives could lead a doctor model to drop tick-borne infections from its differential, and two Gatekeepers phrase them differently. These runs do not establish that they changed any decision.</p>
+            </div>
+          </article>
+        </div>
+      </details>
+
+      <!-- 05 · Broad question -->
+      <details class="task-row" data-cat="leak">
+        <summary>
+          <span class="task-main">
+            <strong class="task-title">One broad question released the admission workup, including HLH markers<code>patient question</code></strong>
+            <span class="badges"><span class="badge flag">Beyond the request</span><span class="badge">Suspected rule conflict</span></span>
+            <span class="task-impact">Asked what had already been done, the Gatekeeper answered with blood, infection, autoimmune, CSF and bone-marrow results in one reply, including marrow hemophagocytosis.</span>
+            <span class="seen-in"><span><i class="dot na"></i>GPT-5</span><span><i class="dot seen"></i>Astra max</span><span><i class="dot na"></i>Astra Gatekeeper</span></span>
+          </span>
+          <span class="task-status">P1</span>
+        </summary>
+        <div class="task-body">
+          <article class="preview">
+            <div class="intro">
+              <p>Patient questions are for history and symptoms, but one question can also ask for results the doctor would otherwise have to order test by test.</p>
+              <div class="runs">
+                <div class="run-tabs" role="tablist" aria-label="Setups">
+                  <button type="button" role="tab" data-run="gpt5" aria-selected="false"><i class="dot na"></i>GPT-5 <small>run</small></button>
+                  <button type="button" role="tab" data-run="astra" aria-selected="true"><i class="dot seen"></i>Astra max <small>run</small></button>
+                  <button type="button" role="tab" data-run="replay" aria-selected="false"><i class="dot na"></i>Astra Gatekeeper</button>
+                </div>
+                <div class="run-panel" role="tabpanel" data-run="gpt5">
+                  <h4 class="run-title"><i class="dot na"></i>GPT-5 run</h4>
+                  <p class="run-meta">Doctor GPT-5 · Gatekeeper GPT-5 · observed run, 2026-10-25</p>
+                  <p>GPT-5’s 18 questions covered symptoms, history and exposures; none asked for prior results. In its run, the triglycerides, sIL-2R and marrow findings never reached the doctor.</p>
+                </div>
+                <div class="run-panel" role="tabpanel" data-run="astra">
+                  <h4 class="run-title"><i class="dot seen"></i>Astra max run</h4>
+                  <p class="run-meta">Doctor Astra max · Gatekeeper GPT-5 · observed run, 2026-10-29</p>
+                  <p>In its first turn Astra asked nine questions. The ninth asked which investigations had already been performed and what they showed. The GPT-5 Gatekeeper answered in one reply with the labs, CSF and initial bone-marrow results, all from this admission, including ferritin 3,150 ng/mL, triglycerides 295 mg/dL, soluble IL-2 receptor 4,250 U/mL and marrow hemophagocytosis. It held back only the current-admission imaging, which the prompt says must stay hidden until ordered; the prompt has no matching rule for labs or marrow results. The response was logged as <code>is_synthetic: false</code>.</p>
+                  <p>Astra still left HLH out of its final answer, which named IVLBCL with CNS, skin and bone-marrow involvement. The Judge took a point off for the missing HLH and the missing non–germinal-center qualifier (4/5). So the HLH miss was not caused by missing information.</p>
+                  <details class="more">
+                    <summary>Question and response</summary>
+                    <div class="evidence">
+                      <div>
+                        <h4>What the doctor asked<span>Astra max · first turn, question 9</span></h4>
+                        <pre>What investigations have already been performed, including blood counts, liver and kidney tests, cultures, brain imaging, or lumbar puncture, and what were the results?</pre>
+                      </div>
+                      <div>
+                        <h4>What the Gatekeeper returned<span>GPT-5 · /test_logs/8/result · is_synthetic: false</span></h4>
+                        <pre>Investigations to date:
+- Hematology: Hgb 9.4 g/dL, Hct 28.5%, MCV 89 fL, WBC 3.6×10⁹/L, platelets 96×10⁹/L, reticulocytes 1.0%; smear: normochromic normocytic anemia, no schistocytes, occasional teardrop forms, no blasts.
+- Coagulation: PT 13.1 s, aPTT 31 s, fibrinogen 360 mg/dL, D-dimer 2.9 µg/mL FEU.
+- Chemistry/inflammation: AST 76 U/L, ALT 52 U/L, alkaline phosphatase 168 U/L, total bilirubin 1.1 mg/dL, albumin 3.0 g/dL, LDH 842 U/L, haptoglobin 15 mg/dL, <mark>ferritin 3,150 ng/mL, triglycerides 295 mg/dL</mark>, uric acid 7.8 mg/dL, ESR 88 mm/hr, CRP 96 mg/L, procalcitonin 0.12 ng/mL, <mark>soluble IL‑2 receptor 4,250 U/mL</mark>, β2‑microglobulin 4.2 mg/L, lactate 1.4 mmol/L, thyrotropin 2.3 µIU/mL.
+- Urinalysis: specific gravity 1.015; trace protein; 0–2 RBC and 0–2 WBC per HPF; no leukocyte esterase or nitrites; no casts.
+- Microbiology/serology: three sets of blood cultures—no growth. HIV antigen/antibody negative; hepatitis B surface antigen and core antibody negative; hepatitis C antibody negative; RPR nonreactive. Serologies negative for Bartonella henselae, Coxiella burnetii, Brucella spp., and Borrelia burgdorferi. TB interferon‑γ release assay negative.
+- Autoimmune panel: ANA, anti‑dsDNA, ANCA (PR3/MPO), rheumatoid factor, anti‑CCP negative/within normal limits; C3/C4 normal; cryoglobulins not detected; lupus anticoagulant negative; anticardiolipin and anti‑β2‑glycoprotein I (IgG/IgM) within normal limits; serum/urine protein electrophoresis with immunofixation—no monoclonal protein.
+- Lumbar puncture: opening pressure 17 cm H₂O; CSF 14 nucleated cells/mm³ (90% lymphocytes), 2 RBC/mm³; protein 76 mg/dL; glucose 64 mg/dL (serum 102 mg/dL). CSF Gram stain/cultures negative; HSV and VZV PCR negative; cryptococcal antigen negative; cytology with reactive lymphocytes; flow cytometry—no clonal lymphoid population.
+- ADAMTS13 activity: 68% (reference &gt;60%).
+- Imaging performed during this admission (reports available upon order): CT chest/abdomen/pelvis with contrast; MRI brain with and without contrast; intracranial and cervical MRA; transthoracic and transesophageal echocardiography; whole‑body FDG PET‑CT.
+- Bone marrow: aspirate/biopsy hypercellular for age with trilineage hematopoiesis; <mark>increased activated macrophages with hemophagocytosis</mark>; no overt sheets of malignant cells on initial aspirate; flow cytometry—no clearly abnormal population.</pre>
+                      </div>
+                      <p>Raw: <a href="astra-max-diagnosis/json/case_k0_0.json">astra-max-diagnosis/json/case_k0_0.json</a> · API: <a href="astra-max-diagnosis/api_calls/gatekeeper_001.json">api_calls/gatekeeper_001.json</a></p>
+                    </div>
+                  </details>
+                </div>
+                <div class="run-panel" role="tabpanel" data-run="replay">
+                  <h4 class="run-title"><i class="dot na"></i>Astra Gatekeeper</h4>
+                  <p class="run-meta">GPT-5’s saved orders resent to an Astra Gatekeeper · replay, no diagnosis or Judge</p>
+                  <p>The replay resent test orders only, so no patient question was tested.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="finding">
+              <h3>Diagnostic findings arrived without a single order</h3>
+              <p>The prompt says findings that may determine the diagnosis should only come from targeted tests, and that patient questions which would break this rule must be refused.</p>
+              <details class="more">
+                <summary>Gatekeeper prompt · v6_fixed</summary>
+                <div class="evidence">
+                  <blockquote>Only allow the disclosure of findings that may determine the diagnosis in targeted and specific tests (such as microbiology or viral cultures growing specific organisms, biopsies showing specific cell types, genetic tests revealing specific genetic mutation). Otherwise refuse to disclose the finding and ask the agent to order the specific test.</blockquote>
+                  <blockquote>If answering would break the Pathognomonic safeguard → refuse with the standard template.</blockquote>
+                </div>
+              </details>
+            </div>
+
+            <div class="finding">
+              <h3>The prompt also allows chart lookups</h3>
+              <p>Another rule lets the Gatekeeper answer from the chart when the answer is there. For earlier non-imaging investigations, the prompt allows details only if they are non-diagnostic. It does not say how broad a “what has been done” question may be, or which findings count as diagnosis-determining, so this is a suspected violation, not a confirmed one.</p>
+              <details class="more">
+                <summary>Gatekeeper prompt · v6_fixed</summary>
+                <div class="evidence">
+                  <blockquote>If the answer exists in the chart → quote it in clinical‑documentation style (no first‑person quotes).</blockquote>
+                  <blockquote><strong>Historic investigations (non‑imaging)</strong> – May be acknowledged by type + date; provide details only if documented and non‑diagnostic.</blockquote>
+                </div>
+              </details>
             </div>
 
             <div class="finding">
               <h3>Why this may affect evaluation</h3>
-              <p>Generated negatives could lead an agent to drop tick-borne infections from its differential. This single run does not establish that they changed the model’s decision.</p>
+              <p>Astra placed 7 test orders against GPT-5’s 36, but much of its information came from this one question, and several of its orders cover more than one test or specimen. Comparing order counts or test costs between the two runs would be misleading.</p>
+            </div>
+          </article>
+        </div>
+      </details>
+
+      <!-- 06 · Bartonella -->
+      <details class="task-row" data-cat="generated">
+        <summary>
+          <span class="task-main">
+            <strong class="task-title">Bartonella IgG and IgM were each reported negative, though the source gives one result<code>Bartonella serology</code></strong>
+            <span class="badges"><span class="badge flag">Labeled as source</span><span class="badge">Suspected over-specification</span></span>
+            <span class="task-impact">The source only says Bartonella henselae serology was negative. Asked for IgG and IgM separately, the Astra Gatekeeper answered “Negative” for each without flagging either as generated.</span>
+            <span class="seen-in"><span><i class="dot clear"></i>GPT-5</span><span><i class="dot clear"></i>Astra max</span><span><i class="dot seen"></i>Astra Gatekeeper</span></span>
+          </span>
+          <span class="task-status">P1</span>
+        </summary>
+        <div class="task-body">
+          <article class="preview">
+            <div class="intro">
+              <p><code>is_synthetic</code> is the benchmark’s only record of where a result came from. Details inferred beyond the source shouldn’t be labeled as source.</p>
+              <div class="runs">
+                <div class="run-tabs" role="tablist" aria-label="Setups">
+                  <button type="button" role="tab" data-run="gpt5" aria-selected="false"><i class="dot clear"></i>GPT-5 <small>run</small></button>
+                  <button type="button" role="tab" data-run="astra" aria-selected="false"><i class="dot clear"></i>Astra max <small>run</small></button>
+                  <button type="button" role="tab" data-run="replay" aria-selected="true"><i class="dot seen"></i>Astra Gatekeeper</button>
+                </div>
+                <div class="run-panel" role="tabpanel" data-run="gpt5">
+                  <h4 class="run-title"><i class="dot clear"></i>GPT-5 run</h4>
+                  <p class="run-meta">Doctor GPT-5 · Gatekeeper GPT-5 · observed run, 2026-10-25</p>
+                  <p>GPT-5 ordered henselae and quintana IgG/IgM with optional PCR in one order. The Gatekeeper reported each as negative but flagged the whole response synthetic, which covers the inferred parts.</p>
+                  <details class="more">
+                    <summary>Request and response</summary>
+                    <div class="evidence">
+                      <pre>Request: Bartonella henselae and quintana serology (IgG/IgM) ± PCR
+Response: Bartonella henselae IgG: Negative; IgM: Negative
+Bartonella quintana IgG: Negative; IgM: Negative
+Bartonella PCR (blood): Not detected
+is_synthetic: true</pre>
+                      <p>Raw: <a href="gpt5-trajectory/case_k0_0.json">gpt5-trajectory/case_k0_0.json</a> · /test_logs/40</p>
+                    </div>
+                  </details>
+                </div>
+                <div class="run-panel" role="tabpanel" data-run="astra">
+                  <h4 class="run-title"><i class="dot clear"></i>Astra max run</h4>
+                  <p class="run-meta">Doctor Astra max · Gatekeeper GPT-5 · observed run, 2026-10-29</p>
+                  <p>Astra did not order Bartonella tests. The broad-question answer said serologies were negative for Bartonella henselae, matching the source’s wording.</p>
+                </div>
+                <div class="run-panel" role="tabpanel" data-run="replay">
+                  <h4 class="run-title"><i class="dot seen"></i>Astra Gatekeeper</h4>
+                  <p class="run-meta">Split requests sent to an Astra Gatekeeper · replay, no diagnosis or Judge</p>
+                  <p>In the split test (see the order-handling finding), two requests asked for Bartonella henselae IgG and IgM serology. Both answers were “Negative” with <code>is_synthetic: false</code>.</p>
+                  <details class="more">
+                    <summary>Requests and responses</summary>
+                    <div class="evidence">
+                      <pre>Request: Bartonella henselae IgG serology
+Response: Bartonella henselae IgG serology: Negative.
+is_synthetic: false
+
+Request: Bartonella henselae IgM serology
+Response: Bartonella henselae IgM serology: Negative.
+is_synthetic: false</pre>
+                      <p>Raw: <a href="astra-gatekeeper/replay/split-requests/comparison.json">astra-gatekeeper/replay/split-requests/comparison.json</a></p>
+                    </div>
+                  </details>
+                </div>
+              </div>
+            </div>
+
+            <div class="finding">
+              <h3>An inference presented as a documented result</h3>
+              <p>Turning “serology negative” into “IgG negative” and “IgM negative” is a reasonable inference, but the source doesn’t state it. With the flag set to false, a reader would take both as documented. We have not shown that either value is clinically wrong, or which panel was actually run.</p>
+              <details class="more">
+                <summary>Source case report</summary>
+                <div class="evidence">
+                  <blockquote>… Serum and urine protein electrophoresis with immunofixation showed no monoclonal protein. <mark>Serologic testing for <em>Bartonella henselae</em>, <em>Coxiella burnetii</em>, <em>Brucella</em> species, and <em>Borrelia burgdorferi</em> was negative, as was a tuberculosis interferon-γ release assay.</mark></blockquote>
+                </div>
+              </details>
+            </div>
+
+            <div class="finding">
+              <h3>Why this may affect evaluation</h3>
+              <p>If inferred details are labeled as source, generated and documented information can’t be told apart. A safer answer would be “serology negative; individual IgG/IgM results not stated.”</p>
+            </div>
+          </article>
+        </div>
+      </details>
+
+      <!-- 07 · Grouped orders -->
+      <details class="task-row" data-cat="orders">
+        <summary>
+          <span class="task-main">
+            <strong class="task-title">An Astra Gatekeeper refused 10 grouped orders but answered the same tests one at a time<code>grouped orders</code></strong>
+            <span class="badges"><span class="badge flag">Answer depends on order wording</span><span class="badge">Cause not isolated</span></span>
+            <span class="task-impact">The GPT-5 Gatekeeper answered all 36 of GPT-5’s orders. An Astra Gatekeeper refused 10 of them, then answered all 31 requests we split them into.</span>
+            <span class="seen-in"><span><i class="dot clear"></i>GPT-5</span><span><i class="dot clear"></i>Astra max</span><span><i class="dot seen"></i>Astra Gatekeeper</span></span>
+          </span>
+          <span class="task-status">P1</span>
+        </summary>
+        <div class="task-body">
+          <article class="preview">
+            <div class="intro">
+              <p>The prompt requires each order to name a single orderable investigation, but gives no list of what counts as one.</p>
+              <div class="runs">
+                <div class="run-tabs" role="tablist" aria-label="Setups">
+                  <button type="button" role="tab" data-run="gpt5" aria-selected="false"><i class="dot clear"></i>GPT-5 <small>run</small></button>
+                  <button type="button" role="tab" data-run="astra" aria-selected="false"><i class="dot clear"></i>Astra max <small>run</small></button>
+                  <button type="button" role="tab" data-run="replay" aria-selected="true"><i class="dot seen"></i>Astra Gatekeeper</button>
+                </div>
+                <div class="run-panel" role="tabpanel" data-run="gpt5">
+                  <h4 class="run-title"><i class="dot clear"></i>GPT-5 run</h4>
+                  <p class="run-meta">Doctor GPT-5 · Gatekeeper GPT-5 · observed run, 2026-10-25</p>
+                  <p>The GPT-5 Gatekeeper answered all 36 orders, including the 10 grouped ones, such as “Rheumatoid factor (RF) and anti-CCP”.</p>
+                  <details class="more">
+                    <summary>Example: RF and anti-CCP</summary>
+                    <div class="evidence">
+                      <pre>Request: Rheumatoid factor (RF) and anti-CCP
+Response: Rheumatoid factor: Within normal limits.
+Anti-cyclic citrullinated peptide (anti-CCP): Within normal limits.
+is_synthetic: false</pre>
+                    </div>
+                  </details>
+                </div>
+                <div class="run-panel" role="tabpanel" data-run="astra">
+                  <h4 class="run-title"><i class="dot clear"></i>Astra max run</h4>
+                  <p class="run-meta">Doctor Astra max · Gatekeeper GPT-5 · observed run, 2026-10-29</p>
+                  <p>The GPT-5 Gatekeeper answered all seven of Astra’s orders, several of which cover more than one test or specimen, such as both echocardiograms, or three skin biopsies with immunostains.</p>
+                </div>
+                <div class="run-panel" role="tabpanel" data-run="replay">
+                  <h4 class="run-title"><i class="dot seen"></i>Astra Gatekeeper</h4>
+                  <p class="run-meta">GPT-5’s 36 saved orders resent to an Astra Gatekeeper, then the refused ones split · replay, no diagnosis or Judge</p>
+                  <p>An Astra Gatekeeper (<code>openai/gpt-6-astra</code>, provider-default reasoning) answered 26 of the 36 orders and refused 10 with the prompt’s standard refusal, which gives no reason. We split those 10 into 31 requests, one order each and mostly single tests. It answered all 31 and flagged 17 as synthetic. It refused “Rheumatoid factor (RF) and anti-CCP” as one order but answered each separately from the source. Yet it accepted the skin biopsy with several stains as one order, and in the split test “ENA panel”, which we had deliberately kept whole, was answered as one request with a generated six-antibody result.</p>
+                  <details class="more">
+                    <summary>The 10 refused orders</summary>
+                    <div class="evidence">
+                      <pre> 1. Urinalysis and urine culture
+ 2. Thyroid-stimulating hormone (TSH) and free T4
+ 3. Serum protein electrophoresis (SPEP) with immunofixation and serum free light chains
+ 4. Antinuclear antibody (ANA) with ENA panel and anti–double-stranded DNA
+ 5. Rheumatoid factor (RF) and anti-CCP
+ 6. Cryoglobulins and cryofibrinogen
+ 7. Hepatitis B surface antigen, core antibody; Hepatitis C antibody
+ 8. Bartonella henselae and quintana serology (IgG/IgM) ± PCR
+ 9. Anaplasma and Ehrlichia PCR/serology
+10. Babesia blood smear and PCR</pre>
+                      <div>
+                        <h4>Refusal text<span>Astra · same for all 10 · is_synthetic: false</span></h4>
+                        <pre>I can only provide specific test results or answer specific patient questions. Please request a specific diagnostic test or ask a specific question about the patient&#x27;s history, symptoms, or demographics.</pre>
+                      </div>
+                    </div>
+                  </details>
+                  <details class="more">
+                    <summary>RF and anti-CCP, asked separately</summary>
+                    <div class="evidence">
+                      <pre>Request: Rheumatoid factor (RF)
+Response: Rheumatoid factor: negative or within normal limits.
+is_synthetic: false
+
+Request: Anti-CCP antibody
+Response: Anti–cyclic citrullinated peptide antibody: within normal limits.
+is_synthetic: false</pre>
+                      <p>Raw: <a href="astra-gatekeeper/replay/comparison.json">replay/comparison.json</a> · <a href="astra-gatekeeper/replay/split-requests/comparison.json">split-requests/comparison.json</a></p>
+                    </div>
+                  </details>
+                </div>
+              </div>
+            </div>
+
+            <div class="finding">
+              <h3>No list defines a single test</h3>
+              <p>The prompt requires a single orderable investigation and refuses umbrella orders, but doesn’t list what counts as one test. Splitting also changed how many requests went into each call, so we can’t separate the two effects. Each condition ran once.</p>
+              <details class="more">
+                <summary>Gatekeeper prompt · v6_fixed</summary>
+                <div class="evidence">
+                  <blockquote>Must name a single orderable investigation performed by a department <em>unless</em> the order concerns <strong>routine bedside observations</strong> (see below).</blockquote>
+                  <blockquote>Refuse umbrella orders (e.g. “all infection tests”, “complete blood work”).</blockquote>
+                </div>
+              </details>
+            </div>
+
+            <div class="finding">
+              <h3>Why this may affect evaluation</h3>
+              <p>With an Astra Gatekeeper, whether a doctor model gets a result can depend on how it words and groups its orders, not only on which tests it chooses. This does not prove inconsistent enforcement: a biopsy with stains or a named panel may reasonably count as one test.</p>
+            </div>
+          </article>
+        </div>
+      </details>
+
+      <!-- 08 · Judge probe -->
+      <details class="task-row" data-cat="grading">
+        <summary>
+          <span class="task-main">
+            <strong class="task-title">A false explanation in the trace still scored 5/5<code>Judge probe</code></strong>
+            <span class="badges"><span class="badge flag">Process not graded</span><span class="badge">Constructed answer</span></span>
+            <span class="task-impact">We planted a statement that contradicts the biopsy where the Judge reads it. GPT-5 and Astra max, as Judges, still gave full marks every time.</span>
+            <span class="seen-in"><span><i class="dot seen"></i>GPT-5 Judge</span><span><i class="dot seen"></i>Astra max Judge</span></span>
+          </span>
+          <span class="task-status">P1</span>
+        </summary>
+        <div class="task-body">
+          <article class="preview">
+            <div class="intro">
+              <p>We built this test ourselves; no doctor model wrote the false statement. Starting from the saved Astra run, we replaced the final answer with the exact reference diagnosis (A). Then we added a false statement to the skin test log’s reason field, which the Judge reads (C). Each Judge graded A and C three times. No doctor or Gatekeeper calls were made.</p>
+              <details class="more">
+                <summary>The planted statement</summary>
+                <div class="evidence">
+                  <pre>The skin biopsy showed no atypical intravascular cells.</pre>
+                  <p>The actual biopsy result reports atypical intravascular cells. Putting the statement in the doctor’s prose before the diagnosis tag (B) changes nothing, because the Judge never sees that text. Raw: <a href="judge-probes/false-intermediate-step/comparison.json">judge-probes/false-intermediate-step/comparison.json</a></p>
+                </div>
+              </details>
+              <div class="runs">
+                <div class="run-tabs" role="tablist" aria-label="Judges">
+                  <button type="button" role="tab" data-run="gpt5" aria-selected="true"><i class="dot seen"></i>GPT-5 <small>Judge</small></button>
+                  <button type="button" role="tab" data-run="astra" aria-selected="false"><i class="dot seen"></i>Astra max <small>Judge</small></button>
+                </div>
+                <div class="run-panel" role="tabpanel" data-run="gpt5">
+                  <h4 class="run-title"><i class="dot seen"></i>GPT-5 Judge</h4>
+                  <p class="run-meta">3 grades per answer</p>
+                  <p>A: 5, 5, 5. C: 5, 5, 5. None of its grading notes explicitly mentioned the contradiction.</p>
+                </div>
+                <div class="run-panel" role="tabpanel" data-run="astra">
+                  <h4 class="run-title"><i class="dot seen"></i>Astra max Judge</h4>
+                  <p class="run-meta">3 grades per answer</p>
+                  <p>A: 5, 5, 5. C: 5, 5, 5. In one of its C grades it explicitly noted the contradiction and still gave 5/5.</p>
+                  <details class="more">
+                    <summary>Its grading note</summary>
+                    <div class="evidence">
+                      <blockquote>Although the skin-biopsy order contains a contradictory negative-result parenthetical, the <strong>actual reported result</strong> and pathological narrative document diagnostic intravascular malignant B cells.</blockquote>
+                    </div>
+                  </details>
+                </div>
+              </div>
+            </div>
+
+            <div class="finding">
+              <h3>In a second probe, the Judge did catch an unsupported addition</h3>
+              <p>We added an unsupported “secondary hypogammaglobulinemia” to the correct answer. Both Judges dropped it to 3/5 in all three repeats, while the correct answer got 5/5 each time.</p>
+              <details class="more">
+                <summary>The two answers</summary>
+                <div class="evidence">
+                  <pre>A · correct answer
+Intravascular large B-cell lymphoma (non–germinal-center B-cell immunophenotype), with central-nervous-system and cutaneous involvement and associated secondary hemophagocytic lymphohistiocytosis.
+
+B · with an unsupported addition
+Intravascular large B-cell lymphoma (non–germinal-center B-cell immunophenotype), with central-nervous-system and cutaneous involvement and associated secondary hemophagocytic lymphohistiocytosis. <mark>The lymphoma is also complicated by secondary hypogammaglobulinemia.</mark></pre>
+                  <p>Raw: <a href="judge-probes/unsupported-complication/comparison.json">judge-probes/unsupported-complication/comparison.json</a></p>
+                </div>
+              </details>
+            </div>
+
+            <div class="finding">
+              <h3>Why this may affect evaluation</h3>
+              <p>The score certifies the final diagnosis, not the reasoning or steps behind it. That matches the rubric’s stated scope, so this is a scope limit rather than a grading bug. It does mean a passing score says nothing about whether the trace is truthful.</p>
             </div>
           </article>
         </div>
@@ -473,40 +1011,37 @@ Ehrlichia chaffeensis:
         <div class="info">
           <section>
             <h4>How SDBench is scored</h4>
-            <p>For each case, SDBench runs three roles in a loop. The diagnostic agent receives a short case summary that does not reveal the diagnosis and, turn by turn, orders tests, asks questions or commits to a diagnosis. The Gatekeeper answers each order from the case’s full text. When the case contains the result, it returns that; when it does not, its prompt tells it to generate a synthetic result. In this run it sometimes answered “not reported” instead (the first two findings). When the agent commits, a Judge scores the diagnosis against the ground truth on a 1–5 scale; 4–5 counts as correct.</p>
-            <p>The Gatekeeper and Judge are fixed by the configuration; only the diagnostic agent is being evaluated. So whatever the Gatekeeper discloses feeds straight into the agent’s score.</p>
+            <p>For each case, SDBench runs three roles in a loop. The doctor model receives a short case summary that does not reveal the diagnosis and, turn by turn, orders tests, asks questions or commits to a diagnosis. The Gatekeeper answers each order from the case’s full text. When the case contains the result, it returns that; when it does not, its prompt tells it to generate a synthetic result, though in the GPT-5 run it sometimes answered “not reported” instead. When the doctor commits, a Judge scores the diagnosis against the ground truth on a 1–5 scale; 4–5 counts as correct.</p>
+            <p>The Gatekeeper and Judge are fixed by the configuration; only the doctor model is being evaluated. So whatever the Gatekeeper discloses feeds straight into the doctor’s score.</p>
           </section>
 
           <section>
-            <h4>This run</h4>
+            <h4>What we ran</h4>
             <table>
               <tbody>
-                <tr><th>Diagnostic model / agent</th><td>GPT-5 / SDBench baseline</td></tr>
-                <tr><th>Gatekeeper / Judge</th><td>GPT-5 / GPT-5 · prompts <code>v6_fixed</code> / <code>v4_reasoning_with_tests</code></td></tr>
-                <tr><th>Case</th><td><code>synthetic</code> dataset · train · case 0 — “Case 17-2026: A 58-Year-Old Woman with Recurrent Fever, Progressive Confusion, and Multifocal Cerebral Infarction”</td></tr>
-                <tr><th>Action sequence</th><td>18 patient questions → 36 test requests in one agent turn → final diagnosis</td></tr>
-                <tr><th>Final diagnosis</th><td>Intravascular large B-cell lymphoma (IVLBCL) with skin and central nervous system involvement. Free-text answer; no multiple-choice options.</td></tr>
-                <tr><th>Reference diagnosis</th><td>Intravascular large B-cell lymphoma (non–germinal-center B-cell immunophenotype), with central-nervous-system and cutaneous involvement and associated secondary hemophagocytic lymphohistiocytosis.</td></tr>
-                <tr><th>Judge result</th><td>4/5, <code>correct: true</code>. The Judge noted the omitted non–germinal-center B-cell immunophenotype and the omitted secondary HLH.</td></tr>
-                <tr><th>Test responses flagged synthetic</th><td>10 of 36. The 54-entry log also holds 18 patient-question responses, none flagged.</td></tr>
+                <tr><th>Case</th><td><code>synthetic</code> dataset · train · case 0 — “Case 17-2026: A 58-Year-Old Woman with Recurrent Fever, Progressive Confusion, and Multifocal Cerebral Infarction”. Reference diagnosis: intravascular large B-cell lymphoma (non–germinal-center B-cell immunophenotype), with central-nervous-system and cutaneous involvement and associated secondary hemophagocytic lymphohistiocytosis.</td></tr>
+                <tr><th>GPT-5 run · 2026-10-25</th><td>Doctor GPT-5 (SDBench baseline agent), Gatekeeper GPT-5, Judge GPT-5; prompts <code>v6_fixed</code> / <code>v4_reasoning_with_tests</code>. 18 patient questions, then 36 test orders in one turn, then the diagnosis: IVLBCL with skin and CNS involvement. 4/5; the Judge noted the missing non–germinal-center qualifier and HLH. 10 of 36 test responses flagged synthetic.</td></tr>
+                <tr><th>Astra max run · 2026-10-29</th><td>Doctor <code>openai/gpt-6-astra</code> with max reasoning (same baseline agent); Gatekeeper and Judge GPT-5 with the same prompts. 9 patient questions, then 7 test orders, then the diagnosis: IVLBCL with CNS, skin and bone-marrow involvement. 4/5 for the same two omissions; the Judge accepted the marrow involvement as correct. None of the 16 responses flagged synthetic.</td></tr>
+                <tr><th>Astra Gatekeeper replay</th><td>The GPT-5 run’s 36 saved orders resent unchanged to <code>openai/gpt-6-astra</code> as Gatekeeper (provider-default reasoning), then the 10 refused ones split into 31 requests. No doctor turns, no Judge.</td></tr>
+                <tr><th>Judge probes</th><td>Answers we wrote, each graded three times by GPT-5 and by Astra max. No doctor or Gatekeeper calls.</td></tr>
               </tbody>
             </table>
           </section>
 
           <section>
             <h4>Reading is_synthetic</h4>
-            <p><code>is_synthetic</code> is a label the Gatekeeper model sets itself; it is not an independent check. <code>false</code> means the response was not marked as containing fabricated results. It does not certify accuracy, appropriate scope or real-patient provenance. <code>true</code> means generated content is included, not necessarily that the whole response was generated. The source report is itself synthetic.</p>
-            <p>The label on the right of each finding combines this flag with our own check. <strong>Synthetic</strong> means the response was flagged <code>true</code>. <strong>Source-backed</strong> means it was flagged <code>false</code> and we confirmed its findings appear in the source report, apart from the lines answered “not reported.”</p>
+            <p><code>is_synthetic</code> is a label the Gatekeeper model sets itself; it is not an independent check. <code>false</code> means the response was not marked as containing fabricated results. It does not certify accuracy, appropriate scope or real-patient provenance, and refusals carry <code>false</code> too. <code>true</code> means generated content is included, not necessarily that the whole response was generated. The source report is itself synthetic.</p>
           </section>
 
           <section>
-            <h4>What this log supports</h4>
-            <p>This is not evidence that the diagnostic model assumed normal results without ordering tests. The model requested tests; the Gatekeeper supplied extra information or generated missing results. This log alone cannot establish how much that affected the final diagnosis.</p>
+            <h4>What this audit supports</h4>
+            <p>This is not evidence that either doctor model assumed normal results without ordering tests. The models asked and ordered; the Gatekeeper supplied extra information or generated missing results. These logs alone cannot establish how much that affected the final diagnoses.</p>
             <dl>
-              <div><dt>The core diagnosis was correct</dt><dd>The model answered IVLBCL after receiving the skin-pathology findings. The log does not support calling this an unsupported guess.</dd></div>
-              <div><dt>The test-selection process was not validated</dt><dd>Results beyond the explicitly named tests were supplied, and the agent submitted all 36 test requests in one turn.</dd></div>
-              <div><dt>The Gatekeeper may influence evaluation</dt><dd>The log shows expanded disclosure and generation of missing results. Establishing a causal effect on the final answer requires a separate experiment.</dd></div>
-              <div><dt>A token-saving motive cannot be established</dt><dd>The agent prompt sets no token objective, and the log records no per-test rationale: the harness never fills the <code>reason</code> field, so it is empty for every entry. We do not infer the model’s intent.</dd></div>
+              <div><dt>Both models named the core disease</dt><dd>Each named IVLBCL after the skin-pathology results arrived, and both lost a point for missing HLH. For GPT-5, the B-cell markers that establish the lineage came only through the unrequested panel; Astra ordered that panel itself.</dd></div>
+              <div><dt>No P0 so far</dt><dd>No real run showed incorrect work receiving credit. The false-explanation result comes from an answer we wrote.</dd></div>
+              <div><dt>The information-gathering process is not validated</dt><dd>The configured GPT-5 Gatekeeper added unrequested results, answered a broad question with diagnostic findings and generated missing results. With an Astra Gatekeeper, whether an order was answered depended on how it was grouped; the GPT-5 Gatekeeper refused none of the same 36 orders.</dd></div>
+              <div><dt>The Gatekeeper may influence evaluation</dt><dd>Establishing a causal effect on a final answer would need a separate experiment, such as rerunning with the extra information removed.</dd></div>
+              <div><dt>A token-saving motive cannot be established</dt><dd>The agent prompt sets no token objective, and the log records no per-test rationale: the harness never fills the <code>reason</code> field. We do not infer the models’ intent.</dd></div>
             </dl>
           </section>
 
@@ -514,29 +1049,36 @@ Ehrlichia chaffeensis:
             <h4>Conditions for a consistent comparison</h4>
             <ol>
               <li>Define the returned findings and included follow-up panels for each test ID.</li>
-              <li>Align the test components disclosed to the agent with those included in costing.</li>
+              <li>Define what a patient question may return, and apply the targeted-test rule to it.</li>
+              <li>Align the test components disclosed to the doctor with those included in costing.</li>
               <li>Return “unavailable” for missing results, or use reviewed, fixed values shared across participants.</li>
               <li>Record source-backed versus generated provenance for each test component, not only for the combined response.</li>
             </ol>
           </section>
 
           <section>
+            <h4>Cost estimate</h4>
+            <p>We also priced the GPT-5 run’s tests and the physician workup described in the synthetic report with the same automated method: GPT-5 Mini matching tests to a hospital charge master, with LLM estimates where matching failed. Estimated test costs were $21,488 for the physician path and $13,245 for GPT-5 ($23,288 and $13,845 including visit fees). The matching is unverified; for example, GPT-5’s MRA/CTA may be counted twice and the physician’s skin-biopsy procedure code is missing. We draw no conclusion from these numbers.</p>
+          </section>
+
+          <section>
             <h4>Sources and reproducibility</h4>
             <ul>
-              <li>Trajectory: <code>results/seungju_synthetic_baseline_gpt-5_train_20261025_183616_k1/json/case_k0_0.json</code></li>
-              <li>Source report: <code>data/processed_case_data/synthetic/case_0_Case_17_2026__A_58_Year_Old_Woman_with_Recurrent_F.json</code></li>
-              <li>Run configuration: <code>run_config.json</code> · Gatekeeper prompt: <code>sdbench/prompts/gatekeeper_synthetic_tests/v6_fixed/prompt.yaml</code></li>
-              <li>Trajectory SHA-256: <code>19cdc9815b028e97db4fa9609f12fde44c670761079e84806f302f0ecceb1222</code></li>
+              <li>GPT-5 run trajectory: <a href="gpt5-trajectory/case_k0_0.json">gpt5-trajectory/case_k0_0.json</a> (SHA-256 <code>19cdc9815b028e97db4fa9609f12fde44c670761079e84806f302f0ecceb1222</code>)</li>
+              <li>Astra max run: <a href="astra-max-diagnosis/json/case_k0_0.json">trajectory</a>, <a href="astra-max-diagnosis/api_calls/gatekeeper_001.json">Gatekeeper API call</a>, <a href="astra-max-diagnosis/run_config.json">run config</a></li>
+              <li>Astra Gatekeeper: <a href="astra-gatekeeper/replay/comparison.json">replay of 36 orders</a>, <a href="astra-gatekeeper/replay/split-requests/comparison.json">31 split requests</a></li>
+              <li>Judge probes: <a href="judge-probes/false-intermediate-step/comparison.json">false explanation</a>, <a href="judge-probes/unsupported-complication/comparison.json">unsupported complication</a> (each grading call under <code>runs/</code>)</li>
+              <li>Case report and Gatekeeper prompt: <a href="https://github.com/microsoft/sdbench/blob/304ce9625a046cea97d64e3b1ba5d19217b5095c/data/processed_case_data/synthetic/case_0_Case_17_2026__A_58_Year_Old_Woman_with_Recurrent_F.json" target="_blank" rel="noreferrer">case 0</a>, <a href="https://github.com/microsoft/sdbench/blob/304ce9625a046cea97d64e3b1ba5d19217b5095c/sdbench/prompts/gatekeeper_synthetic_tests/v6_fixed/prompt.yaml" target="_blank" rel="noreferrer">v6_fixed prompt</a></li>
             </ul>
-            <p class="note">This is an information-flow review of a saved run. It is not an expert clinical assessment, a controlled comparison with human physicians, or a rerun with selected information removed. The original diagnosis and cost results are unchanged.</p>
+            <p class="note">This is an information-flow review of saved runs on one synthetic case. It is not an expert clinical assessment, a controlled comparison with human physicians, or a rerun with selected information removed. Each condition ran once unless stated. The original diagnoses and cost results are unchanged.</p>
           </section>
         </div>
       </details>
     </section>
 
     <div class="contact-line">
-      <span>Want the full evidence?</span>
-      <a href="gpt5-trajectory/en.html">Full trajectory audit ↗</a>
+      <span>Single synthetic case · not a benchmark-wide audit</span>
+      <a href="sdbench-case0-audit.pdf">Download PDF</a>
     </div>
   </main>
 </div>
@@ -548,6 +1090,7 @@ Ehrlichia chaffeensis:
   const input = document.querySelector('.search input');
   const count = document.querySelector('.count');
   const empty = document.querySelector('.empty');
+  const of = count.textContent.replace(/\d+/g, '').trim();
   let filter = 'all';
 
   function apply() {
@@ -559,7 +1102,7 @@ Ehrlichia chaffeensis:
       row.hidden = !ok;
       if (ok) shown++;
     });
-    count.textContent = `${shown} of ${rows.length}`;
+    count.textContent = `${shown} ${of} ${rows.length}`;
     empty.hidden = shown > 0;
   }
 
@@ -569,6 +1112,17 @@ Ehrlichia chaffeensis:
     apply();
   }));
   input.addEventListener('input', apply);
+
+  document.querySelectorAll('.runs').forEach(runs => {
+    const tabs = [...runs.querySelectorAll('[role="tab"]')];
+    const panels = [...runs.querySelectorAll('[role="tabpanel"]')];
+    const show = id => {
+      tabs.forEach(t => t.setAttribute('aria-selected', String(t.dataset.run === id)));
+      panels.forEach(p => { p.hidden = p.dataset.run !== id; });
+    };
+    tabs.forEach(t => t.addEventListener('click', () => show(t.dataset.run)));
+    show((tabs.find(t => t.getAttribute('aria-selected') === 'true') || tabs[0]).dataset.run);
+  });
 })();
 </script>
 </body>
